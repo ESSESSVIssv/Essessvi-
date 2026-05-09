@@ -5,7 +5,7 @@
 
 import { motion } from 'motion/react';
 import { PERSONAL_INFO } from '../constants';
-import { ArrowRight, Github, Linkedin, FileText } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, FileText, Phone } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Hero() {
@@ -80,6 +80,9 @@ export default function Hero() {
           </motion.div>
 
           <div className="flex items-center gap-8 mt-16">
+            <a href={`tel:${PERSONAL_INFO.phone}`} className="text-gray-500 hover:text-brand transition-colors">
+              <Phone size={20} />
+            </a>
             <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-brand transition-colors">
               <Linkedin size={20} />
             </a>

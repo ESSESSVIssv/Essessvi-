@@ -4,7 +4,7 @@
  */
 
 import { useState, useRef, useEffect, FormEvent } from 'react';
-import { Mail, Phone, Linkedin, Send, User, Sparkles, Loader2, ShieldCheck, Zap, Clock } from 'lucide-react';
+import { Mail, Phone, Linkedin, Send, User, Sparkles, Loader2, ShieldCheck, Zap } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 import { GoogleGenAI } from "@google/genai";
 import { motion } from 'motion/react';
@@ -66,7 +66,6 @@ export default function Contact() {
   };
 
   const trustBadges = [
-    { icon: Clock, label: 'Response Time', value: '< 2 Hours' },
     { icon: ShieldCheck, label: 'Availability', value: 'Full-Time / Intern' },
     { icon: Zap, label: 'Focus', value: 'AI & PM' }
   ];
@@ -97,6 +96,16 @@ export default function Contact() {
                 <div>
                    <p className="font-mono text-[10px] text-gray-500 font-bold uppercase tracking-[0.3em] mb-1">Email</p>
                    <p className="text-white font-display font-black text-xl uppercase tracking-tight">{PERSONAL_INFO.email}</p>
+                </div>
+              </a>
+
+              <a href={`tel:${PERSONAL_INFO.phone}`} className="flex items-center gap-8 group">
+                <div className="w-16 h-16 rounded-[2rem] bg-brand/10 border border-brand/20 flex items-center justify-center text-brand group-hover:scale-110 transition-all duration-500">
+                  <Phone size={24} />
+                </div>
+                <div>
+                   <p className="font-mono text-[10px] text-gray-500 font-bold uppercase tracking-[0.3em] mb-1">Phone</p>
+                   <p className="text-white font-display font-black text-xl uppercase tracking-tight">{PERSONAL_INFO.phone}</p>
                 </div>
               </a>
 

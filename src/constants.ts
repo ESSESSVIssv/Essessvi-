@@ -38,25 +38,26 @@ export const PERSONAL_INFO = {
   linkedin: "https://www.linkedin.com/in/essessvi-vadlamudi-ab2590273",
   github: "https://github.com/vessessvi",
   resume: "/resume.pdf",
+  website: "https://essessvi.vercel.app",
   bio: "I’m a Computer Science & Engineering student at The Apollo University with an interest in Product Management and AI. I like working on projects that combine technology, user experience, and problem-solving to build practical and useful products."
 };
 
 export const EDUCATION = [
   {
     institution: "The Apollo University",
-    degree: "Bachelor of Technology, computer science and engineering",
+    degree: "B.Tech in Computer Science — CGPA: 7.17",
     period: "Sept 2022 - April 2026",
     description: "Focused on bridging technical execution with product strategy."
   },
   {
-    institution: "Sri Chaitanya College of Education",
-    degree: "Higher Secondary Education",
+    institution: "GOVT. JR. COLLEGE, VADAMALAPET, Chittoor",
+    degree: "Intermediate — 542 marks",
     period: "March 2020 - August 2022",
     description: ""
   },
   {
-    institution: "CAMFORD",
-    degree: "Primary & Secondary Education",
+    institution: "Camford English High School, Chittoor",
+    degree: "SSC — 416 marks",
     period: "April 2008 - May 2020",
     description: ""
   }
@@ -89,6 +90,19 @@ export const EXPERIENCE = [
       "Built a unified admin dashboard to monitor inventory and transaction metrics."
     ],
     tools: ["Google AI Studio", "Gemini API", "Product Logic"]
+  },
+  {
+    title: "Epidemic Trend Forecasting",
+    role: "Core Team Member",
+    company: "Apollo University (Research Project)",
+    period: "Oct 2024 – Dec 2024",
+    description: "Utilized predictive modeling to forecast disease outbreaks based on historical WHO data.",
+    points: [
+      "Achieved 90% accuracy in short-term trend prediction using ARIMA time-series models.",
+      "Processed 10k+ rows of raw WHO data into structured formats.",
+      "Presented data-driven insights for public health awareness."
+    ],
+    tools: ["Python", "Pandas", "ARIMA", "Statsmodels"]
   }
 ];
 
@@ -124,9 +138,13 @@ export const SKILLS = [
     category: "Product Management", 
     items: ["Product Strategy", "Market Research", "User Personas", "Basic version of the idea Definition", "Roadmapping", "Stakeholder Management", "Agile Methodology"] 
   },
+  {
+    category: "Programming Languages",
+    items: ["Python", "C", "SQL"]
+  },
   { 
     category: "Technical Stack", 
-    items: ["Python", "Pandas", "ARIMA", "Google AI Studio", "Gemini API", "n8n Automation", "API Integration", "Prompt Engineering"] 
+    items: ["Google AI Studio", "Gemini API", "n8n Automation", "API Integration", "Prompt Engineering"] 
   },
   { 
     category: "Data & Strategy", 
@@ -163,14 +181,14 @@ export const CERTIFICATIONS = [
 
 export const CLUBS = [
   {
-    name: "NSS (National Service Scheme)",
-    role: "Coordinator & Member",
-    period: "2022 - 2026"
+    role: "NSS Coordinator",
+    organization: "The Apollo University",
+    description: "Leading community service initiatives and organizing social welfare programs for the National Service Scheme."
   },
   {
-    name: "Echo Club",
-    role: "Member",
-    period: "2024 - 2026"
+    role: "Echo Club Member",
+    organization: "The Apollo University",
+    description: "Actively participating in environmental conservation and sustainability projects within the campus community."
   }
 ];
 
@@ -220,6 +238,7 @@ export const NAV_LINKS = [
   { name: "Vision", href: "/vision" },
   { name: "Work", href: "/work" },
   { name: "Journey", href: "/journey" },
+  { name: "Community", href: "/community" },
   { name: "Awards", href: "/awards" },
   { name: "Resume", href: "/resume" },
   { name: "Services", href: "/services" },

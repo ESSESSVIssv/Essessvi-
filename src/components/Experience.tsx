@@ -89,7 +89,7 @@ export default function Experience() {
           <div className="grid md:grid-cols-2 gap-8">
             {CLUBS.map((club, idx) => (
               <motion.div
-                key={club.name}
+                key={club.role + club.organization}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -97,9 +97,10 @@ export default function Experience() {
                 className="p-8 bg-white/[0.02] border border-white/5 rounded-[2rem] hover:bg-[#FF7A00]/[0.02] transition-all"
               >
                 <div className="flex justify-between items-start mb-4">
-                  <h4 className="text-xl font-bold text-[#F9FAFB]">{club.name}</h4>
+                  <h4 className="text-xl font-bold text-[#F9FAFB]">{club.organization}</h4>
                 </div>
                 <p className="text-[#9CA3AF] text-sm font-bold uppercase tracking-widest">{club.role}</p>
+                <p className="mt-4 text-sm text-gray-500 leading-relaxed">{club.description}</p>
               </motion.div>
             ))}
           </div>

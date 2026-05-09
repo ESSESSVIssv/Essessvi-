@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import Navigation from './components/Navigation';
@@ -14,6 +14,7 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Certifications from './components/Certifications';
+import Community from './components/Community';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -53,6 +54,7 @@ function AppRoutes() {
         <Route path="/stack" element={<PageWrapper><Skills /></PageWrapper>} />
         <Route path="/work" element={<PageWrapper><Projects /></PageWrapper>} />
         <Route path="/journey" element={<PageWrapper><Experience /></PageWrapper>} />
+        <Route path="/community" element={<PageWrapper><Community /></PageWrapper>} />
         <Route path="/awards" element={<PageWrapper><Certifications /></PageWrapper>} />
         <Route path="/resume" element={<PageWrapper><Resume /></PageWrapper>} />
         <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />

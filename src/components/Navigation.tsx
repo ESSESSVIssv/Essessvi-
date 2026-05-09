@@ -84,9 +84,9 @@ export default function Navigation() {
             {/* CTA Button */}
             <Link
               to="/connect"
-              className="hidden sm:flex px-6 py-3 bg-brand text-black font-display font-black text-[10px] uppercase tracking-[0.2em] rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,122,0,0.2)] group"
+              className="hidden sm:flex px-5 py-2 bg-brand text-black font-display font-black text-[9px] uppercase tracking-[0.15em] rounded-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_15px_rgba(255,122,0,0.2)] group items-center"
             >
-              Start Conversation
+              Let's Talk
               <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
 

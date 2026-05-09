@@ -37,7 +37,7 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
           {PROJECTS.map((project, idx) => (
             <motion.div
               key={project.title}
@@ -48,7 +48,7 @@ export default function Projects() {
               className="group"
             >
               <div 
-                className="premium-card aspect-[16/11] mb-10 group-hover:-translate-y-4 transition-all duration-700 cursor-pointer"
+                className="premium-card aspect-[16/12] mb-8 group-hover:-translate-y-4 transition-all duration-700 cursor-pointer"
                 onClick={() => project.title.includes('SpareXchange') && setIsModalOpen(true)}
               >
                 {project.image ? (
@@ -59,46 +59,46 @@ export default function Projects() {
                   />
                 ) : (
                   <div className="absolute inset-0 bg-[#0A0D14] flex items-center justify-center">
-                    <Zap className="w-24 h-24 text-brand/10 group-hover:text-brand/30 transition-colors duration-700" />
+                    <Zap className="w-16 h-16 text-brand/10 group-hover:text-brand/30 transition-colors duration-700" />
                   </div>
                 )}
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80" />
                 
-                <div className="absolute top-8 left-8 flex gap-2">
+                <div className="absolute top-6 left-6 flex gap-2">
                    {project.tools.slice(0, 2).map((tool, tIdx) => (
-                     <span key={tIdx} className="px-4 py-2 glass rounded-xl text-[9px] font-mono font-black uppercase tracking-widest text-white/80">
+                     <span key={tIdx} className="px-3 py-1.5 glass rounded-lg text-[8px] font-mono font-black uppercase tracking-widest text-white/80">
                        {tool}
                      </span>
                    ))}
                 </div>
 
-                <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end">
+                <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
                    <div className="space-y-1">
-                     <span className="text-brand font-mono text-[10px] uppercase tracking-[0.4em] font-bold">{project.subtitle}</span>
-                     <h3 className="text-4xl font-display font-black text-white uppercase tracking-tighter">
+                     <span className="text-brand font-mono text-[9px] uppercase tracking-[0.4em] font-bold">{project.subtitle}</span>
+                     <h3 className="text-2xl font-display font-black text-white uppercase tracking-tighter">
                        {project.title.split(":")[0]}
                      </h3>
                    </div>
-                   <div className="w-16 h-16 bg-white text-black rounded-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-8 group-hover:translate-y-0 transition-all duration-500 shadow-2xl">
-                      <ArrowUpRight className="w-8 h-8" />
+                   <div className="w-12 h-12 bg-white text-black rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-8 group-hover:translate-y-0 transition-all duration-500 shadow-2xl">
+                      <ArrowUpRight className="w-6 h-6" />
                    </div>
                 </div>
               </div>
 
-              <div className="space-y-6 px-4">
-                <p className="text-gray-400 text-lg leading-relaxed line-clamp-3 font-medium">
+              <div className="space-y-4 px-2">
+                <p className="text-gray-400 text-sm leading-relaxed line-clamp-3 font-medium">
                   {project.description}
                 </p>
-                <div className="flex items-center gap-6">
-                  <button className="text-white text-[10px] font-mono tracking-[0.3em] uppercase font-black hover:text-brand transition-colors flex items-center gap-3 group/btn">
-                    Explore Workflow <span className="h-[1px] w-8 bg-brand/40 group-hover/btn:w-16 transition-all duration-500" />
+                <div className="flex flex-wrap items-center gap-4">
+                  <button className="text-white text-[9px] font-mono tracking-[0.3em] uppercase font-black hover:text-brand transition-colors flex items-center gap-2 group/btn">
+                    Explore <span className="h-[1px] w-4 bg-brand/40 group-hover/btn:w-8 transition-all duration-500" />
                   </button>
                   <button 
                     onClick={() => project.title.includes('SpareXchange') && setIsModalOpen(true)}
-                    className="text-gray-500 text-[10px] font-mono tracking-[0.3em] uppercase font-black hover:text-white transition-colors"
+                    className="text-gray-500 text-[9px] font-mono tracking-[0.3em] uppercase font-black hover:text-white transition-colors"
                   >
-                    Product Breakdown
+                    Breakdown
                   </button>
                 </div>
               </div>
