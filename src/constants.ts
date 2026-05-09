@@ -138,10 +138,6 @@ export const SKILLS = [
     category: "Product Management", 
     items: ["Product Strategy", "Market Research", "User Personas", "Basic version of the idea Definition", "Roadmapping", "Stakeholder Management", "Agile Methodology"] 
   },
-  {
-    category: "Programming Languages",
-    items: ["Python", "C", "SQL"]
-  },
   { 
     category: "Technical Stack", 
     items: ["Google AI Studio", "Gemini API", "n8n Automation", "API Integration", "Prompt Engineering"] 
