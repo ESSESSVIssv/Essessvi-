@@ -153,6 +153,10 @@ export const SKILLS = [
   { 
     category: "Soft Skills", 
     items: ["Customer Relationship Management", "Public Relations", "Advertising", "Problem Solving", "Stakeholder Management"] 
+  },
+  {
+    category: "Languages Known",
+    items: ["Telugu — Fluent", "English — Working Proficiency", "Hindi — Basic Proficiency", "Tamil — Conversational Understanding"]
   }
 ];
 

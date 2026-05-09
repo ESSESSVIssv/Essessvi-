@@ -149,45 +149,47 @@ export default function Resume() {
           </header>
 
           {/* Professional Summary */}
-          <section className="mb-6">
-            <h2 className="text-brand font-mono text-[9px] font-bold uppercase tracking-[0.4em] mb-2 print:text-black border-b border-white/5 pb-1">Professional Summary</h2>
+          <section className="mb-5">
+            <h2 className="text-brand font-mono text-[9px] font-bold uppercase tracking-[0.4em] mb-1.5 print:text-black border-b border-white/5 pb-0.5">Professional Summary</h2>
             <p className="text-gray-300 leading-relaxed text-[11px] print:text-black">
               {PERSONAL_INFO.bio}
             </p>
           </section>
 
           {/* Skills */}
-          <section className="mb-6">
-            <h2 className="text-brand font-mono text-[9px] font-bold uppercase tracking-[0.4em] mb-2 print:text-black border-b border-white/5 pb-1">Core Competencies</h2>
-            <div className="grid grid-cols-1 gap-1.5">
+          <section className="mb-5">
+            <h2 className="text-brand font-mono text-[9px] font-bold uppercase tracking-[0.4em] mb-1.5 print:text-black border-b border-white/5 pb-0.5">Core Competencies</h2>
+            <div className="grid grid-cols-1 gap-1">
               {SKILLS.map((group, idx) => (
                 <div key={idx} className="flex items-baseline gap-3">
-                  <h3 className="text-white font-bold text-[10px] uppercase tracking-wider w-[120px] shrink-0 print:text-black">{group.category}:</h3>
-                  <p className="text-gray-400 text-[10px] print:text-black leading-tight">{group.items.join(' • ')}</p>
+                  <h3 className="text-white font-bold text-[9px] uppercase tracking-wider w-[130px] shrink-0 print:text-black">{group.category}:</h3>
+                  <p className="text-gray-400 text-[10px] print:text-black leading-tight">
+                    {group.category === "Languages Known" ? group.items.join(' | ') : group.items.join(' • ')}
+                  </p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* Experience / Projects */}
-          <section className="mb-6">
-            <h2 className="text-brand font-mono text-[9px] font-bold uppercase tracking-[0.4em] mb-3 print:text-black border-b border-white/5 pb-1">Key Projects & Experience</h2>
-            <div className="space-y-4">
+          <section className="mb-5">
+            <h2 className="text-brand font-mono text-[9px] font-bold uppercase tracking-[0.4em] mb-2 print:text-black border-b border-white/5 pb-0.5">Key Projects & Experience</h2>
+            <div className="space-y-3.5">
               {EXPERIENCE.map((exp, idx) => (
                 <div key={idx}>
                   <div className="flex justify-between items-baseline mb-0.5">
-                    <h3 className="text-[12px] font-black text-white uppercase tracking-tight print:text-black">
-                      {exp.title} <span className="text-brand text-[9px] font-bold ml-1">@ {exp.company}</span>
+                    <h3 className="text-[11.5px] font-black text-white uppercase tracking-tight print:text-black">
+                      {exp.title} <span className="text-brand text-[8px] font-bold ml-1">@ {exp.company}</span>
                     </h3>
                     <span className="text-[8px] font-mono text-gray-500 uppercase tracking-widest">{exp.period}</span>
                   </div>
-                  <div className="text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-1.5 flex items-center gap-2">
+                  <div className="text-[8px] font-bold text-gray-400 uppercase tracking-widest mb-1 flex items-center gap-2">
                     <span>{exp.role}</span>
                   </div>
-                  <ul className="space-y-1">
+                  <ul className="space-y-0.5">
                     {exp.points.map((point, pIdx) => (
-                      <li key={pIdx} className="text-gray-400 text-[10.5px] leading-relaxed flex gap-2 print:text-black">
-                        <span className="text-brand font-black mt-1 text-[7px] shrink-0">●</span>
+                      <li key={pIdx} className="text-gray-400 text-[10px] leading-relaxed flex gap-2 print:text-black">
+                        <span className="text-brand font-black mt-1 text-[6.5px] shrink-0">●</span>
                         <span>{point}</span>
                       </li>
                     ))}
@@ -201,11 +203,11 @@ export default function Resume() {
           <div className="grid grid-cols-2 gap-8">
             <section>
               <h2 className="text-brand font-mono text-[9px] font-bold uppercase tracking-[0.4em] mb-3 print:text-black border-b border-white/5 pb-1">Education</h2>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {EDUCATION.map((edu, idx) => (
                   <div key={idx}>
                     <h3 className="text-[10px] font-bold text-white uppercase print:text-black leading-tight">{edu.institution}</h3>
-                    <p className="text-gray-400 text-[9px] leading-tight mb-0.5">{edu.degree}</p>
+                    <p className="text-gray-400 text-[8.5px] leading-tight mb-0.5">{edu.degree}</p>
                     <span className="text-[8px] font-mono text-gray-500 uppercase tracking-widest">{edu.period}</span>
                   </div>
                 ))}
@@ -214,7 +216,7 @@ export default function Resume() {
 
             <section>
               <h2 className="text-brand font-mono text-[9px] font-bold uppercase tracking-[0.4em] mb-3 print:text-black border-b border-white/5 pb-1">Certifications</h2>
-              <div className="space-y-2">
+              <div className="space-y-1.5">
                 {CERTIFICATIONS.slice(0, 5).map((cert, idx) => (
                   <div key={idx} className="flex justify-between items-start gap-4">
                     <p className="text-[9px] font-bold text-white uppercase leading-tight print:text-black flex-1">{cert.title}</p>
