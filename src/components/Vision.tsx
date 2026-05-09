@@ -27,20 +27,16 @@ export default function Vision() {
             <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
               Background & Vision
             </span>
-            <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter mb-12 text-gradient leading-[0.9]">
-              STRATEGY <br />
-              <span className="text-brand">DRIVES VALUE.</span>
+            <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter mb-12 text-white leading-[1.1]">
+              I’m a Computer Science & Engineering student at <span className="text-brand">The Apollo University</span> with an interest in Product Management and AI.
             </h2>
             
             <div className="space-y-10 text-xl md:text-3xl text-gray-400 font-medium leading-relaxed max-w-4xl">
-              <p className="text-white font-bold italic border-l-4 border-brand pl-8">
-                "I solve complex friction points by integrating AI logic with human-centric product strategy."
-              </p>
               <p className="tracking-tight">
-                As a Computer Science & Engineering student at <span className="text-white font-bold">The Apollo University (2022-2026)</span>, I specialize in the intersection of business intelligence and technical execution.
+                I like working on projects that combine technology, user experience, and problem-solving to build practical and useful products.
               </p>
               <p className="text-gray-500 text-lg md:text-2xl font-bold leading-snug">
-                I believe high-impact products originate from bridging market gaps—understanding unmet needs and building the MVPs that address them.
+                I believe high-impact products originate from bridging market gaps—understanding unmet needs and building a basic working version of the idea.
               </p>
             </div>
           </motion.div>

@@ -6,8 +6,11 @@
 import { motion } from 'motion/react';
 import { PROJECTS } from '../constants';
 import { ArrowUpRight, Zap } from 'lucide-react';
+import { useState } from 'react';
+import CaseStudyModal from './CaseStudyModal';
 
 export default function Projects() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="projects" className="bg-bg py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
@@ -44,7 +47,10 @@ export default function Projects() {
               transition={{ duration: 0.8, delay: idx * 0.1 }}
               className="group"
             >
-              <div className="premium-card aspect-[16/11] mb-10 group-hover:-translate-y-4 transition-all duration-700">
+              <div 
+                className="premium-card aspect-[16/11] mb-10 group-hover:-translate-y-4 transition-all duration-700 cursor-pointer"
+                onClick={() => project.title.includes('SpareXchange') && setIsModalOpen(true)}
+              >
                 {project.image ? (
                    <img 
                     src={project.image} 
@@ -88,7 +94,10 @@ export default function Projects() {
                   <button className="text-white text-[10px] font-mono tracking-[0.3em] uppercase font-black hover:text-brand transition-colors flex items-center gap-3 group/btn">
                     Explore Workflow <span className="h-[1px] w-8 bg-brand/40 group-hover/btn:w-16 transition-all duration-500" />
                   </button>
-                  <button className="text-gray-500 text-[10px] font-mono tracking-[0.3em] uppercase font-black hover:text-white transition-colors">
+                  <button 
+                    onClick={() => project.title.includes('SpareXchange') && setIsModalOpen(true)}
+                    className="text-gray-500 text-[10px] font-mono tracking-[0.3em] uppercase font-black hover:text-white transition-colors"
+                  >
                     Product Breakdown
                   </button>
                 </div>
@@ -97,6 +106,8 @@ export default function Projects() {
           ))}
         </div>
       </div>
+
+      <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

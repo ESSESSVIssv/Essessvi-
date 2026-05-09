@@ -34,7 +34,7 @@ export const PERSONAL_INFO = {
   linkedin: "https://www.linkedin.com/in/essessvi-vadlamudi",
   github: "https://github.com/vessessvi",
   resume: "/resume.pdf",
-  bio: "Final-year CSE student focused on turning user friction and market gaps into scalable, AI-driven products. Experienced in technical implementation and product lifecycle strategy."
+  bio: "I’m a Computer Science & Engineering student at The Apollo University with an interest in Product Management and AI. I like working on projects that combine technology, user experience, and problem-solving to build practical and useful products. Phone: 9392964456"
 };
 
 export const EDUCATION = [
@@ -100,7 +100,7 @@ export const PROJECTS = [
   {
     title: "SpareXchange Marketplace",
     subtitle: "End-to-End E-Commerce",
-    description: "A full-scale MVP for automobile part sales. Features include secure OTP transactions, real-time inventory tracking, and dynamic pricing.",
+    description: "A full-scale basic working version of the idea for automobile part sales. Features include secure OTP transactions, real-time inventory tracking, and dynamic pricing.",
     tools: ["Google AI Studio", "Gemini API", "Product Logic"],
     icon: Sparkles,
     image: sparexchangeImg
@@ -118,7 +118,7 @@ export const PROJECTS = [
 export const SKILLS = [
   { 
     category: "Product Management", 
-    items: ["Product Strategy", "Market Research", "User Personas", "MVP Definition", "Roadmapping", "Stakeholder Management", "Agile Methodology"] 
+    items: ["Product Strategy", "Market Research", "User Personas", "Basic version of the idea Definition", "Roadmapping", "Stakeholder Management", "Agile Methodology"] 
   },
   { 
     category: "Technical Stack", 
