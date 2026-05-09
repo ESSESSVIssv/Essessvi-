@@ -8,36 +8,44 @@ import { SERVICES } from '../constants';
 
 export default function Services() {
   return (
-    <section id="services" className="py-32 px-6 bg-white border-b border-slate-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-20">
-          <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-navy uppercase tracking-tighter whitespace-nowrap">
-            I CAN HELP YOU WITH
+    <section id="services" className="bg-bg py-32 border-t border-white/5 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <div className="mb-24">
+          <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
+            Solution Architecture
+          </span>
+          <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
+            STRATEGIC <br />
+            <span className="text-brand">OFFERINGS.</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {SERVICES.map((service, idx) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="group relative"
+              transition={{ duration: 0.8, delay: idx * 0.1 }}
+              className="premium-card p-10 group"
             >
-              <div className="text-4xl md:text-5xl font-bold text-slate-100 mb-8 font-display group-hover:text-blue-50 transition-colors">
+              <div className="text-7xl font-display font-black text-white/5 mb-12 group-hover:text-brand/10 transition-colors">
                 0{idx + 1}
               </div>
-              <h3 className="text-xl font-bold text-navy mb-4 uppercase tracking-tight">
+              <div className="w-12 h-12 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand mb-8 group-hover:scale-110 transition-all duration-500">
+                <service.icon size={24} />
+              </div>
+              <h3 className="text-xl font-display font-black text-white mb-4 uppercase tracking-tight leading-tight group-hover:text-brand transition-colors">
                 {service.title}
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed max-w-[200px]">
-                Providing end-to-end expertise in {service.title.toLowerCase()}.
+              <p className="text-gray-500 text-sm leading-relaxed font-medium mb-10">
+                Architecting high-conversion strategies in {service.title.toLowerCase()} to scale disruptive products.
               </p>
               
-              <div className="mt-8 overflow-hidden">
-                <div className="w-full h-px bg-slate-100 group-hover:bg-navy transition-colors duration-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform"></div>
+              <div className="flex items-center gap-4 text-brand group-hover:gap-6 transition-all">
+                <span className="text-[10px] font-mono font-black uppercase tracking-widest">Protocol Details</span>
+                <div className="h-[1px] flex-1 bg-brand/20"></div>
               </div>
             </motion.div>
           ))}

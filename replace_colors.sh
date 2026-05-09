@@ -1,0 +1,2 @@
+#!/bin/bash
+find src/components -type f -name "*.tsx" -exec sed -i -e 's/bg-white/bg-[#050505]/g' -e 's/bg-slate-50/bg-white\/5/g' -e 's/border-slate-100/border-white\/10/g' -e 's/bg-slate-100/bg-white\/10/g' -e 's/text-slate-500/text-slate-400/g' -e 's/text-slate-600/text-slate-300/g' -e 's/text-slate-900/text-slate-50/g' -e 's/text-slate-800/text-slate-100/g' -e 's/text-slate-100/text-slate-800/g' {} +
