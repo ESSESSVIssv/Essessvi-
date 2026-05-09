@@ -14,7 +14,7 @@ export default function Experience() {
           <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
             Work History
           </span>
-          <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
+          <h2 className="text-3xl md:text-5xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
             PROFESSIONAL <br />
             <span className="text-brand">EXPERIENCE.</span>
           </h2>

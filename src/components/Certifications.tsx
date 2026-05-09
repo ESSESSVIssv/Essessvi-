@@ -15,7 +15,7 @@ export default function Certifications() {
           <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
             Validated Expertise
           </span>
-          <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
+          <h2 className="text-3xl md:text-5xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
             INDUSTRY <br />
             <span className="text-brand">CERTIFICATIONS.</span>
           </h2>

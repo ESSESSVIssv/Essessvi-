@@ -14,7 +14,7 @@ export default function Projects() {
   return (
     <section id="projects" className="bg-bg py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <div className="mb-32 flex flex-col md:flex-row md:items-end justify-between gap-12">
+        <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-12">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -24,7 +24,7 @@ export default function Projects() {
             <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
               Market Solutions
             </span>
-            <h2 className="text-5xl md:text-9xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
+            <h2 className="text-3xl md:text-5xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
               FEATURED <br />
               <span className="text-brand">PROJECTS.</span>
             </h2>

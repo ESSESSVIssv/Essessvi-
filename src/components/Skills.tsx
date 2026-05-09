@@ -17,7 +17,7 @@ export default function Skills() {
           <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
             Technical Stack
           </span>
-          <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
+          <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
             CORE <br />
             <span className="text-brand">CAPABILITIES.</span>
           </h2>
@@ -33,10 +33,10 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
-                className="premium-card p-12 group flex flex-col min-h-[400px]"
+                className="premium-card p-8 group flex flex-col min-h-[350px]"
               >
-                <div className="w-14 h-14 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand mb-10 group-hover:scale-110 transition-all duration-500">
-                  <Icon size={24} />
+                <div className="w-12 h-12 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand mb-8 group-hover:scale-110 transition-all duration-500">
+                  <Icon size={20} />
                 </div>
 
                 <div className="text-[10px] font-mono text-brand mb-4 uppercase tracking-[0.4em] font-black opacity-60 group-hover:opacity-100 transition-opacity">

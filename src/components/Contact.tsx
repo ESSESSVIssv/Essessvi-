@@ -80,7 +80,7 @@ export default function Contact() {
             <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
               Get in Touch
             </span>
-            <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.9] mb-12">
+            <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.9] mb-12">
               LET'S <br />
               <span className="text-brand">CONNECT.</span>
             </h2>
@@ -106,7 +106,7 @@ export default function Contact() {
                 </div>
                 <div>
                    <p className="font-mono text-[10px] text-gray-500 font-bold uppercase tracking-[0.3em] mb-1">LinkedIn</p>
-                   <p className="text-white font-display font-black text-xl uppercase tracking-tight">V.ESSESSVI</p>
+                   <p className="text-white font-display font-black text-xl uppercase tracking-tight">ESSESSVI VADLAMUDI</p>
                 </div>
               </a>
             </div>
