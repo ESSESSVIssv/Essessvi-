@@ -81,28 +81,7 @@ export default function Hero() {
               Resume <FileText className="w-4 h-4 group-hover:text-brand transition-colors" />
             </button>
           </motion.div>
-
-          <div className="flex items-center gap-8 mt-16">
-            <a href={`tel:${PERSONAL_INFO.phone}`} className="text-gray-500 hover:text-brand transition-colors">
-              <Phone size={20} />
-            </a>
-            <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-brand transition-colors">
-              <Linkedin size={20} />
-            </a>
-            <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-brand transition-colors">
-              <Github size={20} />
-            </a>
-          </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          className="w-[1.5px] h-14 bg-gradient-to-b from-brand to-transparent"
-        />
-        <span className="text-[9px] font-mono tracking-[0.4em] uppercase opacity-40 font-bold">Scroll to Explore</span>
       </div>
     </section>
   );

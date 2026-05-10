@@ -8,6 +8,7 @@ import {
   Mail,
   Phone,
   Linkedin,
+  Github,
   Send,
   User,
   Sparkles,
@@ -166,6 +167,25 @@ export default function Contact() {
                   </p>
                   <p className="text-white font-display font-black text-xl uppercase tracking-tight">
                     ESSESSVI VADLAMUDI
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href={PERSONAL_INFO.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-8 group"
+              >
+                <div className="w-16 h-16 rounded-[2rem] bg-brand/10 border border-brand/20 flex items-center justify-center text-brand group-hover:scale-110 transition-all duration-500">
+                  <Github size={24} />
+                </div>
+                <div>
+                  <p className="font-mono text-[10px] text-gray-500 font-bold uppercase tracking-[0.3em] mb-1">
+                    GitHub
+                  </p>
+                  <p className="text-white font-display font-black text-xl uppercase tracking-tight">
+                    V-ESSESSVI
                   </p>
                 </div>
               </a>

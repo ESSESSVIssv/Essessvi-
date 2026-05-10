@@ -36,7 +36,7 @@ export const PERSONAL_INFO = {
   phone: "9392964456",
   location: "Chittoor, India",
   linkedin: "https://www.linkedin.com/in/essessvi-vadlamudi-ab2590273",
-  github: "https://github.com/vessessvi",
+  github: "https://github.com/dashboard",
   resume: "/resume.pdf",
   website: "https://essessvi.vercel.app",
   bio: "I engineered WhatsApp automation at AgentRoomAI that reduced manual work by 70%, built a full automobile marketplace from user journey to live transactions, and developed an epidemic forecasting engine with 90% accuracy using WHO data. I don't just learn tools — I deploy them. Currently open for internships and full time opportunities."
