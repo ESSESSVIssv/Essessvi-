@@ -31,7 +31,7 @@ import sparexchangeImg from './assets/images/regenerated_image_1777977231180.png
 export const PERSONAL_INFO = {
   name: "ESSESSVI VADLAMUDI",
   firstName: "ESSESSVI",
-  role: "Prompt Engineer",
+  role: "Prompt Engineer | n8n • OpenAI • Claude | Open to Internships | Passionate about building things that matter | Human first, professional second.",
   email: "vessessvi2005@gmail.com",
   phone: "9392964456",
   location: "Chittoor, India",

@@ -52,7 +52,7 @@ export default function Hero() {
           >
             <div className="text-lg md:text-2xl font-medium mb-8 tracking-tight uppercase text-center">
               <span className="text-white block mb-3">{PERSONAL_INFO.name}</span>
-              <span className="text-brand block leading-tight">Prompt Engineer</span>
+              <span className="text-brand block leading-tight">Prompt Engineer | n8n • OpenAI • Claude | Open to Internships | Passionate about building things that matter | Human first, professional second.</span>
             </div>
             <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto font-medium mb-6 text-center">
               I turn ideas into real AI systems — from building a full automobile marketplace to deploying WhatsApp AI bots that run in production.

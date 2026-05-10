@@ -133,7 +133,7 @@ export default function Resume() {
               {PERSONAL_INFO.name}
             </h1>
             <p className="text-brand font-display font-bold text-[10px] uppercase tracking-[0.4em] mb-3 leading-tight">
-              {PERSONAL_INFO.role}
+              Prompt Engineer | n8n • OpenAI • Claude | Open to Internships
             </p>
             <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 text-[9px] font-mono text-gray-400 uppercase tracking-widest leading-none">
               <span>{PERSONAL_INFO.phone}</span>
