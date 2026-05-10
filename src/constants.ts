@@ -121,7 +121,8 @@ export const PROJECTS = [
     description: "A full-scale basic working version of the idea for automobile part sales. Features include secure OTP transactions, real-time inventory tracking, and dynamic pricing.",
     tools: ["Google AI Studio", "Gemini API", "Product Logic"],
     icon: Sparkles,
-    image: sparexchangeImg
+    image: sparexchangeImg,
+    link: "https://sparexchange-tau.vercel.app"
   },
   {
     title: "Health Forecasting System",
@@ -171,26 +172,6 @@ export const CERTIFICATIONS = [
   }
 ];
 
-export const CLUBS = [
-  {
-    role: "NSS Coordinator",
-    organization: "The Apollo University",
-    description: "Leading community service initiatives and organizing social welfare programs for the National Service Scheme."
-  },
-  {
-    role: "Echo Club Member",
-    organization: "The Apollo University",
-    description: "Actively participating in environmental conservation and sustainability projects within the campus community."
-  }
-];
-
-export const ACHIEVEMENTS = [
-  "Gold Medal, Hindi Olympiad 2019",
-  "NSS Coordinator and Member",
-  "ASER 2024 Volunteer",
-  "Google Cloud Skillboosts Certified"
-];
-
 export const SERVICES = [
   { 
     title: "AI Chatbot Development", 
@@ -225,7 +206,6 @@ export const NAV_LINKS = [
   { name: "Vision", href: "/vision" },
   { name: "Work", href: "/work" },
   { name: "Journey", href: "/journey" },
-  { name: "Community", href: "/community" },
   { name: "Awards", href: "/awards" },
   { name: "Resume", href: "/resume" },
   { name: "Services", href: "/services" },

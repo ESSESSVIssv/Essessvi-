@@ -4,7 +4,7 @@
  */
 
 import { motion } from 'motion/react';
-import { PERSONAL_INFO, EXPERIENCE, EDUCATION, SKILLS, CERTIFICATIONS, CLUBS } from '../constants';
+import { PERSONAL_INFO, EXPERIENCE, EDUCATION, SKILLS, CERTIFICATIONS } from '../constants';
 import { Download, Mail, Phone, MapPin, Linkedin, Globe, ExternalLink, Printer, ArrowRight, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 // @ts-ignore - html2pdf.js doesn't have official types
@@ -74,7 +74,7 @@ export default function Resume() {
           clonedDoc.head.appendChild(style);
         }
       },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' as 'portrait' }
     };
 
     try {

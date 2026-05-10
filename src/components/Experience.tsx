@@ -4,7 +4,7 @@
  */
 
 import { motion } from 'motion/react';
-import { EXPERIENCE, CLUBS } from '../constants';
+import { EXPERIENCE } from '../constants';
 
 export default function Experience() {
   return (
@@ -74,36 +74,6 @@ export default function Experience() {
               </div>
             </motion.div>
           ))}
-        </div>
-        
-        {/* Leadership & Activities */}
-        <div className="mt-16 pt-16 border-t border-white/5">
-          <div className="mb-12">
-             <span className="text-[#FF7A00] font-bold uppercase tracking-[0.3em] text-sm mb-6 block">
-               Leadership
-             </span>
-             <h3 className="text-3xl md:text-5xl font-bold text-[#F9FAFB] uppercase tracking-tighter">
-               CLUBS & <span className="text-[#FF7A00]">ACTIVITIES</span>
-             </h3>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {CLUBS.map((club, idx) => (
-              <motion.div
-                key={club.role + club.organization}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="p-8 bg-white/[0.02] border border-white/5 rounded-[2rem] hover:bg-[#FF7A00]/[0.02] transition-all"
-              >
-                <div className="flex justify-between items-start mb-4">
-                  <h4 className="text-xl font-bold text-[#F9FAFB]">{club.organization}</h4>
-                </div>
-                <p className="text-[#9CA3AF] text-sm font-bold uppercase tracking-widest">{club.role}</p>
-                <p className="mt-4 text-sm text-gray-500 leading-relaxed">{club.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

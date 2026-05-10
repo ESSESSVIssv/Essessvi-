@@ -80,9 +80,11 @@ export default function Projects() {
                        {project.title.split(":")[0]}
                      </h3>
                    </div>
-                   <div className="w-12 h-12 bg-white text-black rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-8 group-hover:translate-y-0 transition-all duration-500 shadow-2xl">
-                      <ArrowUpRight className="w-6 h-6" />
-                   </div>
+                   {project.title.includes('SpareXchange') && (
+                     <div className="w-12 h-12 bg-white text-black rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-8 group-hover:translate-y-0 transition-all duration-500 shadow-2xl">
+                        <ArrowUpRight className="w-6 h-6" />
+                     </div>
+                   )}
                 </div>
               </div>
 
@@ -91,9 +93,16 @@ export default function Projects() {
                   {project.description}
                 </p>
                 <div className="flex flex-wrap items-center gap-4">
-                  <button className="text-white text-[9px] font-mono tracking-[0.3em] uppercase font-black hover:text-brand transition-colors flex items-center gap-2 group/btn">
-                    Explore <span className="h-[1px] w-4 bg-brand/40 group-hover/btn:w-8 transition-all duration-500" />
-                  </button>
+                  {project.link ? (
+                    <a 
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white text-[9px] font-mono tracking-[0.3em] uppercase font-black hover:text-brand transition-colors flex items-center gap-2 group/btn"
+                    >
+                      Visit Project <span className="h-[1px] w-4 bg-brand/40 group-hover/btn:w-8 transition-all duration-500" />
+                    </a>
+                  ) : null}
                   <button 
                     onClick={() => project.title.includes('SpareXchange') && setIsModalOpen(true)}
                     className="text-gray-500 text-[9px] font-mono tracking-[0.3em] uppercase font-black hover:text-white transition-colors"

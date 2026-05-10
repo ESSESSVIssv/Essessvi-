@@ -6,6 +6,7 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface CaseStudyModalProps {
   isOpen: boolean;
@@ -13,6 +14,8 @@ interface CaseStudyModalProps {
 }
 
 export default function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -56,7 +59,7 @@ export default function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps)
             <header className="relative py-24 px-8 md:px-16 border-b border-white/5 bg-gradient-to-br from-brand/5 to-transparent">
               <div className="max-w-4xl">
                 <span className="font-mono text-xs text-brand uppercase tracking-[0.3em] mb-6 block font-bold">
-                  PM Case Study · 2024–2025
+                  Project · 2024–2025
                 </span>
                 <h1 className="text-5xl md:text-8xl font-display font-black text-white leading-none tracking-tighter mb-12 uppercase">
                   Spare<span className="text-brand">Xchange</span>
@@ -65,7 +68,7 @@ export default function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps)
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                   <div>
                     <span className="font-mono text-[10px] text-gray-500 uppercase tracking-widest block mb-2">Role</span>
-                    <span className="text-white font-bold text-sm tracking-tight">AI Developer & PM</span>
+                    <span className="text-white font-bold text-sm tracking-tight">AI Automation Engineer</span>
                   </div>
                   <div>
                     <span className="font-mono text-[10px] text-gray-500 uppercase tracking-widest block mb-2">Domain</span>
@@ -222,9 +225,15 @@ export default function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps)
               {/* Footer CTA */}
               <div className="text-center pt-8 border-t border-white/5">
                 <p className="text-gray-500 font-mono text-xs uppercase tracking-widest mb-8">Want to discuss this case study?</p>
-                <a href="mailto:vessessvi2005@gmail.com" className="px-12 py-5 bg-brand text-black font-display font-black text-xs uppercase tracking-[0.2em] rounded-2xl hover:scale-105 transition-all inline-block">
-                  Initiate Correspondence
-                </a>
+                <button 
+                  onClick={() => {
+                    onClose();
+                    navigate('/connect');
+                  }}
+                  className="px-12 py-5 bg-brand text-black font-display font-black text-xs uppercase tracking-[0.2em] rounded-2xl hover:scale-105 transition-all inline-block"
+                >
+                  Talk to AI Concierge
+                </button>
               </div>
             </div>
           </div>
