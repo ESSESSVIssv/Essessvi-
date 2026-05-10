@@ -14,7 +14,7 @@ export default function Footer() {
             {PERSONAL_INFO.name}
           </h2>
           <p className="text-[10px] font-mono text-gray-500 uppercase tracking-[0.3em] font-bold">
-            AI Product Builder | Product Management Enthusiast
+            AI Automation Engineer | Chittoor, India
           </p>
         </div>
 

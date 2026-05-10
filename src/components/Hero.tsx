@@ -40,8 +40,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-display font-black leading-[0.85] tracking-tighter text-gradient mb-12 uppercase text-center"
           >
-            BUILDING INTELLIGENT <br />
-            <span className="text-brand">EXPERIENCES</span>
+            AI AUTOMATION <br />
+            <span className="text-brand">ENGINEER</span>
           </motion.h1>
 
           <motion.div
@@ -52,10 +52,13 @@ export default function Hero() {
           >
             <div className="text-lg md:text-2xl font-medium mb-8 tracking-tight uppercase text-center">
               <span className="text-white block mb-3">{PERSONAL_INFO.name}</span>
-              <span className="text-brand block leading-tight">Aspiring Product Manager | AI Workflow Engineer</span>
+              <span className="text-brand block leading-tight">AI Workflow Engineer • n8n • APIs • Prompt Engineering</span>
             </div>
-            <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto font-medium">
-              Bridging the gap between technical execution and market strategy to build products that solve real-world problems.
+            <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto font-medium mb-6 text-center">
+              I turn ideas into real AI systems — from building a full automobile marketplace to deploying WhatsApp AI bots that run in production.
+            </p>
+            <p className="text-xs md:text-sm text-gray-400 uppercase tracking-widest text-center font-mono">
+              1 Company • 3 Projects • 4 Certifications • 4 Months Real Experience
             </p>
           </motion.div>
 

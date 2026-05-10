@@ -18,7 +18,7 @@ interface Message {
 
 export default function Contact() {
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: `Hi there! I'm ${PERSONAL_INFO.firstName}'s AI assistant. How can I help you learn more about my product experience or technical projects today?` }
+    { role: 'assistant', content: `Hi! I'm Essessvi's AI assistant. Ask me anything about his AI projects or automation work!` }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -67,7 +67,7 @@ export default function Contact() {
 
   const trustBadges = [
     { icon: ShieldCheck, label: 'Availability', value: 'Full-Time / Intern' },
-    { icon: Zap, label: 'Focus', value: 'AI & PM' }
+    { icon: Zap, label: 'Focus', value: 'AI Automation & No-Code' }
   ];
 
   return (

@@ -27,15 +27,12 @@ export default function Vision() {
               Background & Vision
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-black uppercase tracking-tighter mb-12 text-white leading-[1.2]">
-              I’m a Computer Science & Engineering student at <span className="text-brand">The Apollo University</span> with an interest in Product Management and AI.
+              I'M ESSESSVI — A CSE FINAL YEAR STUDENT FROM <span className="text-brand">CHITTOOR</span> WHO BUILDS REAL AI SYSTEMS.
             </h2>
             
-            <div className="space-y-10 text-lg md:text-xl text-gray-400 font-medium leading-relaxed">
+            <div className="space-y-10 text-base md:text-xl text-gray-400 font-medium leading-relaxed">
               <p className="tracking-tight">
-                I like working on projects that combine technology, user experience, and problem-solving to build practical and useful products.
-              </p>
-              <p className="text-gray-500 text-base md:text-lg font-bold leading-snug">
-                I believe high-impact products originate from bridging market gaps—understanding unmet needs and building a basic working version of the idea.
+                I engineered WhatsApp automation at AgentRoomAI that reduced manual work by 70%, built a full automobile marketplace from user journey to live transactions, and developed an epidemic forecasting engine with 90% accuracy using WHO data. I don't just learn tools — I deploy them. Currently open for internships and full time opportunities.
               </p>
             </div>
           </motion.div>

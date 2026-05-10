@@ -31,15 +31,15 @@ import sparexchangeImg from './assets/images/regenerated_image_1777977231180.png
 export const PERSONAL_INFO = {
   name: "ESSESSVI VADLAMUDI",
   firstName: "ESSESSVI",
-  role: "Aspiring Product Manager | AI Workflow Engineer",
+  role: "AI Automation Engineer",
   email: "vessessvi2005@gmail.com",
   phone: "9392964456",
-  location: "Chittoor, Andhra Pradesh, India",
+  location: "Chittoor, India",
   linkedin: "https://www.linkedin.com/in/essessvi-vadlamudi-ab2590273",
   github: "https://github.com/vessessvi",
   resume: "/resume.pdf",
   website: "https://essessvi.vercel.app",
-  bio: "I’m a Computer Science & Engineering student at The Apollo University with an interest in Product Management and AI. I like working on projects that combine technology, user experience, and problem-solving to build practical and useful products."
+  bio: "I engineered WhatsApp automation at AgentRoomAI that reduced manual work by 70%, built a full automobile marketplace from user journey to live transactions, and developed an epidemic forecasting engine with 90% accuracy using WHO data. I don't just learn tools — I deploy them. Currently open for internships and full time opportunities."
 };
 
 export const EDUCATION = [
@@ -67,7 +67,7 @@ export const EXPERIENCE = [
   {
     title: "AgentRoomAI",
     role: "AI Workflow Engineer",
-    company: "AgentRoomAI",
+    company: "Early Stage AI Startup | agentroomai.com",
     period: "Dec 2025 – April 2026",
     description: "Designed and developed an AI-powered WhatsApp automation system using n8n and OpenAI.",
     points: [
@@ -135,20 +135,12 @@ export const PROJECTS = [
 
 export const SKILLS = [
   { 
-    category: "Product Management", 
-    items: ["Product Strategy", "Market Research", "User Personas", "Basic version of the idea Definition", "Roadmapping", "Stakeholder Management", "Agile Methodology"] 
-  },
-  { 
     category: "Technical Stack", 
-    items: ["Google AI Studio", "Gemini API", "n8n Automation", "API Integration", "Prompt Engineering"] 
-  },
-  { 
-    category: "Data & Strategy", 
-    items: ["Data Analysis", "Metric Tracking", "Competitor Benchmarking", "User Journey Mapping", "Logic Modeling"] 
+    items: ["Google AI Studio", "Gemini API", "n8n Automation", "API Integration", "Prompt Engineering", "WhatsApp Business API"] 
   },
   { 
     category: "Soft Skills", 
-    items: ["Customer Relationship Management", "Public Relations", "Advertising", "Problem Solving", "Stakeholder Management"] 
+    items: ["Customer Relationship Management", "Public Relations", "Problem Solving"] 
   },
   {
     category: "Languages Known",
@@ -201,34 +193,29 @@ export const ACHIEVEMENTS = [
 
 export const SERVICES = [
   { 
-    title: "AI Product Strategy", 
+    title: "AI Chatbot Development", 
     icon: Target,
     description: "Architecting high-conversion AI roadmaps that bridge market gaps and drive scalable user value."
   },
   { 
-    title: "Workflow Automation", 
+    title: "Business Process Automation", 
     icon: Zap,
     description: "Eliminating operational bottlenecks by engineering intelligent autonomous systems and n8n pipelines."
   },
   { 
-    title: "Product Research", 
+    title: "AI Tool Integration", 
     icon: Search,
     description: "Deep-dive user journey mapping and problem discovery to validate high-impact product hypotheses."
   },
   { 
-    title: "AI Assistant Design", 
+    title: "WhatsApp Bot Development", 
     icon: Brain,
     description: "Designing conversational interfaces and agents that feel human-centric and solve real-world friction."
   },
   { 
-    title: "Process Optimization", 
+    title: "n8n Workflow Building", 
     icon: Cpu,
     description: "Refining technical execution and logic models to maximize output efficiency and resource allocation."
-  },
-  { 
-    title: "Market Analysis", 
-    icon: BarChart3,
-    description: "Competitor benchmarking and data-driven insights to position products for maximum technical edge."
   }
 ];
 
