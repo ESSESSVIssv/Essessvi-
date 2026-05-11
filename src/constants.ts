@@ -106,6 +106,33 @@ export const EXPERIENCE = [
   }
 ];
 
+export const CLUBS = [
+  {
+    title: "National Service Scheme (NSS)",
+    role: "Coordinator & Member",
+    company: "Clubs & Organizations",
+    period: "2022 – 2026",
+    description: "Organized and participated in community service initiatives and social awareness campaigns.",
+    points: [
+      "Led student groups in organizing community outreach and environmental campaigns.",
+      "Facilitated collaboration between university administration and student volunteers."
+    ],
+    tools: ["Leadership", "Event Coordination", "Community Service"]
+  },
+  {
+    title: "Echo Club",
+    role: "Member",
+    company: "Clubs & Organizations",
+    period: "2024 – 2025",
+    description: "Active member contributing to environmental conservation and awareness programs.",
+    points: [
+      "Participated in sustainability drives and eco-friendly campus initiatives.",
+      "Collaborated with team members to execute awareness events."
+    ],
+    tools: ["Teamwork", "Sustainability", "Public Awareness"]
+  }
+];
+
 export const PROJECTS = [
   {
     title: "AI WhatsApp Agent",

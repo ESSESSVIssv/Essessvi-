@@ -4,7 +4,7 @@
  */
 
 import { motion } from 'motion/react';
-import { PERSONAL_INFO, EXPERIENCE, EDUCATION, SKILLS, CERTIFICATIONS } from '../constants';
+import { PERSONAL_INFO, EXPERIENCE, CLUBS, EDUCATION, SKILLS, CERTIFICATIONS } from '../constants';
 import { Download, Mail, Phone, MapPin, Linkedin, Globe, ExternalLink, Printer, ArrowRight, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 // @ts-ignore - html2pdf.js doesn't have official types
@@ -188,6 +188,34 @@ export default function Resume() {
                   </div>
                   <ul className="space-y-0.5">
                     {exp.points.map((point, pIdx) => (
+                      <li key={pIdx} className="text-gray-400 text-[10px] leading-relaxed flex gap-2 print:text-black">
+                        <span className="text-brand font-black mt-1 text-[6.5px] shrink-0">●</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Clubs */}
+          <section className="mb-5">
+            <h2 className="text-brand font-mono text-[9px] font-bold uppercase tracking-[0.4em] mb-2 print:text-black border-b border-white/5 pb-0.5">Clubs & Organizations</h2>
+            <div className="space-y-3.5">
+              {CLUBS.map((club, idx) => (
+                <div key={idx}>
+                  <div className="flex justify-between items-baseline mb-0.5">
+                    <h3 className="text-[11.5px] font-black text-white uppercase tracking-tight print:text-black">
+                      {club.title}
+                    </h3>
+                    <span className="text-[8px] font-mono text-gray-500 uppercase tracking-widest">{club.period}</span>
+                  </div>
+                  <div className="text-[8px] font-bold text-gray-400 uppercase tracking-widest mb-1 flex items-center gap-2">
+                    <span>{club.role}</span>
+                  </div>
+                  <ul className="space-y-0.5">
+                    {club.points.map((point, pIdx) => (
                       <li key={pIdx} className="text-gray-400 text-[10px] leading-relaxed flex gap-2 print:text-black">
                         <span className="text-brand font-black mt-1 text-[6.5px] shrink-0">●</span>
                         <span>{point}</span>
