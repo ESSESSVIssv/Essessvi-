@@ -31,7 +31,7 @@ import sparexchangeImg from './assets/images/regenerated_image_1777977231180.png
 export const PERSONAL_INFO = {
   name: "ESSESSVI VADLAMUDI",
   firstName: "ESSESSVI",
-  role: "Prompt Engineer & Aspiring Product Manager | n8n • OpenAI • Claude | Open to Internships",
+  role: "Aspiring Prompt Engineer & Aspiring Product Manager | Open to Internships",
   email: "vessessvi2005@gmail.com",
   phone: "9392964456",
   location: "Chittoor, India",
@@ -239,6 +239,5 @@ export const NAV_LINKS = [
   { name: "Work", href: "/work" },
   { name: "Journey", href: "/journey" },
   { name: "Awards", href: "/awards" },
-  { name: "Resume", href: "/resume" },
   { name: "Connect", href: "/connect" }
 ];

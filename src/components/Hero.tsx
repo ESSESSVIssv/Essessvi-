@@ -38,10 +38,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-black leading-[0.85] tracking-tighter text-gradient mb-12 uppercase text-center"
+            className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.9] tracking-tighter text-gradient mb-8 text-center"
           >
-            AI AUTOMATION <br />
-            <span className="text-brand">ENGINEER</span>
+            ASPIRING PROMPT ENGINEER <br />
+            <span className="text-brand">& ASPIRING PRODUCT MANAGER</span>
           </motion.h1>
 
           <motion.div
@@ -52,7 +52,7 @@ export default function Hero() {
           >
             <div className="text-lg md:text-2xl font-medium mb-8 tracking-tight uppercase text-center">
               <span className="text-white block mb-3">{PERSONAL_INFO.name}</span>
-              <span className="text-brand block leading-tight">Prompt Engineer & Aspiring Product Manager | n8n • OpenAI • Claude | Open to Internships</span>
+              <span className="text-brand block leading-tight">Open to Internships</span>
             </div>
             <p className="text-xs md:text-sm text-gray-400 uppercase tracking-widest text-center font-mono">
               1 Company • 3 Projects • 5 Certifications • 4 Months Real Experience
@@ -70,12 +70,6 @@ export default function Hero() {
               className="px-10 py-5 bg-brand text-black font-display font-black text-xs uppercase tracking-[0.2em] rounded-2xl flex items-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(255,122,0,0.3)]"
             >
               View Projects <ArrowRight className="w-4 h-4" />
-            </button>
-            <button 
-              onClick={() => navigate('/resume')}
-              className="px-10 py-5 glass hover:bg-white/[0.05] text-white font-display font-black text-xs uppercase tracking-[0.2em] rounded-2xl transition-all border-white/10 flex items-center gap-3 group"
-            >
-              Resume <FileText className="w-4 h-4 group-hover:text-brand transition-colors" />
             </button>
           </motion.div>
         </div>

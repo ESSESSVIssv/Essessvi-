@@ -17,10 +17,7 @@ import {
   Zap,
 } from "lucide-react";
 import { PERSONAL_INFO } from "../constants";
-import { GoogleGenAI } from "@google/genai";
 import { motion } from "motion/react";
-
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY as string });
 
 interface Message {
   role: "user" | "assistant";
@@ -58,25 +55,34 @@ export default function Contact() {
     setIsLoading(true);
 
     try {
-      const response = await ai.models.generateContent({
-        model: "gemini-3-flash-preview",
-        contents: `
-          Professional assistant for ${PERSONAL_INFO.name}. 
-          Context: ${PERSONAL_INFO.bio}. 
-          Role: ${PERSONAL_INFO.role}.
-          Visitor Message: ${userMessage}
-          
-          Respond concisely and professionally as an assistant.
-        `,
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: userMessage,
+          context: PERSONAL_INFO.bio,
+          role: PERSONAL_INFO.role,
+        }),
       });
+      
+      const data = await response.json();
+      
+      if (data.error) throw new Error(data.error);
 
-      const botResponse =
-        response.text ||
-        "I'm sorry, I couldn't generate a response. Please reach out via email!";
+      const botResponse = data.text || "I'm sorry, I couldn't generate a response.";
+      
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: botResponse },
       ]);
+      
+      if (data.audio) {
+        const audio = new Audio(`data:audio/wav;base64,${data.audio}`);
+        audio.play().catch(console.error);
+      } else {
+        const utterance = new SpeechSynthesisUtterance(botResponse);
+        window.speechSynthesis.speak(utterance);
+      }
     } catch (error) {
       setMessages((prev) => [
         ...prev,

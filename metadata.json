@@ -2,5 +2,5 @@
   "name": "V.Essessvi | Portfolio",
   "description": "Personal portfolio of V.Essessvi, an Aspiring Product Manager specializing in AI product development and product thinking.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

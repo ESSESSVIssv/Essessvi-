@@ -49,7 +49,7 @@ export default function Certifications() {
 
                 <div className="mt-auto flex items-center justify-between border-t border-white/5 pt-8">
                    <span className="text-xs font-mono text-gray-600 uppercase tracking-widest">{cert.date}</span>
-                   <span className="text-[10px] font-mono text-brand uppercase tracking-[0.3em] font-black group-hover:translate-x-2 transition-transform">Verify Unit</span>
+                   <span className="text-[10px] font-mono text-brand uppercase tracking-[0.3em] font-black group-hover:translate-x-2 transition-transform">Verify</span>
                 </div>
               </div>
             </motion.div>
