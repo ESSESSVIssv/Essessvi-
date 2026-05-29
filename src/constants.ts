@@ -240,6 +240,5 @@ export const NAV_LINKS = [
   { name: "Journey", href: "/journey" },
   { name: "Awards", href: "/awards" },
   { name: "Resume", href: "/resume" },
-  { name: "Services", href: "/services" },
   { name: "Connect", href: "/connect" }
 ];

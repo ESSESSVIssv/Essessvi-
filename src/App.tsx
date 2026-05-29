@@ -8,7 +8,6 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import Services from './components/Services';
 import Vision from './components/Vision';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
@@ -56,7 +55,6 @@ function AppRoutes() {
         <Route path="/journey" element={<PageWrapper><Experience /></PageWrapper>} />
         <Route path="/awards" element={<PageWrapper><Certifications /></PageWrapper>} />
         <Route path="/resume" element={<PageWrapper><Resume /></PageWrapper>} />
-        <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
         <Route path="/connect" element={<PageWrapper><Contact /></PageWrapper>} />
       </Routes>
     </AnimatePresence>
