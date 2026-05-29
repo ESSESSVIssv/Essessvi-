@@ -178,6 +178,11 @@ export const SKILLS = [
 
 export const CERTIFICATIONS = [
   {
+    title: "Aha! Product Management Professional Certificate",
+    issuer: "LinkedIn Learning",
+    date: "May 2026"
+  },
+  {
     title: "Google Cloud Computing Foundations",
     issuer: "Google Cloud",
     date: "Dec 2023"
