@@ -55,7 +55,7 @@ export default function Hero() {
               <span className="text-brand block leading-tight">Open to Internships</span>
             </div>
             <p className="text-xs md:text-sm text-gray-400 uppercase tracking-widest text-center font-mono">
-              1 Company • 3 Projects • 5 Certifications • 4 Months Real Experience
+              1 Company • 4 Projects • 5 Certifications • 4 Months Real Experience
             </p>
           </motion.div>
 

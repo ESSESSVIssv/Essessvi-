@@ -27,9 +27,10 @@ import {
 } from 'lucide-react';
 import arimaImg from './assets/images/regenerated_image_1777976972209.png';
 import sparexchangeImg from './assets/images/regenerated_image_1777977231180.png';
+import joblenceImg from './assets/images/joblence_mockup_1781166249602.png';
 
 export const PERSONAL_INFO = {
-  name: "ESSESSVI VADLAMUDI",
+  name: "V.ESSESSVI",
   firstName: "ESSESSVI",
   role: "Aspiring Prompt Engineer & Aspiring Product Manager | Open to Internships",
   email: "vessessvi2005@gmail.com",
@@ -39,7 +40,7 @@ export const PERSONAL_INFO = {
   github: "https://github.com/dashboard",
   resume: "/resume.pdf",
   website: "https://essessvi.vercel.app",
-  bio: "I engineered WhatsApp automation at AgentRoomAI that reduced manual work by 70%, built a full automobile marketplace from user journey to live transactions, and developed an epidemic forecasting engine with 90% accuracy using WHO data. I don't just learn tools — I deploy them. Currently open for internships and full time opportunities."
+  bio: "I am a final-year CSE student who combines product thinking with hands-on execution. From n8n automation workflows at AgentRoomAI to building SpareXchange and JobLence (an AI job application assistant), I translate problem discovery into high-impact products. Currently seeking Product Management internships and full-time opportunities."
 };
 
 export const EDUCATION = [
@@ -79,6 +80,20 @@ export const EXPERIENCE = [
     tools: ["n8n", "WhatsApp API", "OpenAI", "Workflow Engineering"]
   },
   {
+    title: "JobLence",
+    role: "AI Job Application Assistant",
+    company: "JobLence",
+    period: "Feb 2025 – Present",
+    description: "An AI-powered job application assistant designed to evaluate resume-to-job relevance, design seamless applicant user flows, and automate job discovery pipelines.",
+    points: [
+      "Built an AI-powered platform that matches resumes with relevant job opportunities.",
+      "Designed user flows and product features to simplify the job application process.",
+      "Automated job discovery and recommendation workflows.",
+      "Led product planning, AI integration, and end-to-end development."
+    ],
+    tools: ["AI Integration", "Product Planning", "Workflow Automation", "User Experience (UX)"]
+  },
+  {
     title: "SpareXChange: Automobile Marketplace",
     role: "Product Lead & Developer",
     company: "Apollo University (Project)",
@@ -92,17 +107,19 @@ export const EXPERIENCE = [
     tools: ["Google AI Studio", "Gemini API", "Product Logic"]
   },
   {
-    title: "Epidemic Trend Forecasting",
-    role: "Core Team Member",
+    title: "Predicting Epidemics: Health Forecasting",
+    role: "Core Developer & Thesis Presenter",
     company: "Apollo University (Research Project)",
     period: "Oct 2024 – Dec 2024",
-    description: "Utilized predictive modeling to forecast disease outbreaks based on historical WHO data.",
+    description: "Designed and developed an epidemic time-series system using ARIMA models to analyze historical records, identify patterns, and map future disease outbreaks under the guidance of Dr. K. Sudheer.",
     points: [
-      "Achieved 90% accuracy in short-term trend prediction using ARIMA time-series models.",
-      "Processed 10k+ rows of raw WHO data into structured formats.",
-      "Presented data-driven insights for public health awareness."
+      "Preprocessed, formatted, and cleaned 10,000+ data points of raw WHO historical epidemic records using Python, Pandas, and NumPy to establish stationarity.",
+      "Designed and fitted ARIMA (AutoRegressive Integrated Moving Average) algorithms, conducting robust mathematical parameters (p, d, q) tuning.",
+      "Evaluated model performance using statistical metrics, achieving a Mean Absolute Error (MAE) of 45.32 and a Root Mean Square Error (RMSE) of 60.78.",
+      "Structured diagnostic plotting pipelines with Matplotlib/Seaborn to outline confidence limits (95% interval) and observed-vs-predicted curves.",
+      "Presented thesis findings in a departmental forum, laying the groundwork for resource optimization and adaptive healthcare response planning."
     ],
-    tools: ["Python", "Pandas", "ARIMA", "Statsmodels"]
+    tools: ["Python", "Pandas", "NumPy", "Predictive Analytics", "ARIMA", "Statsmodels", "Matplotlib", "Seaborn"]
   }
 ];
 
@@ -134,6 +151,15 @@ export const CLUBS = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "JobLence: AI Job Assistant",
+    subtitle: "AI Job Application Assistant",
+    description: "Built an AI-powered tool that analyzes resumes, matches them with relevant job opportunities, calculates job-fit scores, and streamlines the application process through automation. Designed to help job seekers save time and apply smarter.",
+    tools: ["Resume Matching", "Job-Fit Scores", "AI Automation", "React / Vercel"],
+    icon: Briefcase,
+    image: joblenceImg,
+    link: "https://joblens-ten.vercel.app/"
+  },
   {
     title: "AI WhatsApp Agent",
     subtitle: "Automated Support & Logistics",

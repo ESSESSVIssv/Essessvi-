@@ -172,7 +172,7 @@ export default function Contact() {
                     LinkedIn
                   </p>
                   <p className="text-white font-display font-black text-xl uppercase tracking-tight">
-                    ESSESSVI VADLAMUDI
+                    V.ESSESSVI
                   </p>
                 </div>
               </a>

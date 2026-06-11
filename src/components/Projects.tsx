@@ -10,7 +10,7 @@ import { useState } from 'react';
 import CaseStudyModal from './CaseStudyModal';
 
 export default function Projects() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeProject, setActiveProject] = useState<'sparexchange' | 'whatsapp' | 'epidemic' | null>(null);
   return (
     <section id="projects" className="bg-bg py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
@@ -49,7 +49,11 @@ export default function Projects() {
             >
               <div 
                 className="premium-card aspect-[16/12] mb-8 group-hover:-translate-y-4 transition-all duration-700 cursor-pointer"
-                onClick={() => project.title.includes('SpareXchange') && setIsModalOpen(true)}
+                onClick={() => {
+                  if (project.title.includes('SpareXchange')) setActiveProject('sparexchange');
+                  if (project.title.includes('WhatsApp')) setActiveProject('whatsapp');
+                  if (project.title.includes('Health Forecasting') || project.title.includes('Epidemic')) setActiveProject('epidemic');
+                }}
               >
                 {project.image ? (
                    <img 
@@ -80,7 +84,7 @@ export default function Projects() {
                        {project.title.split(":")[0]}
                      </h3>
                    </div>
-                   {project.title.includes('SpareXchange') && (
+                   {(project.title.includes('SpareXchange') || project.title.includes('WhatsApp') || project.title.includes('Health Forecasting') || project.title.includes('Epidemic')) && (
                      <div className="w-12 h-12 bg-white text-black rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-8 group-hover:translate-y-0 transition-all duration-500 shadow-2xl">
                         <ArrowUpRight className="w-6 h-6" />
                      </div>
@@ -103,12 +107,18 @@ export default function Projects() {
                       Visit Project <span className="h-[1px] w-4 bg-brand/40 group-hover/btn:w-8 transition-all duration-500" />
                     </a>
                   ) : null}
-                  <button 
-                    onClick={() => project.title.includes('SpareXchange') && setIsModalOpen(true)}
-                    className="text-gray-500 text-[9px] font-mono tracking-[0.3em] uppercase font-black hover:text-white transition-colors"
-                  >
-                    Breakdown
-                  </button>
+                  {(project.title.includes('SpareXchange') || project.title.includes('WhatsApp') || project.title.includes('Health Forecasting') || project.title.includes('Epidemic')) && (
+                    <button 
+                      onClick={() => {
+                        if (project.title.includes('SpareXchange')) setActiveProject('sparexchange');
+                        if (project.title.includes('WhatsApp')) setActiveProject('whatsapp');
+                        if (project.title.includes('Health Forecasting') || project.title.includes('Epidemic')) setActiveProject('epidemic');
+                      }}
+                      className="text-gray-500 text-[9px] font-mono tracking-[0.3em] uppercase font-black hover:text-white transition-colors"
+                    >
+                      Breakdown / PDF Slides
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -116,7 +126,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <CaseStudyModal isOpen={activeProject !== null} onClose={() => setActiveProject(null)} projectType={activeProject} />
     </section>
   );
 }
