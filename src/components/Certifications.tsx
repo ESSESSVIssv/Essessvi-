@@ -12,10 +12,10 @@ export default function Certifications() {
     <section id="certifications" className="bg-bg py-32 border-t border-white/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="mb-24">
-          <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
+          <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-light">
             Validated Expertise
           </span>
-          <h2 className="text-3xl md:text-5xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
+          <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tighter text-gradient leading-[0.85]">
             INDUSTRY <br />
             <span className="text-brand">CERTIFICATIONS.</span>
           </h2>
@@ -40,16 +40,15 @@ export default function Certifications() {
                   <Award size={24} />
                 </div>
                 
-                <h3 className="text-2xl font-display font-black text-white mb-4 uppercase tracking-tight group-hover:text-brand transition-colors leading-tight">
+                <h3 className="text-2xl font-display font-bold text-white mb-4 uppercase tracking-tight group-hover:text-brand transition-colors leading-tight">
                   {cert.title}
                 </h3>
-                <p className="text-gray-500 font-mono text-[11px] uppercase tracking-widest mb-12">
+                <p className="text-gray-500 font-mono text-[11px] uppercase tracking-widest mb-12 font-normal">
                   Issued by {cert.issuer}
                 </p>
 
-                <div className="mt-auto flex items-center justify-between border-t border-white/5 pt-8">
+                <div className="mt-auto pt-8 border-t border-white/5">
                    <span className="text-xs font-mono text-gray-600 uppercase tracking-widest">{cert.date}</span>
-                   <span className="text-[10px] font-mono text-brand uppercase tracking-[0.3em] font-black group-hover:translate-x-2 transition-transform">Verify</span>
                 </div>
               </div>
             </motion.div>

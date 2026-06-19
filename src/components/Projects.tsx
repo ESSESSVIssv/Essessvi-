@@ -21,17 +21,17 @@ export default function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
+            <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-light">
               Market Solutions
             </span>
-            <h2 className="text-3xl md:text-5xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
+            <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tighter text-gradient leading-[0.85]">
               FEATURED <br />
               <span className="text-brand">PROJECTS.</span>
             </h2>
           </motion.div>
           <div className="max-w-xs space-y-4">
              <div className="w-12 h-1 bg-brand/30" />
-             <p className="text-gray-500 text-sm font-medium leading-relaxed uppercase tracking-widest italic">
+             <p className="text-gray-500 text-sm font-light leading-relaxed uppercase tracking-widest italic font-normal">
                Developing MVPs with high automation and validated product-market fit.
              </p>
           </div>
@@ -71,7 +71,7 @@ export default function Projects() {
                 
                 <div className="absolute top-6 left-6 flex gap-2">
                    {project.tools.slice(0, 2).map((tool, tIdx) => (
-                     <span key={tIdx} className="px-3 py-1.5 glass rounded-lg text-[8px] font-mono font-black uppercase tracking-widest text-white/80">
+                     <span key={tIdx} className="px-3 py-1.5 glass rounded-lg text-[8px] font-mono font-light uppercase tracking-widest text-white/80">
                        {tool}
                      </span>
                    ))}
@@ -79,8 +79,8 @@ export default function Projects() {
 
                 <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
                    <div className="space-y-1">
-                     <span className="text-brand font-mono text-[9px] uppercase tracking-[0.4em] font-bold">{project.subtitle}</span>
-                     <h3 className="text-2xl font-display font-black text-white uppercase tracking-tighter">
+                     <span className="text-brand font-mono text-[9px] uppercase tracking-[0.4em] font-light">{project.subtitle}</span>
+                     <h3 className="text-2xl font-display font-bold text-white uppercase tracking-tighter">
                        {project.title.split(":")[0]}
                      </h3>
                    </div>
@@ -93,7 +93,7 @@ export default function Projects() {
               </div>
 
               <div className="space-y-4 px-2">
-                <p className="text-gray-400 text-sm leading-relaxed line-clamp-3 font-medium">
+                <p className="text-gray-400 text-sm leading-relaxed line-clamp-3  font-normal">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap items-center gap-4">
@@ -102,7 +102,7 @@ export default function Projects() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white text-[9px] font-mono tracking-[0.3em] uppercase font-black hover:text-brand transition-colors flex items-center gap-2 group/btn"
+                      className="text-white text-[9px] font-mono tracking-[0.3em] uppercase font-light hover:text-brand transition-colors flex items-center gap-2 group/btn"
                     >
                       Visit Project <span className="h-[1px] w-4 bg-brand/40 group-hover/btn:w-8 transition-all duration-500" />
                     </a>
@@ -114,7 +114,7 @@ export default function Projects() {
                         if (project.title.includes('WhatsApp')) setActiveProject('whatsapp');
                         if (project.title.includes('Health Forecasting') || project.title.includes('Epidemic')) setActiveProject('epidemic');
                       }}
-                      className="text-gray-500 text-[9px] font-mono tracking-[0.3em] uppercase font-black hover:text-white transition-colors"
+                      className="text-gray-500 text-[9px] font-mono tracking-[0.3em] uppercase font-light hover:text-white transition-colors font-normal"
                     >
                       Breakdown / PDF Slides
                     </button>

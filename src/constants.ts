@@ -40,7 +40,7 @@ export const PERSONAL_INFO = {
   github: "https://github.com/dashboard",
   resume: "/resume.pdf",
   website: "https://essessvi.vercel.app",
-  bio: "I am a final-year CSE student who combines product thinking with hands-on execution. From n8n automation workflows at AgentRoomAI to building SpareXchange and JobLence (an AI job application assistant), I translate problem discovery into high-impact products. Currently seeking Product Management internships and full-time opportunities."
+  bio: "I am a final-year CSE student who combines product thinking with hands-on execution. From building AI-powered WhatsApp automation workflows to developing SpareXchange and JobLence (an AI job application assistant), I translate problem discovery into high-impact products. Currently seeking Product Management internships and full-time opportunities."
 };
 
 export const EDUCATION = [
@@ -66,9 +66,9 @@ export const EDUCATION = [
 
 export const EXPERIENCE = [
   {
-    title: "AgentRoomAI",
+    title: "AI WhatsApp Automation",
     role: "AI Workflow Engineer",
-    company: "Early Stage AI Startup | agentroomai.com",
+    company: "Independent Project",
     period: "Dec 2025 – April 2026",
     description: "Designed and developed an AI-powered WhatsApp automation system using n8n and OpenAI.",
     points: [

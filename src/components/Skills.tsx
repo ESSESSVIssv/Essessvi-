@@ -14,10 +14,10 @@ export default function Skills() {
     <section id="skills" className="bg-bg py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="mb-24">
-          <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
+          <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-light">
             Technical Stack
           </span>
-          <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.85]">
+          <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tighter text-gradient leading-[0.85]">
             CORE <br />
             <span className="text-brand">CAPABILITIES.</span>
           </h2>
@@ -39,11 +39,11 @@ export default function Skills() {
                   <Icon size={20} />
                 </div>
 
-                <div className="text-[10px] font-mono text-brand mb-4 uppercase tracking-[0.4em] font-black opacity-60 group-hover:opacity-100 transition-opacity">
+                <div className="text-[10px] font-mono text-brand mb-4 uppercase tracking-[0.4em] font-light opacity-60 group-hover:opacity-100 transition-opacity">
                   {cat.category === "Product Management" ? "Market Logic" : cat.category === "Technical Stack" ? "Engineering Edge" : "Strategic Thinking"}
                 </div>
                 
-                <h3 className="text-2xl font-display font-black text-white uppercase tracking-tighter mb-12 group-hover:text-brand transition-colors">
+                <h3 className="text-2xl font-display font-bold text-white uppercase tracking-tighter mb-12 group-hover:text-brand transition-colors">
                   {cat.category}
                 </h3>
 
@@ -51,7 +51,7 @@ export default function Skills() {
                   {cat.items.map(item => (
                     <span 
                       key={item} 
-                      className="text-[10px] font-mono font-bold uppercase tracking-widest px-4 py-2 bg-white/[0.03] text-gray-400 rounded-lg border border-white/5 hover:border-brand/40 hover:text-white transition-all"
+                      className="text-[10px] font-mono font-light uppercase tracking-widest px-4 py-2 bg-white/[0.03] text-gray-400 rounded-lg border border-white/5 hover:border-brand/40 hover:text-white transition-all font-normal"
                     >
                       {item}
                     </span>

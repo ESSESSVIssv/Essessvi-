@@ -31,14 +31,14 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-green-500 font-bold">Open for Internships</span>
+            <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-green-500 font-light">Open for Internships</span>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.9] tracking-tighter text-gradient mb-8 text-center"
+            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[0.9] tracking-tighter text-gradient mb-8 text-center"
           >
             ASPIRING PROMPT ENGINEER <br />
             <span className="text-brand">& ASPIRING PRODUCT MANAGER</span>
@@ -51,7 +51,7 @@ export default function Hero() {
             className="max-w-4xl"
           >
             <div className="text-lg md:text-2xl font-medium mb-8 tracking-tight uppercase text-center">
-              <span className="text-white block mb-3">{PERSONAL_INFO.name}</span>
+              <span className="text-white block mb-6 font-serif italic text-5xl md:text-7xl normal-case font-normal">{PERSONAL_INFO.name}</span>
               <span className="text-brand block leading-tight">Open to Internships</span>
             </div>
             <p className="text-xs md:text-sm text-gray-400 uppercase tracking-widest text-center font-mono">
@@ -67,7 +67,7 @@ export default function Hero() {
           >
             <button 
               onClick={() => navigate('/work')}
-              className="px-10 py-5 bg-brand text-black font-display font-black text-xs uppercase tracking-[0.2em] rounded-2xl flex items-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(255,122,0,0.3)]"
+              className="px-10 py-5 bg-brand text-[#F5F1E8] font-display font-light text-xs uppercase tracking-[0.2em] rounded-2xl flex items-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(255,122,0,0.3)]"
             >
               View Projects <ArrowRight className="w-4 h-4" />
             </button>

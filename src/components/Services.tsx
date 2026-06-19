@@ -19,17 +19,17 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12">
           <div className="max-w-2xl">
-            <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
+            <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-light">
               Service Ecosystem
             </span>
-            <h2 className="text-3xl md:text-5xl font-display font-black uppercase tracking-tighter text-white leading-[1.2]">
+            <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tighter text-white leading-[1.2]">
               INTELLIGENT <br />
               <span className="text-brand">OFFERINGS.</span>
             </h2>
           </div>
           
           <div className="pb-4">
-            <p className="text-gray-500 font-mono text-[10px] uppercase tracking-widest max-w-[250px] leading-relaxed">
+            <p className="text-gray-500 font-mono text-[10px] uppercase tracking-widest max-w-[250px] leading-relaxed font-normal">
               Engineering high-impact solutions through technical edge & product logic.
             </p>
           </div>
@@ -57,11 +57,11 @@ export default function Services() {
                   <div className="p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div className="flex items-center gap-6">
                       <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 ${
-                        isExpanded ? 'bg-brand text-black scale-110' : 'bg-white/5 text-brand'
+                        isExpanded ? 'bg-brand text-[#F5F1E8] scale-110' : 'bg-white/5 text-brand'
                       }`}>
                         <service.icon size={24} />
                       </div>
-                      <h3 className={`text-xl md:text-2xl font-display font-black uppercase tracking-tight transition-colors ${
+                      <h3 className={`text-xl md:text-2xl font-display font-semibold uppercase tracking-tight transition-colors ${
                         isExpanded ? 'text-brand' : 'text-white'
                       }`}>
                         {service.title}
@@ -69,12 +69,12 @@ export default function Services() {
                     </div>
                     
                     <div className="flex items-center gap-6">
-                      <span className="hidden md:block font-mono text-[10px] text-gray-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="hidden md:block font-mono text-[10px] text-gray-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity font-normal">
                         {isExpanded ? 'Collapse Protocol' : 'Explore Protocol'}
                       </span>
                       <motion.div
                         animate={{ rotate: isExpanded ? 180 : 0 }}
-                        className="text-gray-500"
+                        className="text-gray-500 font-normal"
                       >
                         <ChevronDown size={20} />
                       </motion.div>
@@ -117,7 +117,7 @@ export default function Services() {
                                   const el = document.getElementById('contact');
                                   el?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className="w-full md:w-auto px-8 py-5 bg-brand text-black font-display font-black text-[10px] uppercase tracking-[0.2em] rounded-2xl flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_10px_30px_rgba(255,122,0,0.2)]"
+                                className="w-full md:w-auto px-8 py-5 bg-brand text-[#F5F1E8] font-display font-light text-[10px] uppercase tracking-[0.2em] rounded-2xl flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_10px_30px_rgba(255,122,0,0.2)]"
                               >
                                 Start Engagement <ArrowUpRight size={14} />
                               </a>

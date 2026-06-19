@@ -48,10 +48,10 @@ export default function Navigation() {
             to="/"
             className="flex items-center gap-3 cursor-pointer group"
           >
-            <div className="w-10 h-10 bg-brand flex items-center justify-center rounded-2xl font-display font-black text-black text-xl group-hover:rotate-12 group-hover:scale-110 transition-all shadow-[0_0_30px_rgba(255,122,0,0.5)]">
+            <div className="w-10 h-10 bg-brand flex items-center justify-center rounded-2xl font-display font-medium text-[#F5F1E8] text-xl group-hover:rotate-12 group-hover:scale-110 transition-all shadow-[0_0_30px_rgba(255,122,0,0.5)]">
               {PERSONAL_INFO.firstName[0]}
             </div>
-            <span className="font-display font-black text-2xl tracking-tighter text-white uppercase opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 hidden sm:block">
+            <span className="font-display font-bold text-2xl tracking-tighter text-white uppercase opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 hidden sm:block">
               {PERSONAL_INFO.firstName}
             </span>
           </Link>
@@ -64,7 +64,7 @@ export default function Navigation() {
                 <NavLink
                   key={link.name}
                   to={link.href}
-                  className={`relative px-5 py-2.5 rounded-2xl text-[10px] font-mono tracking-[0.2em] font-black transition-all uppercase ${
+                  className={`relative px-5 py-2.5 rounded-2xl text-[10px] font-serif tracking-[0.2em] font-medium transition-all uppercase ${
                     isActive ? 'text-brand' : 'text-gray-400 hover:text-white'
                   }`}
                 >
@@ -84,7 +84,7 @@ export default function Navigation() {
             {/* CTA Button */}
             <Link
               to="/connect"
-              className="hidden sm:flex px-5 py-2 bg-brand text-black font-display font-black text-[9px] uppercase tracking-[0.15em] rounded-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_15px_rgba(255,122,0,0.2)] group items-center"
+              className="hidden sm:flex px-5 py-2 bg-brand text-[#F5F1E8] font-display font-light text-[9px] uppercase tracking-[0.15em] rounded-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_15px_rgba(255,122,0,0.2)] group items-center"
             >
               Let's Talk
               <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -118,7 +118,7 @@ export default function Navigation() {
             className="fixed inset-0 z-[100] bg-bg flex flex-col p-8 lg:hidden"
           >
             <div className="flex items-center justify-between mb-12">
-              <span className="font-display font-black text-2xl text-white uppercase tracking-tighter">
+              <span className="font-display font-bold text-2xl text-white uppercase tracking-tighter">
                 Navigation
               </span>
               <button 
@@ -142,7 +142,7 @@ export default function Navigation() {
                     setMobileMenuOpen(false);
                     navigate(link.href);
                   }}
-                  className={`text-4xl font-display font-black uppercase tracking-tighter hover:text-brand transition-colors ${
+                  className={`text-4xl font-serif font-medium uppercase tracking-tighter hover:text-brand transition-colors ${
                     pathname === link.href ? 'text-brand' : 'text-white/40'
                   }`}
                 >
@@ -155,7 +155,7 @@ export default function Navigation() {
               <div className="flex gap-6">
                 {/* Social links could go here */}
               </div>
-              <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest font-bold">
+              <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest font-light font-normal">
                 {PERSONAL_INFO.name} // 2026
               </span>
             </div>

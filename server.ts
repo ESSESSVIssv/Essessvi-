@@ -28,12 +28,15 @@ async function startServer() {
       const response = await ai.models.generateContent({
         model: "gemini-3.5-flash",
         contents: `
-          Professional assistant. 
+          You are V.Essessvi's professional AI assistant. 
           Context: ${context}. 
           Role: ${role}.
           Visitor Message: ${message}
           
-          Respond concisely and professionally as an assistant.
+          Strict rules for your response:
+          1. You must ONLY discuss V.Essessvi's own projects and what they have accomplished or engineered.
+          2. Decline politely to answer any questions outside of V.Essessvi's professional portfolio, projects, and work experience.
+          3. Keep responses concise, direct, and professional.
         `,
       });
       

@@ -75,14 +75,6 @@ export default function Contact() {
         ...prev,
         { role: "assistant", content: botResponse },
       ]);
-      
-      if (data.audio) {
-        const audio = new Audio(`data:audio/wav;base64,${data.audio}`);
-        audio.play().catch(console.error);
-      } else {
-        const utterance = new SpeechSynthesisUtterance(botResponse);
-        window.speechSynthesis.speak(utterance);
-      }
     } catch (error) {
       setMessages((prev) => [
         ...prev,
@@ -110,15 +102,15 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row gap-20 lg:gap-32">
           <div className="w-full lg:w-[45%]">
-            <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-bold">
+            <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-light">
               Get in Touch
             </span>
-            <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.9] mb-12">
+            <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tighter text-gradient leading-[0.9] mb-12">
               LET'S <br />
               <span className="text-brand">CONNECT.</span>
             </h2>
 
-            <p className="text-gray-400 text-sm md:text-base mb-16 max-w-md font-medium leading-relaxed tracking-wider">
+            <p className="text-gray-400 text-sm md:text-base mb-16 max-w-md  leading-relaxed tracking-wider font-normal">
               Have a project in mind or looking for an AI automation engineer?
               Reach out through any channel.
             </p>
@@ -132,10 +124,10 @@ export default function Contact() {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] text-gray-500 font-bold uppercase tracking-[0.3em] mb-1">
+                  <p className="font-mono text-[10px] text-gray-500 font-light uppercase tracking-[0.3em] mb-1 font-normal">
                     Email
                   </p>
-                  <p className="text-white font-display font-black text-xl uppercase tracking-tight">
+                  <p className="text-white font-display font-medium text-xl uppercase tracking-tight">
                     {PERSONAL_INFO.email}
                   </p>
                 </div>
@@ -149,10 +141,10 @@ export default function Contact() {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] text-gray-500 font-bold uppercase tracking-[0.3em] mb-1">
+                  <p className="font-mono text-[10px] text-gray-500 font-light uppercase tracking-[0.3em] mb-1 font-normal">
                     Phone
                   </p>
-                  <p className="text-white font-display font-black text-xl uppercase tracking-tight">
+                  <p className="text-white font-display font-medium text-xl uppercase tracking-tight">
                     {PERSONAL_INFO.phone}
                   </p>
                 </div>
@@ -168,10 +160,10 @@ export default function Contact() {
                   <Linkedin size={24} />
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] text-gray-500 font-bold uppercase tracking-[0.3em] mb-1">
+                  <p className="font-mono text-[10px] text-gray-500 font-light uppercase tracking-[0.3em] mb-1 font-normal">
                     LinkedIn
                   </p>
-                  <p className="text-white font-display font-black text-xl uppercase tracking-tight">
+                  <p className="text-white font-display font-medium text-xl uppercase tracking-tight">
                     V.ESSESSVI
                   </p>
                 </div>
@@ -187,10 +179,10 @@ export default function Contact() {
                   <Github size={24} />
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] text-gray-500 font-bold uppercase tracking-[0.3em] mb-1">
+                  <p className="font-mono text-[10px] text-gray-500 font-light uppercase tracking-[0.3em] mb-1 font-normal">
                     GitHub
                   </p>
-                  <p className="text-white font-display font-black text-xl uppercase tracking-tight">
+                  <p className="text-white font-display font-medium text-xl uppercase tracking-tight">
                     V-ESSESSVI
                   </p>
                 </div>
@@ -201,10 +193,10 @@ export default function Contact() {
               {trustBadges.map((badge, idx) => (
                 <div key={idx} className="space-y-2">
                   <badge.icon className="w-5 h-5 text-brand opacity-60" />
-                  <p className="text-[9px] font-mono font-bold text-gray-600 uppercase tracking-widest">
+                  <p className="text-[9px] font-mono font-light text-gray-600 uppercase tracking-widest">
                     {badge.label}
                   </p>
-                  <p className="text-xs font-display font-black text-white uppercase">
+                  <p className="text-xs font-display font-light text-white uppercase">
                     {badge.value}
                   </p>
                 </div>
@@ -224,10 +216,10 @@ export default function Contact() {
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-4 border-card rounded-full shadow-lg"></div>
                   </div>
                   <div>
-                    <h4 className="text-white font-display font-black text-sm uppercase tracking-widest">
+                    <h4 className="text-white font-display font-light text-sm uppercase tracking-widest font-normal">
                       AI Concierge
                     </h4>
-                    <p className="text-[9px] font-mono text-gray-500 uppercase tracking-widest font-bold">
+                    <p className="text-[9px] font-mono text-gray-500 uppercase tracking-widest font-light font-normal">
                       Always Active
                     </p>
                   </div>
@@ -292,12 +284,12 @@ export default function Contact() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Type your message..."
-                  className="flex-1 bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-4 text-sm text-white focus:outline-none focus:border-brand/40 transition-all font-mono placeholder:text-gray-600 shadow-inner"
+                  className="flex-1 bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-4 text-sm text-white focus:outline-none focus:border-brand/40 transition-all font-mono placeholder:text-gray-600 shadow-inner font-normal"
                 />
                 <button
                   type="submit"
                   disabled={!input.trim() || isLoading}
-                  className="px-8 bg-brand hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed rounded-2xl flex items-center justify-center text-black font-display font-black text-xs uppercase tracking-widest transition-all shadow-xl"
+                  className="px-8 bg-brand hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed rounded-2xl flex items-center justify-center text-[#F5F1E8] font-display font-light text-xs uppercase tracking-widest transition-all shadow-xl"
                 >
                   Send
                 </button>
