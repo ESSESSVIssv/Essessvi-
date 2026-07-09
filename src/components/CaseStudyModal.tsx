@@ -1381,7 +1381,7 @@ export default function CaseStudyModal({ isOpen, onClose, projectType }: CaseStu
                     }}
                     className="px-12 py-5 bg-brand text-bg font-display font-light text-xs uppercase tracking-[0.2em] rounded-2xl hover:scale-105 transition-all inline-block"
                   >
-                    Talk to AI Concierge
+                    Let's Connect
                   </button>
                 </div>
               </div>

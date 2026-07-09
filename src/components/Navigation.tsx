@@ -64,8 +64,8 @@ export default function Navigation() {
                 <NavLink
                   key={link.name}
                   to={link.href}
-                  className={`relative font-sans text-xs tracking-[0.15em] transition-all uppercase ${
-                    isActive ? 'text-brand font-bold' : 'text-text-main hover:text-brand'
+                  className={`relative font-sans text-xs tracking-[0.15em] transition-colors duration-300 ease-in-out uppercase font-semibold ${
+                    isActive ? 'text-brand' : 'text-[#111111] hover:text-[#111111]'
                   }`}
                 >
                   {link.name}
