@@ -17,7 +17,6 @@ import {
   Zap,
 } from "lucide-react";
 import { PERSONAL_INFO } from "../constants";
-import { motion } from "motion/react";
 
 interface Message {
   role: "user" | "assistant";

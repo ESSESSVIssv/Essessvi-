@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from 'motion/react';
 import { SKILLS } from '../constants';
 import { ShieldCheck, Cpu, Zap } from 'lucide-react';
 
@@ -27,12 +26,8 @@ export default function Skills() {
           {SKILLS.map((cat, idx) => {
              const Icon = icons[idx % icons.length];
              return (
-              <motion.div
+              <div
                 key={cat.category}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: idx * 0.1 }}
                 className="relative bg-[#F6F2EA] rounded-2xl border border-[#DDD5C8] p-10 group flex flex-col min-h-[350px] shadow-sm hover:shadow-md transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-brand/10 to-transparent opacity-50 pointer-events-none"></div>
@@ -59,9 +54,9 @@ export default function Skills() {
                     </span>
                   ))}
                 </div>
-              </motion.div>
-            );
-          })}
+                </div>
+              );
+            })}
         </div>
       </div>
     </section>

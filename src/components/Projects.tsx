@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from 'motion/react';
 import { PROJECTS } from '../constants';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
@@ -17,12 +16,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         <div className="mb-24 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-light">
               Product Case Studies
             </span>
@@ -30,18 +24,14 @@ export default function Projects() {
               PRODUCT <br />
               <span className="text-brand">PORTFOLIO.</span>
             </h2>
-          </motion.div>
+          </div>
         </div>
 
         <div className="flex flex-col gap-20">
           
           {PROJECTS.map((project, idx) => (
-            <motion.div
+            <div
               key={project.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: 0.1 }}
               className="relative group bg-[#F6F2EA] border border-[#DDD5C8] rounded-2xl p-10 md:p-14 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] hover:border-brand/40 hover:-translate-y-2 transition-all duration-500 flex flex-col lg:flex-row gap-12"
             >
               <div className="absolute top-10 right-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-brand">
@@ -139,7 +129,7 @@ export default function Projects() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
 
         </div>

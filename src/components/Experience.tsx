@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from 'motion/react';
 import { EXPERIENCE, CLUBS } from '../constants';
 
 export default function Experience() {
@@ -22,11 +21,8 @@ export default function Experience() {
 
         <div className="space-y-0">
           {(EXPERIENCE as any[]).map((exp, idx) => (
-            <motion.div
+            <div
               key={exp.title || exp.role}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               className="group py-20 border-b border-text-main/10 flex flex-col md:grid md:grid-cols-12 gap-12 items-start relative transition-all hover:bg-text-main/5"
             >
               <div className="md:col-span-3">
@@ -72,7 +68,7 @@ export default function Experience() {
                   </ul>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -87,11 +83,8 @@ export default function Experience() {
 
         <div className="space-y-0">
           {(CLUBS as any[]).map((club, idx) => (
-            <motion.div
+            <div
               key={club.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               className="group py-20 border-b border-text-main/10 flex flex-col md:grid md:grid-cols-12 gap-12 items-start relative transition-all hover:bg-text-main/5"
             >
               <div className="md:col-span-3">
@@ -137,7 +130,7 @@ export default function Experience() {
                   </ul>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

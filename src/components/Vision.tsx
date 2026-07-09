@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from 'motion/react';
 import { SERVICES } from '../constants';
 
 export default function Vision() {
@@ -17,12 +16,7 @@ export default function Vision() {
     <section id="vision" className="bg-bg py-32 border-y border-text-main/10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 w-full">
         <div className="w-full">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-light">
               Background & Vision
             </span>
@@ -47,7 +41,7 @@ export default function Vision() {
                 Open to Prompt Engineering, AI Workflow Automation, and Technical Product roles.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         <div className="mt-16 grid grid-cols-2 lg:grid-cols-3 gap-12 border-t border-text-main/10 pt-16">

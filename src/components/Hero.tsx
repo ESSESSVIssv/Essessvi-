@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from 'motion/react';
 import { PERSONAL_INFO } from '../constants';
 import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -14,12 +13,7 @@ export default function Hero() {
     <section id="home" className="min-h-screen pt-32 pb-20 px-6 md:px-16 bg-bg flex items-center">
       <div className="max-w-7xl mx-auto w-full">
         
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col pt-12 max-w-5xl"
-        >
+        <div className="flex flex-col pt-12 max-w-5xl">
           <h1 className="text-5xl md:text-7xl lg:text-[7.5rem] font-display font-black leading-[0.85] tracking-tighter uppercase mb-10">
             ASPIRING<br />PRODUCT MANAGER
           </h1>
@@ -47,7 +41,7 @@ export default function Hero() {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>

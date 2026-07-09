@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from 'motion/react';
 import { CERTIFICATIONS } from '../constants';
 import { Award, Globe } from 'lucide-react';
 
@@ -23,12 +22,8 @@ export default function Certifications() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {CERTIFICATIONS.map((cert, idx) => (
-            <motion.div
+            <div
               key={cert.title + idx}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: idx * 0.1 }}
               className="premium-card p-10 group overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
@@ -51,7 +46,7 @@ export default function Certifications() {
                    <span className="text-xs font-mono text-gray-600 uppercase tracking-widest">{cert.date}</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
