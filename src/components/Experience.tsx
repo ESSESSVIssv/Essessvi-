@@ -8,7 +8,7 @@ import { EXPERIENCE, CLUBS } from '../constants';
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-bg py-32 border-y border-white/5 relative overflow-hidden">
+    <section id="experience" className="bg-bg py-32 border-y border-text-main/10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="mb-24">
           <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-light">
@@ -27,19 +27,19 @@ export default function Experience() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="group py-20 border-b border-white/5 flex flex-col md:grid md:grid-cols-12 gap-12 items-start relative transition-all hover:bg-white/[0.01]"
+              className="group py-20 border-b border-text-main/10 flex flex-col md:grid md:grid-cols-12 gap-12 items-start relative transition-all hover:bg-text-main/5"
             >
               <div className="md:col-span-3">
-                <div className="text-[10px] font-mono font-light text-gray-500 uppercase tracking-[0.3em] bg-white/5 px-5 py-2.5 rounded-2xl inline-block border border-white/5 group-hover:border-brand/40 group-hover:text-white transition-all font-normal">
+                <div className="text-[10px] font-mono font-light text-text-main/40 uppercase tracking-[0.3em] bg-white/5 px-5 py-2.5 rounded-2xl inline-block border border-text-main/10 group-hover:border-brand/40 group-hover:text-text-main transition-all font-normal">
                   {exp.company}
                 </div>
               </div>
               
               <div className="md:col-span-5">
-                <h3 className="text-3xl md:text-5xl font-display font-bold text-white uppercase tracking-tighter mb-6 group-hover:text-brand transition-all leading-[0.9]">
+                <h3 className="text-3xl md:text-4xl font-display font-bold text-text-main uppercase tracking-tighter mb-4 group-hover:text-brand transition-all leading-[1.1]">
                   {exp.title}
                 </h3>
-                <p className="text-xs font-mono font-light text-gray-600 uppercase tracking-[0.2em] mb-12">
+                <p className="text-[10px] font-mono font-light text-text-main/60 uppercase tracking-[0.2em] mb-12">
                   {exp.role}
                 </p>
                 
@@ -55,7 +55,7 @@ export default function Experience() {
               </div>
 
               <div className="md:col-span-4">
-                <p className="text-gray-400 text-lg leading-relaxed mb-10 font-medium italic border-l-2 border-brand/20 pl-6">
+                <p className="text-text-main/60 text-lg leading-relaxed mb-10 font-medium italic border-l-2 border-brand/20 pl-6">
                   {exp.description}
                 </p>
                 
@@ -63,8 +63,8 @@ export default function Experience() {
                   <ul className="space-y-6">
                     {exp.points.map((point: string, pIdx: number) => (
                       <li key={pIdx} className="flex items-start gap-5">
-                        <div className="w-1.5 h-1.5 rounded-full bg-brand mt-2 flex-shrink-0 shadow-[0_0_10px_rgba(255,122,0,1)]"></div>
-                        <span className="text-gray-500 text-sm leading-relaxed  font-normal">
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand mt-2 flex-shrink-0 shadow-[0_0_10px_rgba(184,115,51,1)]"></div>
+                        <span className="text-text-main/40 text-sm leading-relaxed  font-normal">
                           {point}
                         </span>
                       </li>
@@ -92,19 +92,19 @@ export default function Experience() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="group py-20 border-b border-white/5 flex flex-col md:grid md:grid-cols-12 gap-12 items-start relative transition-all hover:bg-white/[0.01]"
+              className="group py-20 border-b border-text-main/10 flex flex-col md:grid md:grid-cols-12 gap-12 items-start relative transition-all hover:bg-text-main/5"
             >
               <div className="md:col-span-3">
-                <div className="text-[10px] font-mono font-light text-gray-500 uppercase tracking-[0.3em] bg-white/5 px-5 py-2.5 rounded-2xl inline-block border border-white/5 group-hover:border-brand/40 group-hover:text-white transition-all font-normal">
+                <div className="text-[10px] font-mono font-light text-text-main/40 uppercase tracking-[0.3em] bg-white/5 px-5 py-2.5 rounded-2xl inline-block border border-text-main/10 group-hover:border-brand/40 group-hover:text-text-main transition-all font-normal">
                   {club.company}
                 </div>
               </div>
               
               <div className="md:col-span-5">
-                <h3 className="text-3xl md:text-5xl font-display font-bold text-white uppercase tracking-tighter mb-6 group-hover:text-brand transition-all leading-[0.9]">
+                <h3 className="text-3xl md:text-4xl font-display font-bold text-text-main uppercase tracking-tighter mb-4 group-hover:text-brand transition-all leading-[1.1]">
                   {club.title}
                 </h3>
-                <p className="text-xs font-mono font-light text-gray-600 uppercase tracking-[0.2em] mb-12">
+                <p className="text-[10px] font-mono font-light text-text-main/60 uppercase tracking-[0.2em] mb-12">
                   {club.role} • {club.period}
                 </p>
                 
@@ -120,7 +120,7 @@ export default function Experience() {
               </div>
 
               <div className="md:col-span-4">
-                <p className="text-gray-400 text-lg leading-relaxed mb-10 font-medium italic border-l-2 border-brand/20 pl-6">
+                <p className="text-text-main/60 text-lg leading-relaxed mb-10 font-medium italic border-l-2 border-brand/20 pl-6">
                   {club.description}
                 </p>
                 
@@ -128,8 +128,8 @@ export default function Experience() {
                   <ul className="space-y-6">
                     {club.points.map((point: string, pIdx: number) => (
                       <li key={pIdx} className="flex items-start gap-5">
-                        <div className="w-1.5 h-1.5 rounded-full bg-brand mt-2 flex-shrink-0 shadow-[0_0_10px_rgba(255,122,0,1)]"></div>
-                        <span className="text-gray-500 text-sm leading-relaxed  font-normal">
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand mt-2 flex-shrink-0 shadow-[0_0_10px_rgba(184,115,51,1)]"></div>
+                        <span className="text-text-main/40 text-sm leading-relaxed  font-normal">
                           {point}
                         </span>
                       </li>

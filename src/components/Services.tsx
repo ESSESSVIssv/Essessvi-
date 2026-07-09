@@ -12,7 +12,7 @@ export default function Services() {
   const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
 
   return (
-    <section id="services" className="bg-bg py-32 border-t border-white/5 relative overflow-hidden">
+    <section id="services" className="bg-bg py-32 border-t border-text-main/10 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand/5 blur-[120px] pointer-events-none" />
       
@@ -22,14 +22,14 @@ export default function Services() {
             <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-light">
               Service Ecosystem
             </span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tighter text-white leading-[1.2]">
+            <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tighter text-text-main leading-[1.2]">
               INTELLIGENT <br />
               <span className="text-brand">OFFERINGS.</span>
             </h2>
           </div>
           
           <div className="pb-4">
-            <p className="text-gray-500 font-mono text-[10px] uppercase tracking-widest max-w-[250px] leading-relaxed font-normal">
+            <p className="text-text-main/40 font-mono text-[10px] uppercase tracking-widest max-w-[250px] leading-relaxed font-normal">
               Engineering high-impact solutions through technical edge & product logic.
             </p>
           </div>
@@ -50,31 +50,31 @@ export default function Services() {
                   onClick={() => setExpandedIdx(isExpanded ? null : idx)}
                   className={`group relative overflow-hidden rounded-[2rem] cursor-pointer transition-all duration-500 border ${
                     isExpanded 
-                      ? 'bg-white/[0.08] border-brand/40 shadow-[0_0_50px_rgba(255,122,0,0.1)]' 
-                      : 'bg-white/[0.03] border-white/5 hover:border-white/10'
+                      ? 'bg-text-main/10 border-brand/40 shadow-[0_0_50px_rgba(184,115,51,0.1)]' 
+                      : 'bg-text-main/5 border-text-main/10 hover:border-text-main/20'
                   }`}
                 >
                   <div className="p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div className="flex items-center gap-6">
                       <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 ${
-                        isExpanded ? 'bg-brand text-[#F5F1E8] scale-110' : 'bg-white/5 text-brand'
+                        isExpanded ? 'bg-brand text-bg scale-110' : 'bg-white/5 text-brand'
                       }`}>
                         <service.icon size={24} />
                       </div>
                       <h3 className={`text-xl md:text-2xl font-display font-semibold uppercase tracking-tight transition-colors ${
-                        isExpanded ? 'text-brand' : 'text-white'
+                        isExpanded ? 'text-brand' : 'text-text-main'
                       }`}>
                         {service.title}
                       </h3>
                     </div>
                     
                     <div className="flex items-center gap-6">
-                      <span className="hidden md:block font-mono text-[10px] text-gray-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity font-normal">
+                      <span className="hidden md:block font-mono text-[10px] text-text-main/40 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity font-normal">
                         {isExpanded ? 'Collapse Protocol' : 'Explore Protocol'}
                       </span>
                       <motion.div
                         animate={{ rotate: isExpanded ? 180 : 0 }}
-                        className="text-gray-500 font-normal"
+                        className="text-text-main/40 font-normal"
                       >
                         <ChevronDown size={20} />
                       </motion.div>
@@ -89,10 +89,10 @@ export default function Services() {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.4, ease: 'circOut' }}
                       >
-                        <div className="px-8 pb-10 border-t border-white/10 pt-10">
+                        <div className="px-8 pb-10 border-t border-text-main/20 pt-10">
                           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                             <div className="lg:col-span-8">
-                              <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-8 font-medium">
+                              <p className="text-text-main/60 text-lg md:text-xl leading-relaxed mb-8 font-medium">
                                 {service.description}
                               </p>
                               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -102,7 +102,7 @@ export default function Services() {
                                   'AI Agent Integration',
                                   'Strategic Market Alignment'
                                 ].map(item => (
-                                  <div key={item} className="flex items-center gap-3 text-white/40 font-mono text-[10px] uppercase tracking-widest">
+                                  <div key={item} className="flex items-center gap-3 text-text-main/40 font-mono text-[10px] uppercase tracking-widest">
                                     <CheckCircle2 size={12} className="text-brand" />
                                     {item}
                                   </div>
@@ -117,7 +117,7 @@ export default function Services() {
                                   const el = document.getElementById('contact');
                                   el?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className="w-full md:w-auto px-8 py-5 bg-brand text-[#F5F1E8] font-display font-light text-[10px] uppercase tracking-[0.2em] rounded-2xl flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_10px_30px_rgba(255,122,0,0.2)]"
+                                className="w-full md:w-auto px-8 py-5 bg-brand text-bg font-display font-light text-[10px] uppercase tracking-[0.2em] rounded-2xl flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_10px_30px_rgba(184,115,51,0.2)]"
                               >
                                 Start Engagement <ArrowUpRight size={14} />
                               </a>

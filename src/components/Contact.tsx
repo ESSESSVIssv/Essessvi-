@@ -97,7 +97,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-bg py-32 border-t border-white/5 relative overflow-hidden"
+      className="bg-bg py-32 border-t border-text-main/10 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row gap-20 lg:gap-32">
@@ -110,7 +110,7 @@ export default function Contact() {
               <span className="text-brand">CONNECT.</span>
             </h2>
 
-            <p className="text-gray-400 text-sm md:text-base mb-16 max-w-md  leading-relaxed tracking-wider font-normal">
+            <p className="text-text-main/60 text-sm md:text-base mb-16 max-w-md  leading-relaxed tracking-wider font-normal">
               Have a project in mind or looking for an AI automation engineer?
               Reach out through any channel.
             </p>
@@ -124,10 +124,10 @@ export default function Contact() {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] text-gray-500 font-light uppercase tracking-[0.3em] mb-1 font-normal">
+                  <p className="font-mono text-[10px] text-text-main/40 font-light uppercase tracking-[0.3em] mb-1 font-normal">
                     Email
                   </p>
-                  <p className="text-white font-display font-medium text-xl uppercase tracking-tight">
+                  <p className="text-text-main font-display font-medium text-xl uppercase tracking-tight">
                     {PERSONAL_INFO.email}
                   </p>
                 </div>
@@ -141,10 +141,10 @@ export default function Contact() {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] text-gray-500 font-light uppercase tracking-[0.3em] mb-1 font-normal">
+                  <p className="font-mono text-[10px] text-text-main/40 font-light uppercase tracking-[0.3em] mb-1 font-normal">
                     Phone
                   </p>
-                  <p className="text-white font-display font-medium text-xl uppercase tracking-tight">
+                  <p className="text-text-main font-display font-medium text-xl uppercase tracking-tight">
                     {PERSONAL_INFO.phone}
                   </p>
                 </div>
@@ -160,10 +160,10 @@ export default function Contact() {
                   <Linkedin size={24} />
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] text-gray-500 font-light uppercase tracking-[0.3em] mb-1 font-normal">
+                  <p className="font-mono text-[10px] text-text-main/40 font-light uppercase tracking-[0.3em] mb-1 font-normal">
                     LinkedIn
                   </p>
-                  <p className="text-white font-display font-medium text-xl uppercase tracking-tight">
+                  <p className="text-text-main font-display font-medium text-xl uppercase tracking-tight">
                     V.ESSESSVI
                   </p>
                 </div>
@@ -179,24 +179,24 @@ export default function Contact() {
                   <Github size={24} />
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] text-gray-500 font-light uppercase tracking-[0.3em] mb-1 font-normal">
+                  <p className="font-mono text-[10px] text-text-main/40 font-light uppercase tracking-[0.3em] mb-1 font-normal">
                     GitHub
                   </p>
-                  <p className="text-white font-display font-medium text-xl uppercase tracking-tight">
+                  <p className="text-text-main font-display font-medium text-xl uppercase tracking-tight">
                     V-ESSESSVI
                   </p>
                 </div>
               </a>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 pt-12 border-t border-white/5">
+            <div className="grid grid-cols-3 gap-6 pt-12 border-t border-text-main/10">
               {trustBadges.map((badge, idx) => (
                 <div key={idx} className="space-y-2">
                   <badge.icon className="w-5 h-5 text-brand opacity-60" />
                   <p className="text-[9px] font-mono font-light text-gray-600 uppercase tracking-widest">
                     {badge.label}
                   </p>
-                  <p className="text-xs font-display font-light text-white uppercase">
+                  <p className="text-xs font-display font-light text-text-main uppercase">
                     {badge.value}
                   </p>
                 </div>
@@ -207,7 +207,7 @@ export default function Contact() {
           <div className="w-full lg:w-[55%]">
             <div className="premium-card h-[650px] flex flex-col bg-card overflow-hidden">
               {/* Terminal Header */}
-              <div className="p-8 border-b border-white/[0.05] flex items-center justify-between bg-white/[0.02]">
+              <div className="p-8 border-b border-text-main/10 flex items-center justify-between bg-text-main/5">
                 <div className="flex items-center gap-4">
                   <div className="relative">
                     <div className="w-12 h-12 rounded-2xl bg-brand/20 flex items-center justify-center">
@@ -216,10 +216,10 @@ export default function Contact() {
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-4 border-card rounded-full shadow-lg"></div>
                   </div>
                   <div>
-                    <h4 className="text-white font-display font-light text-sm uppercase tracking-widest font-normal">
+                    <h4 className="text-text-main font-display font-light text-sm uppercase tracking-widest font-normal">
                       AI Concierge
                     </h4>
-                    <p className="text-[9px] font-mono text-gray-500 uppercase tracking-widest font-light font-normal">
+                    <p className="text-[9px] font-mono text-text-main/40 uppercase tracking-widest font-light font-normal">
                       Always Active
                     </p>
                   </div>
@@ -240,10 +240,10 @@ export default function Contact() {
                     className={`flex gap-6 ${msg.role === "user" ? "flex-row-reverse" : ""}`}
                   >
                     <div
-                      className={`w-10 h-10 rounded-2xl flex items-center justify-center flex-shrink-0 ${msg.role === "user" ? "bg-brand shadow-[0_0_20px_rgba(255,122,0,0.4)]" : "bg-white/[0.05] border border-white/10"}`}
+                      className={`w-10 h-10 rounded-2xl flex items-center justify-center flex-shrink-0 ${msg.role === "user" ? "bg-brand shadow-[0_0_20px_rgba(184,115,51,0.4)]" : "bg-text-main/10 border border-text-main/20"}`}
                     >
                       {msg.role === "user" ? (
-                        <User size={18} className="text-black" />
+                        <User size={18} className="text-bg" />
                       ) : (
                         <Sparkles size={18} className="text-brand" />
                       )}
@@ -251,8 +251,8 @@ export default function Contact() {
                     <div
                       className={`max-w-[85%] p-6 rounded-3xl text-sm leading-relaxed border transition-all ${
                         msg.role === "user"
-                          ? "bg-brand/5 text-white border-brand/20 rounded-tr-none"
-                          : "bg-white/[0.02] text-gray-400 border-white/10 rounded-tl-none font-medium"
+                          ? "bg-brand/5 text-text-main border-brand/20 rounded-tr-none"
+                          : "bg-text-main/5 text-text-main/60 border-text-main/20 rounded-tl-none font-medium"
                       }`}
                     >
                       {msg.content}
@@ -261,10 +261,10 @@ export default function Contact() {
                 ))}
                 {isLoading && (
                   <div className="flex gap-6">
-                    <div className="w-10 h-10 rounded-2xl bg-white/[0.05] flex items-center justify-center animate-pulse">
+                    <div className="w-10 h-10 rounded-2xl bg-text-main/10 flex items-center justify-center animate-pulse">
                       <Loader2 className="w-5 h-5 text-brand animate-spin" />
                     </div>
-                    <div className="bg-white/5 p-6 rounded-3xl rounded-tl-none border border-white/10 w-24 h-16 flex items-center justify-center gap-1">
+                    <div className="bg-white/5 p-6 rounded-3xl rounded-tl-none border border-text-main/20 w-24 h-16 flex items-center justify-center gap-1">
                       <span className="w-1.5 h-1.5 bg-brand/40 rounded-full animate-bounce"></span>
                       <span className="w-1.5 h-1.5 bg-brand/40 rounded-full animate-bounce delay-75"></span>
                       <span className="w-1.5 h-1.5 bg-brand/40 rounded-full animate-bounce delay-150"></span>
@@ -277,19 +277,19 @@ export default function Contact() {
               {/* Command Input */}
               <form
                 onSubmit={handleSend}
-                className="p-8 bg-white/[0.02] border-t border-white/[0.05] flex gap-4"
+                className="p-8 bg-text-main/5 border-t border-text-main/10 flex gap-4"
               >
                 <input
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Type your message..."
-                  className="flex-1 bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-4 text-sm text-white focus:outline-none focus:border-brand/40 transition-all font-mono placeholder:text-gray-600 shadow-inner font-normal"
+                  className="flex-1 bg-text-main/5 border border-text-main/20 rounded-2xl px-6 py-4 text-sm text-text-main focus:outline-none focus:border-brand/40 transition-all font-mono placeholder:text-gray-600 shadow-inner font-normal"
                 />
                 <button
                   type="submit"
                   disabled={!input.trim() || isLoading}
-                  className="px-8 bg-brand hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed rounded-2xl flex items-center justify-center text-[#F5F1E8] font-display font-light text-xs uppercase tracking-widest transition-all shadow-xl"
+                  className="px-8 bg-brand hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed rounded-2xl flex items-center justify-center text-bg font-display font-light text-xs uppercase tracking-widest transition-all shadow-xl"
                 >
                   Send
                 </button>

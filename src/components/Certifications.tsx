@@ -9,7 +9,7 @@ import { Award, Globe } from 'lucide-react';
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="bg-bg py-32 border-t border-white/5 relative overflow-hidden">
+    <section id="certifications" className="bg-bg py-32 border-t border-text-main/10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="mb-24">
           <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-light">
@@ -40,14 +40,14 @@ export default function Certifications() {
                   <Award size={24} />
                 </div>
                 
-                <h3 className="text-2xl font-display font-bold text-white mb-4 uppercase tracking-tight group-hover:text-brand transition-colors leading-tight">
+                <h3 className="text-2xl font-display font-bold text-text-main mb-4 uppercase tracking-tight group-hover:text-brand transition-colors leading-tight">
                   {cert.title}
                 </h3>
-                <p className="text-gray-500 font-mono text-[11px] uppercase tracking-widest mb-12 font-normal">
+                <p className="text-text-main/40 font-mono text-[11px] uppercase tracking-widest mb-12 font-normal">
                   Issued by {cert.issuer}
                 </p>
 
-                <div className="mt-auto pt-8 border-t border-white/5">
+                <div className="mt-auto pt-8 border-t border-text-main/10">
                    <span className="text-xs font-mono text-gray-600 uppercase tracking-widest">{cert.date}</span>
                 </div>
               </div>

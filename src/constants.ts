@@ -32,7 +32,7 @@ import joblenceImg from './assets/images/joblence_mockup_1781166249602.png';
 export const PERSONAL_INFO = {
   name: "V.ESSESSVI",
   firstName: "ESSESSVI",
-  role: "Aspiring Prompt Engineer & Aspiring Product Manager | Open to Internships",
+  role: "Aspiring Product Manager | Open to Internships",
   email: "vessessvi2005@gmail.com",
   phone: "9392964456",
   location: "Chittoor, India",
@@ -152,41 +152,61 @@ export const CLUBS = [
 
 export const PROJECTS = [
   {
-    title: "JobLence: AI Job Assistant",
-    subtitle: "AI Job Application Assistant",
-    description: "Built an AI-powered tool that analyzes resumes, matches them with relevant job opportunities, calculates job-fit scores, and streamlines the application process through automation. Designed to help job seekers save time and apply smarter.",
-    tools: ["Resume Matching", "Job-Fit Scores", "AI Automation", "React / Vercel"],
-    icon: Briefcase,
-    image: joblenceImg,
-    link: "https://joblens-ten.vercel.app/"
-  },
-  {
-    title: "AI WhatsApp Agent",
-    subtitle: "Automated Support & Logistics",
-    description: "Reduced manual order processing effort by 70% through AI-powered automation workflows. Integrated real-time parsing for commerce operations.",
-    tools: ["n8n", "WhatsApp Business API", "OpenAI", "NLP"],
-    icon: MessageSquare,
-    image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2070&auto=format&fit=crop"
-  },
-  {
     title: "SpareXchange Marketplace",
-    subtitle: "End-to-End E-Commerce",
-    description: "A full-scale basic working version of the idea for automobile part sales. Features include secure OTP transactions, real-time inventory tracking, and dynamic pricing.",
-    tools: ["Google AI Studio", "Gemini API", "Product Logic"],
+    subtitle: "Dual-Sided Auto Parts Platform",
+    description: "An end-to-end e-commerce marketplace prototype designed specifically for new and used automobile spare parts.",
+    problem: "Finding reliable, verified spare parts is fragmented and lacks secure transaction mechanisms.",
+    solution: "Mapped out the full user journey and implemented a QR-based payment flow with OTP confirmation for secure handoffs.",
+    impact: "Successfully validated the dual-sided marketplace model and established a unified inventory dashboard.",
+    tools: ["Google AI Studio", "Gemini API", "Product Logic", "Journey Mapping"],
+    role: "Product Lead & Developer",
+    status: "Prototype",
     icon: Sparkles,
     image: sparexchangeImg,
     link: "https://sparexchange-tau.vercel.app"
   },
   {
+    title: "AI WhatsApp Agent",
+    subtitle: "Automated Support & Logistics Pipeline",
+    description: "An intelligent WhatsApp agent designed to automate customer interactions and streamline order processing in real-time.",
+    problem: "Manual order processing was slow, error-prone, and required constant human intervention.",
+    solution: "Built a conversational AI agent using n8n and OpenAI to handle queries, parse orders, and trigger fulfillment workflows.",
+    impact: "Reduced manual processing effort by 70% and decreased average response time from hours to seconds.",
+    tools: ["n8n", "WhatsApp API", "OpenAI", "NLP"],
+    role: "Product & AI Automation",
+    status: "Live",
+    icon: MessageSquare,
+    image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2070&auto=format&fit=crop",
+    link: "#"
+  },
+  {
+    title: "JobLence: AI Job Assistant",
+    subtitle: "AI-Powered Applicant Flow",
+    description: "A smart application platform that evaluates resume-to-job fit and automates discovery pipelines for job seekers.",
+    problem: "Applicants waste hours applying for mismatched roles due to a lack of immediate fit-feedback.",
+    solution: "Designed user flows and integrated AI to parse resumes against job descriptions, calculating instant job-fit scores.",
+    impact: "Streamlined the application process, enabling users to focus solely on high-probability opportunities.",
+    tools: ["Resume Matching", "Job-Fit Scores", "AI Automation", "Product Strategy"],
+    role: "Product Planning & UX",
+    status: "Under Progress",
+    icon: Briefcase,
+    image: joblenceImg,
+    link: "https://joblens-ten.vercel.app/"
+  },
+  {
     title: "Health Forecasting System",
-    subtitle: "Predictive Analytics",
-    description: "Built a forecasting engine for epidemic detection. Focused on data strategy and predictive accuracy for humanitarian impact.",
-    tools: ["Python", "Pandas", "ARIMA", "Data Analysis"],
+    subtitle: "Epidemic Predictive Analytics",
+    description: "A time-series forecasting engine utilizing historical data to predict and map future disease outbreaks.",
+    problem: "Healthcare responses are often reactive due to unpredictable epidemic patterns.",
+    solution: "Preprocessed 10,000+ data points and tuned ARIMA models to establish a reliable predictive baseline.",
+    impact: "Achieved high predictive accuracy (MAE: 45.32), laying the groundwork for adaptive healthcare resource allocation.",
+    tools: ["Python", "ARIMA", "Data Strategy", "Predictive Analytics"],
+    role: "Core Researcher",
+    status: "Completed",
     icon: TrendingUp,
     image: arimaImg
   }
 ];
-
 export const SKILLS = [
   { 
     category: "Technical Stack", 
@@ -233,27 +253,27 @@ export const CERTIFICATIONS = [
 export const SERVICES = [
   { 
     title: "AI Chatbot Development", 
-    icon: Target,
+    icon: "Target",
     description: "Architecting high-conversion AI roadmaps that bridge market gaps and drive scalable user value."
   },
   { 
     title: "Business Process Automation", 
-    icon: Zap,
+    icon: "Zap",
     description: "Eliminating operational bottlenecks by engineering intelligent autonomous systems and n8n pipelines."
   },
   { 
     title: "AI Tool Integration", 
-    icon: Search,
+    icon: "Search",
     description: "Deep-dive user journey mapping and problem discovery to validate high-impact product hypotheses."
   },
   { 
     title: "WhatsApp Bot Development", 
-    icon: Brain,
+    icon: "Brain",
     description: "Designing conversational interfaces and agents that feel human-centric and solve real-world friction."
   },
   { 
     title: "n8n Workflow Building", 
-    icon: Cpu,
+    icon: "Cpu",
     description: "Refining technical execution and logic models to maximize output efficiency and resource allocation."
   }
 ];

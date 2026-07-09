@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@800&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: "Inter", ui-monospace, SFMono-Regular, monospace;
-  --font-serif: "Canela", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Space Mono", ui-monospace, SFMono-Regular, monospace;
   
-  --color-brand: #D4A017;
-  --color-bg: #0B0B0B;
-  --color-text-main: #F5F1E8;
-  --color-card: #0A0D14;
-  --color-border: rgba(255, 255, 255, 0.05);
+  --color-brand: #B87333;
+  --color-bg: #F6F2EA;
+  --color-text-main: #111111;
+  --color-card: #F6F2EA;
+  --color-border: #DDD5C8;
 }
 
 @layer base {
@@ -25,26 +25,27 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     selection-background-color: var(--color-brand);
-    selection-color: #000;
+    selection-color: var(--color-bg);
   }
 
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-main);
     font-family: var(--font-display);
+    text-transform: uppercase;
   }
 }
 
 @layer components {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40;
+    @apply text-[color:var(--color-text-main)];
   }
 
   .premium-card {
-    @apply bg-card border border-white/[0.04] rounded-[2.5rem] relative overflow-hidden transition-all duration-500 hover:border-brand/30 hover:shadow-[0_0_80px_rgba(255,122,0,0.05)];
+    @apply bg-[color:var(--color-bg)] border border-[color:var(--color-border)] relative overflow-hidden transition-all duration-300 hover:-translate-y-2;
   }
 
   .glass {
-    @apply bg-white/[0.02] backdrop-blur-3xl border border-white/[0.08];
+    @apply bg-[color:var(--color-bg)] border border-[color:var(--color-border)];
   }
 
   .no-scrollbar::-webkit-scrollbar {
@@ -60,7 +61,7 @@
 /* Custom Animations */
 @keyframes float {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-5px); }
   100% { transform: translateY(0px); }
 }
 
@@ -71,5 +72,5 @@
 /* Custom selection */
 ::selection {
   background: var(--color-brand);
-  color: black;
+  color: var(--color-bg);
 }

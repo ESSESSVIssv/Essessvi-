@@ -36,10 +36,10 @@ export default function Navigation() {
       <motion.nav 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ${
           scrolled 
-            ? 'py-4 bg-bg/80 backdrop-blur-2xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)]' 
-            : 'py-8'
+            ? 'py-4 bg-bg border-b-2 border-border shadow-none' 
+            : 'py-8 border-b-2 border-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -48,33 +48,27 @@ export default function Navigation() {
             to="/"
             className="flex items-center gap-3 cursor-pointer group"
           >
-            <div className="w-10 h-10 bg-brand flex items-center justify-center rounded-2xl font-display font-medium text-[#F5F1E8] text-xl group-hover:rotate-12 group-hover:scale-110 transition-all shadow-[0_0_30px_rgba(255,122,0,0.5)]">
+            <div className="w-10 h-10 bg-brand flex items-center justify-center rounded-2xl font-display font-medium text-bg text-xl group-hover:rotate-12 group-hover:scale-110 transition-all shadow-[0_0_30px_rgba(184,115,51,0.5)]">
               {PERSONAL_INFO.firstName[0]}
             </div>
-            <span className="font-display font-bold text-2xl tracking-tighter text-white uppercase opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 hidden sm:block">
+            <span className="font-display font-bold text-2xl tracking-tighter text-text-main uppercase opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 hidden sm:block">
               {PERSONAL_INFO.firstName}
             </span>
           </Link>
 
           {/* Desktop Nav Items */}
-          <div className="hidden lg:flex items-center gap-1 p-1 bg-white/[0.03] backdrop-blur-2xl border border-white/[0.08] rounded-3xl">
-            {NAV_LINKS.map((link) => {
+          <div className="hidden lg:flex items-center gap-8">
+            {NAV_LINKS.map((link, index) => {
               const isActive = pathname === link.href;
               return (
                 <NavLink
                   key={link.name}
                   to={link.href}
-                  className={`relative px-5 py-2.5 rounded-2xl text-[10px] font-serif tracking-[0.2em] font-medium transition-all uppercase ${
-                    isActive ? 'text-brand' : 'text-gray-400 hover:text-white'
+                  className={`relative font-sans text-xs tracking-[0.15em] transition-all uppercase ${
+                    isActive ? 'text-brand font-bold' : 'text-text-main hover:text-brand'
                   }`}
                 >
                   {link.name}
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute bottom-1 left-2 right-2 h-[2px] bg-brand/40"
-                    />
-                  )}
                 </NavLink>
               );
             })}
@@ -84,15 +78,14 @@ export default function Navigation() {
             {/* CTA Button */}
             <Link
               to="/connect"
-              className="hidden sm:flex px-5 py-2 bg-brand text-[#F5F1E8] font-display font-light text-[9px] uppercase tracking-[0.15em] rounded-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_15px_rgba(255,122,0,0.2)] group items-center"
+              className="hidden sm:flex px-8 py-4 bg-brand text-bg font-sans font-bold text-[10px] uppercase tracking-[0.15em] hover:bg-text-main transition-colors items-center"
             >
               Let's Talk
-              <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
 
             {/* Mobile Menu Toggle */}
             <button 
-              className="lg:hidden p-3 bg-white/5 border border-white/10 rounded-2xl text-white hover:bg-white/10 transition-colors"
+              className="lg:hidden p-3 bg-text-main text-bg border-2 border-text-main transition-colors hover:bg-bg hover:text-text-main"
               onClick={() => setMobileMenuOpen(true)}
             >
               <Menu size={20} />
@@ -118,11 +111,11 @@ export default function Navigation() {
             className="fixed inset-0 z-[100] bg-bg flex flex-col p-8 lg:hidden"
           >
             <div className="flex items-center justify-between mb-12">
-              <span className="font-display font-bold text-2xl text-white uppercase tracking-tighter">
+              <span className="font-display font-bold text-2xl text-text-main uppercase tracking-tighter">
                 Navigation
               </span>
               <button 
-                className="p-4 bg-white/5 border border-white/10 rounded-3xl text-white"
+                className="p-4 bg-text-main text-bg border-2 border-text-main"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <X size={24} />
@@ -142,8 +135,8 @@ export default function Navigation() {
                     setMobileMenuOpen(false);
                     navigate(link.href);
                   }}
-                  className={`text-4xl font-serif font-medium uppercase tracking-tighter hover:text-brand transition-colors ${
-                    pathname === link.href ? 'text-brand' : 'text-white/40'
+                  className={`text-4xl font-display font-bold uppercase tracking-tighter hover:text-brand transition-colors ${
+                    pathname === link.href ? 'text-brand' : 'text-text-main'
                   }`}
                 >
                   {link.name}
@@ -151,11 +144,11 @@ export default function Navigation() {
               ))}
             </div>
 
-            <div className="pt-12 border-t border-white/5 flex items-center justify-between">
+            <div className="pt-12 border-t-2 border-text-main flex items-center justify-between">
               <div className="flex gap-6">
                 {/* Social links could go here */}
               </div>
-              <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest font-light font-normal">
+              <span className="text-[10px] font-sans text-text-main uppercase tracking-widest font-bold">
                 {PERSONAL_INFO.name} // 2026
               </span>
             </div>

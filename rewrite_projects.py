@@ -1,4 +1,6 @@
-/**
+import sys
+
+new_content = """/**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -65,8 +67,8 @@ export default function Projects() {
                     )}
                   </div>
                   
-                  <h3 className="text-4xl md:text-5xl font-display font-bold text-text-main uppercase tracking-tighter leading-tight mb-4">
-                    {project.title}
+                  <h3 className="text-4xl md:text-5xl font-display font-bold text-text-main uppercase tracking-tighter mb-4">
+                    {project.title.split(":")[0]}
                   </h3>
                   <div className="w-20 h-[1px] bg-brand/50 mb-8"></div>
 
@@ -149,3 +151,7 @@ export default function Projects() {
     </section>
   );
 }
+"""
+
+with open("src/components/Projects.tsx", "w") as f:
+    f.write(new_content)
