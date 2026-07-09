@@ -45,7 +45,7 @@ export default function Skills() {
                 </div>
                 <div className="relative z-10 w-12 h-[1px] bg-brand/40 mb-8"></div>
                 
-                <h3 className="relative z-10 text-3xl md:text-4xl font-display font-bold text-text-main uppercase tracking-tighter mb-12 group-hover:text-brand transition-colors">
+                <h3 className="relative z-10 text-xl sm:text-2xl font-display font-bold text-text-main uppercase tracking-tight mb-12 group-hover:text-brand transition-colors">
                   {cat.category}
                 </h3>
 

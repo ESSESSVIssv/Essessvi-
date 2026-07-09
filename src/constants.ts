@@ -66,9 +66,22 @@ export const EDUCATION = [
 
 export const EXPERIENCE = [
   {
-    title: "AI WhatsApp Automation",
+    title: "SpareXChange: Automobile Marketplace",
+    role: "Product Lead & Developer",
+    company: "SpareXchange",
+    period: "Jan 2025 – Mar 2025",
+    description: "End-to-end development of a dual-sided marketplace for new and used automobile spare parts.",
+    points: [
+      "Designed full product lifecycle from user journey mapping to automated order fulfillment.",
+      "Implemented QR-based payment flow with OTP-secured transaction confirmation.",
+      "Built a unified admin dashboard to monitor inventory and transaction metrics."
+    ],
+    tools: ["Google AI Studio", "Gemini API", "Product Logic"]
+  },
+  {
+    title: "AI WhatsApp Agent",
     role: "AI Workflow Engineer",
-    company: "Independent Project",
+    company: "agentroomai",
     period: "Dec 2025 – April 2026",
     description: "Designed and developed an AI-powered WhatsApp automation system using n8n and OpenAI.",
     points: [
@@ -80,7 +93,7 @@ export const EXPERIENCE = [
     tools: ["n8n", "WhatsApp API", "OpenAI", "Workflow Engineering"]
   },
   {
-    title: "JobLence",
+    title: "JobLence: AI Job Assistant",
     role: "AI Job Application Assistant",
     company: "JobLence",
     period: "Feb 2025 – Present",
@@ -94,20 +107,7 @@ export const EXPERIENCE = [
     tools: ["AI Integration", "Product Planning", "Workflow Automation", "User Experience (UX)"]
   },
   {
-    title: "SpareXChange: Automobile Marketplace",
-    role: "Product Lead & Developer",
-    company: "Apollo University (Project)",
-    period: "Jan 2025 – Mar 2025",
-    description: "End-to-end development of a dual-sided marketplace for new and used automobile spare parts.",
-    points: [
-      "Designed full product lifecycle from user journey mapping to automated order fulfillment.",
-      "Implemented QR-based payment flow with OTP-secured transaction confirmation.",
-      "Built a unified admin dashboard to monitor inventory and transaction metrics."
-    ],
-    tools: ["Google AI Studio", "Gemini API", "Product Logic"]
-  },
-  {
-    title: "Predicting Epidemics: Health Forecasting",
+    title: "Health Forecasting System",
     role: "Core Developer & Thesis Presenter",
     company: "Apollo University (Research Project)",
     period: "Oct 2024 – Dec 2024",
