@@ -29,7 +29,7 @@ export default function Vision() {
                 I combine product thinking with hands-on execution, taking ideas from problem discovery to deployment. I engineered an AI-powered WhatsApp automation system that reduced manual work by 70%. I built SpareXchange, an automobile spare parts marketplace inspired by real user challenges, where I worked on user research, feature planning, user flows, and product design. I also developed an epidemic forecasting engine using WHO data that achieved 90% prediction accuracy.
               </p>
               <p>
-                Recently, I built <span className="text-text-main font-medium">JobLence</span>, an AI-powered job application assistant that analyzes resumes, matches candidates with relevant job opportunities, and streamlines the application process through automation. The project was driven by the challenge of making job discovery and applications more efficient for candidates.
+                Currently under progress is <span className="text-text-main font-medium">JobLence</span>, an AI-powered job application assistant that analyzes resumes, matches candidates with relevant job opportunities, and streamlines the application process through automation. The project is driven by the challenge of making job discovery and applications more efficient for candidates.
               </p>
               <p>
                 My role across these projects spans problem identification, user research, user journey mapping, feature prioritization, product strategy, AI workflow design, and technical implementation. I enjoy building products that solve real problems, create measurable impact, and deliver value to users.
