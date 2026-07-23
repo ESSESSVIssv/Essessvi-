@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto w-full">
         
         <div className="flex flex-col pt-12 max-w-5xl">
-          <h1 className="text-5xl md:text-7xl lg:text-[7.5rem] font-display font-black leading-[0.85] tracking-tighter uppercase mb-10">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-black leading-[0.9] tracking-tighter uppercase mb-10">
             ASPIRING<br />PRODUCT MANAGER
           </h1>
           

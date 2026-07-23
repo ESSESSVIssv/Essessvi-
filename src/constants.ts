@@ -66,19 +66,6 @@ export const EDUCATION = [
 
 export const EXPERIENCE = [
   {
-    title: "SpareXChange: Automobile Marketplace",
-    role: "Product Lead & Developer",
-    company: "SpareXchange",
-    period: "Jan 2025 – Mar 2025",
-    description: "End-to-end development of a dual-sided marketplace for new and used automobile spare parts.",
-    points: [
-      "Designed full product lifecycle from user journey mapping to automated order fulfillment.",
-      "Implemented QR-based payment flow with OTP-secured transaction confirmation.",
-      "Built a unified admin dashboard to monitor inventory and transaction metrics."
-    ],
-    tools: ["Google AI Studio", "Gemini API", "Product Logic"]
-  },
-  {
     title: "AI WhatsApp Agent",
     role: "AI Workflow Engineer",
     company: "agentroomai",
@@ -91,6 +78,19 @@ export const EXPERIENCE = [
       "Automated confirmations and deployed intelligent systems in a real-world environment."
     ],
     tools: ["n8n", "WhatsApp API", "OpenAI", "Workflow Engineering"]
+  },
+  {
+    title: "SpareXChange: Automobile Marketplace",
+    role: "Product Lead & Developer",
+    company: "SpareXchange",
+    period: "Jan 2025 – Mar 2025",
+    description: "End-to-end development of a dual-sided marketplace for new and used automobile spare parts.",
+    points: [
+      "Designed full product lifecycle from user journey mapping to automated order fulfillment.",
+      "Implemented QR-based payment flow with OTP-secured transaction confirmation.",
+      "Built a unified admin dashboard to monitor inventory and transaction metrics."
+    ],
+    tools: ["Google AI Studio", "Gemini API", "Product Logic"]
   },
   {
     title: "JobLence: AI Job Assistant",
@@ -152,20 +152,6 @@ export const CLUBS = [
 
 export const PROJECTS = [
   {
-    title: "SpareXchange Marketplace",
-    subtitle: "Dual-Sided Auto Parts Platform",
-    description: "An end-to-end e-commerce marketplace prototype designed specifically for new and used automobile spare parts.",
-    problem: "Finding reliable, verified spare parts is fragmented and lacks secure transaction mechanisms.",
-    solution: "Mapped out the full user journey and implemented a QR-based payment flow with OTP confirmation for secure handoffs.",
-    impact: "Successfully validated the dual-sided marketplace model and established a unified inventory dashboard.",
-    tools: ["Google AI Studio", "Gemini API", "Product Logic", "Journey Mapping"],
-    role: "Product Lead & Developer",
-    status: "Prototype",
-    icon: Sparkles,
-    image: sparexchangeImg,
-    link: "https://sparexchange-tau.vercel.app"
-  },
-  {
     title: "AI WhatsApp Agent",
     subtitle: "Automated Support & Logistics Pipeline",
     description: "An intelligent WhatsApp agent designed to automate customer interactions and streamline order processing in real-time.",
@@ -178,6 +164,20 @@ export const PROJECTS = [
     icon: MessageSquare,
     image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2070&auto=format&fit=crop",
     link: "#"
+  },
+  {
+    title: "SpareXchange Marketplace",
+    subtitle: "Dual-Sided Auto Parts Platform",
+    description: "An end-to-end e-commerce marketplace prototype designed specifically for new and used automobile spare parts.",
+    problem: "Finding reliable, verified spare parts is fragmented and lacks secure transaction mechanisms.",
+    solution: "Mapped out the full user journey and implemented a QR-based payment flow with OTP confirmation for secure handoffs.",
+    impact: "Successfully validated the dual-sided marketplace model and established a unified inventory dashboard.",
+    tools: ["Google AI Studio", "Gemini API", "Product Logic", "Journey Mapping"],
+    role: "Product Lead & Developer",
+    status: "Prototype",
+    icon: Sparkles,
+    image: sparexchangeImg,
+    link: "https://sparexchange-tau.vercel.app"
   },
   {
     title: "JobLence: AI Job Assistant",
