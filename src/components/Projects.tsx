@@ -32,7 +32,7 @@ export default function Projects() {
           {PROJECTS.map((project, idx) => (
             <div
               key={project.title}
-              className="relative group bg-[#F6F2EA] border border-[#DDD5C8] rounded-2xl p-10 md:p-14 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] hover:border-brand/40 hover:-translate-y-2 transition-all duration-500 flex flex-col lg:flex-row gap-12"
+              className="relative group bg-[#F6F2EA] border border-[#DDD5C8] rounded-2xl p-6 sm:p-10 md:p-14 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] hover:border-brand/40 hover:-translate-y-2 transition-all duration-500 flex flex-col lg:flex-row gap-8 lg:gap-12"
             >
               <div className="absolute top-10 right-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-brand">
                 <ArrowUpRight className="w-10 h-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500" />
@@ -55,7 +55,7 @@ export default function Projects() {
                     )}
                   </div>
                   
-                  <h3 className="text-4xl md:text-5xl font-display font-bold text-text-main uppercase tracking-tighter leading-tight mb-4">
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-text-main uppercase tracking-tighter leading-tight mb-4 break-words">
                     {project.title}
                   </h3>
                   <div className="w-20 h-[1px] bg-brand/50 mb-8"></div>
