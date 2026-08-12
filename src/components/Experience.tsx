@@ -23,16 +23,16 @@ export default function Experience() {
           {(EXPERIENCE as any[]).map((exp, idx) => (
             <div
               key={exp.title || exp.role}
-              className="group py-20 border-b border-text-main/10 flex flex-col md:grid md:grid-cols-12 gap-12 items-start relative transition-all hover:bg-text-main/5"
+              className="group py-20 border-b border-text-main/10 flex flex-col lg:grid lg:grid-cols-12 gap-12 items-start relative transition-all hover:bg-text-main/5"
             >
-              <div className="md:col-span-3">
+              <div className="lg:col-span-3">
                 <div className="text-[10px] font-mono font-light text-text-main/40 uppercase tracking-[0.3em] bg-white/5 px-5 py-2.5 rounded-2xl inline-block border border-text-main/10 group-hover:border-brand/40 group-hover:text-text-main transition-all font-normal">
                   {exp.company}
                 </div>
               </div>
               
-              <div className="md:col-span-5">
-                <h3 className="text-3xl md:text-4xl font-display font-bold text-text-main uppercase tracking-tighter mb-4 group-hover:text-brand transition-all leading-[1.1]">
+              <div className="lg:col-span-5">
+                <h3 className="text-3xl md:text-4xl font-display font-bold text-text-main uppercase tracking-tighter mb-4 group-hover:text-brand break-words transition-all leading-[1.1]">
                   {exp.title}
                 </h3>
                 <p className="text-[10px] font-mono font-light text-text-main/60 uppercase tracking-[0.2em] mb-12">
@@ -50,7 +50,7 @@ export default function Experience() {
                 )}
               </div>
 
-              <div className="md:col-span-4">
+              <div className="lg:col-span-4">
                 <p className="text-text-main/60 text-lg leading-relaxed mb-10 font-medium italic border-l-2 border-brand/20 pl-6">
                   {exp.description}
                 </p>
@@ -85,16 +85,16 @@ export default function Experience() {
           {(CLUBS as any[]).map((club, idx) => (
             <div
               key={club.title}
-              className="group py-20 border-b border-text-main/10 flex flex-col md:grid md:grid-cols-12 gap-12 items-start relative transition-all hover:bg-text-main/5"
+              className="group py-20 border-b border-text-main/10 flex flex-col lg:grid lg:grid-cols-12 gap-12 items-start relative transition-all hover:bg-text-main/5"
             >
-              <div className="md:col-span-3">
+              <div className="lg:col-span-3">
                 <div className="text-[10px] font-mono font-light text-text-main/40 uppercase tracking-[0.3em] bg-white/5 px-5 py-2.5 rounded-2xl inline-block border border-text-main/10 group-hover:border-brand/40 group-hover:text-text-main transition-all font-normal">
                   {club.company}
                 </div>
               </div>
               
-              <div className="md:col-span-5">
-                <h3 className="text-3xl md:text-4xl font-display font-bold text-text-main uppercase tracking-tighter mb-4 group-hover:text-brand transition-all leading-[1.1]">
+              <div className="lg:col-span-5">
+                <h3 className="text-3xl md:text-4xl font-display font-bold text-text-main uppercase tracking-tighter mb-4 group-hover:text-brand break-words transition-all leading-[1.1]">
                   {club.title}
                 </h3>
                 <p className="text-[10px] font-mono font-light text-text-main/60 uppercase tracking-[0.2em] mb-12">
@@ -112,7 +112,7 @@ export default function Experience() {
                 )}
               </div>
 
-              <div className="md:col-span-4">
+              <div className="lg:col-span-4">
                 <p className="text-text-main/60 text-lg leading-relaxed mb-10 font-medium italic border-l-2 border-brand/20 pl-6">
                   {club.description}
                 </p>
