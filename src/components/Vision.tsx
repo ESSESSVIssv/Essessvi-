@@ -21,7 +21,7 @@ export default function Vision() {
               Background & Vision
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tighter mb-6 text-gradient leading-[1.1]">
-              I'M ESSESSVI — A FINAL-YEAR CSE STUDENT WHO BUILDS <span className="text-brand">PRODUCTS</span> AND BRINGS THEM TO LIFE.
+              I'M ESSESSVI — AN AI PRODUCT BUILDER <br /> WHO BUILDS <br /> USEFUL <span className="text-brand">PRODUCTS</span> <br /> AND BRINGS THEM TO LIFE.
             </h2>
             
             <div className="space-y-2 text-base md:text-lg text-text-main/60 font-normal leading-relaxed">
