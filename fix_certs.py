@@ -1,4 +1,9 @@
-/**
+import re
+
+with open('src/components/Certifications.tsx', 'r') as f:
+    content = f.read()
+
+new_certs = """/**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -14,7 +19,7 @@ export default function Certifications() {
           <span className="text-brand font-sans uppercase tracking-widest text-xs mb-4 block font-bold">
             Continuous Learning
           </span>
-          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter text-text-main mb-6 break-words hyphens-auto">
+          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter text-text-main mb-6">
             CERTIFICATIONS & AWARDS
           </h2>
         </div>
@@ -48,3 +53,7 @@ export default function Certifications() {
     </section>
   );
 }
+"""
+
+with open('src/components/Certifications.tsx', 'w') as f:
+    f.write(new_certs)

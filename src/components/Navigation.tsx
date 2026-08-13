@@ -77,15 +77,15 @@ export default function Navigation() {
           <div className="flex items-center gap-4">
             {/* CTA Button */}
             <Link
-              to="/connect"
-              className="hidden sm:flex px-8 py-4 bg-brand text-bg font-sans font-bold text-[10px] uppercase tracking-[0.15em] hover:bg-text-main transition-colors items-center"
+              to="/contact"
+              className="hidden sm:flex px-8 py-4 bg-brand text-white font-sans font-bold text-[10px] uppercase tracking-[0.15em] hover:bg-text-main transition-colors items-center"
             >
               Let's Talk
             </Link>
 
             {/* Mobile Menu Toggle */}
             <button 
-              className="lg:hidden p-3 bg-text-main text-bg border-2 border-text-main transition-colors hover:bg-bg hover:text-text-main"
+              className="lg:hidden p-3 bg-text-main text-white border-2 border-text-main transition-colors hover:bg-bg hover:text-text-main"
               onClick={() => setMobileMenuOpen(true)}
             >
               <Menu size={20} />
@@ -115,7 +115,7 @@ export default function Navigation() {
                 Navigation
               </span>
               <button 
-                className="p-4 bg-text-main text-bg border-2 border-text-main"
+                className="p-4 bg-text-main text-white border-2 border-text-main"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <X size={24} />

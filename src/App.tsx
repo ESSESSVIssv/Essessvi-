@@ -14,6 +14,7 @@ import Skills from './components/Skills';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Resume from './components/Resume';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -37,12 +38,14 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<PageWrapper><Hero /></PageWrapper>} />
-      <Route path="/vision" element={<PageWrapper><Vision /></PageWrapper>} />
-      <Route path="/stack" element={<PageWrapper><Skills /></PageWrapper>} />
-      <Route path="/work" element={<PageWrapper><Projects /></PageWrapper>} />
+      <Route path="/about" element={<PageWrapper><Vision /></PageWrapper>} />
+      <Route path="/skills" element={<PageWrapper><Skills /></PageWrapper>} />
+      <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
+      <Route path="/experience" element={<PageWrapper><Experience /></PageWrapper>} />
       <Route path="/journey" element={<PageWrapper><Experience /></PageWrapper>} />
       <Route path="/awards" element={<PageWrapper><Certifications /></PageWrapper>} />
-      <Route path="/connect" element={<PageWrapper><Contact /></PageWrapper>} />
+      <Route path="/resume" element={<PageWrapper><Resume /></PageWrapper>} />
+      <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
     </Routes>
   );
 }

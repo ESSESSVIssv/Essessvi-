@@ -89,7 +89,7 @@ export default function Contact() {
   };
 
   const trustBadges = [
-    { icon: ShieldCheck, label: "Availability", value: "Full-Time / Intern" },
+    { icon: ShieldCheck, label: "Availability", value: "Full-Time" },
     { icon: Zap, label: "Focus", value: "AI Automation & No-Code" },
   ];
 

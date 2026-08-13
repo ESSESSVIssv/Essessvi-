@@ -1,4 +1,9 @@
-/**
+import re
+
+with open('src/components/Skills.tsx', 'r') as f:
+    content = f.read()
+
+new_skills = """/**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -13,7 +18,7 @@ export default function Skills() {
           <span className="text-brand font-sans uppercase tracking-widest text-xs mb-4 block font-bold">
             Core Competencies
           </span>
-          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter text-text-main mb-6 break-words hyphens-auto">
+          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter text-text-main mb-6">
             PRODUCT & TECHNICAL SKILLS
           </h2>
         </div>
@@ -41,3 +46,7 @@ export default function Skills() {
     </section>
   );
 }
+"""
+
+with open('src/components/Skills.tsx', 'w') as f:
+    f.write(new_skills)

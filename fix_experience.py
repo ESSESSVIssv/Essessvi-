@@ -1,4 +1,9 @@
-/**
+import re
+
+with open('src/components/Experience.tsx', 'r') as f:
+    content = f.read()
+
+new_experience = """/**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -14,7 +19,7 @@ export default function Experience() {
           <span className="text-brand font-sans uppercase tracking-widest text-xs mb-4 block font-bold">
             Work History
           </span>
-          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter text-text-main mb-6 break-words hyphens-auto">
+          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter text-text-main mb-6">
             PROFESSIONAL EXPERIENCE
           </h2>
         </div>
@@ -77,7 +82,7 @@ export default function Experience() {
           <span className="text-brand font-sans uppercase tracking-widest text-xs mb-4 block font-bold">
             Extracurricular
           </span>
-          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter text-text-main mb-6 break-words hyphens-auto">
+          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter text-text-main mb-6">
             CLUBS & LEADERSHIP
           </h2>
         </div>
@@ -119,3 +124,7 @@ export default function Experience() {
     </section>
   );
 }
+"""
+
+with open('src/components/Experience.tsx', 'w') as f:
+    f.write(new_experience)
