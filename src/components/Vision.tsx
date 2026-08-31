@@ -22,7 +22,7 @@ export default function Vision() {
             
             <div className="space-y-4 text-base md:text-lg text-text-main/80 font-sans leading-relaxed mt-12 w-full">
               <p>
-                I combine product thinking with hands-on execution, taking ideas from problem discovery to deployment. I engineered an AI-powered WhatsApp automation system that reduced manual work by 70%. I built SpareXChange, an automobile spare parts marketplace inspired by real user challenges, where I worked on user research, feature planning, user flows, and product design. I also developed an epidemic forecasting engine using WHO data that achieved 90% prediction accuracy.
+                I combine product thinking with hands-on execution, taking ideas from problem discovery to deployment. I engineered an AI-powered WhatsApp automation system that reduced manual work by 70%. I built SpareXChange, an automobile spare parts marketplace inspired by real user challenges, where I worked on user research, feature planning, user flows, and product design.
               </p>
               
               <p>
@@ -30,7 +30,7 @@ export default function Vision() {
               </p>
               <div className="mt-8 p-6 bg-white border border-border shadow-sm">
                 <p className="text-brand font-bold text-lg mb-2">
-                  Currently seeking full-time Product Management opportunities.
+                  Currently seeking a Product Management Internship.
                 </p>
                 <p className="text-sm font-sans text-text-main/60">
                   Based in {PERSONAL_INFO.location}

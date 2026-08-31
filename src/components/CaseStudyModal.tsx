@@ -26,12 +26,11 @@ import { useNavigate } from 'react-router-dom';
 
 import { whatsappSlides } from '../data/whatsappSlides';
 import { sparexchangeSlides } from '../data/sparexchangeSlides';
-import { epidemicSlides } from '../data/epidemicSlides';
 
 interface CaseStudyModalProps {
   isOpen: boolean;
   onClose: () => void;
-  projectType: 'sparexchange' | 'whatsapp' | 'epidemic' | null;
+  projectType: 'sparexchange' | 'whatsapp' | null;
 }
 
 export default function CaseStudyModal({ isOpen, onClose, projectType }: CaseStudyModalProps) {
@@ -39,7 +38,6 @@ export default function CaseStudyModal({ isOpen, onClose, projectType }: CaseStu
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = projectType === 'whatsapp' ? whatsappSlides : 
-                 projectType === 'epidemic' ? epidemicSlides : 
                  projectType === 'sparexchange' ? sparexchangeSlides : [];
 
   useEffect(() => {
@@ -72,10 +70,8 @@ export default function CaseStudyModal({ isOpen, onClose, projectType }: CaseStu
   if (!isOpen || !projectType) return null;
 
   const title = projectType === 'whatsapp' ? "AI-Based WhatsApp Agent" : 
-                projectType === 'epidemic' ? "Predicting Epidemics" : 
                 "SpareXChange Blueprint";
   const subtitle = projectType === 'whatsapp' ? "Academic Dissertation & Presentation Deck" : 
-                   projectType === 'epidemic' ? "Python & Pandas Predictive Analytics System" : 
                    "Product Management Case Study";
 
   return (

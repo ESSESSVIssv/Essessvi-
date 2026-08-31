@@ -5,6 +5,8 @@
 
 import { PROJECTS } from '../constants';
 import { ArrowUpRight } from 'lucide-react';
+import ProductThinking from './ProductThinking';
+
 
 export default function Projects() {
   return (
@@ -18,12 +20,13 @@ export default function Projects() {
           <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter text-text-main mb-6 break-words hyphens-auto">
             PRODUCT CASE STUDIES
           </h2>
-          <p className="text-text-main/70 font-sans max-w-2xl text-lg leading-relaxed">
+          <p className="text-text-main/70 font-sans w-full text-lg leading-relaxed">
             I approach building products by focusing on the user problem first. Here is a selection of my work demonstrating product thinking, AI integration, and end-to-end execution.
           </p>
         </div>
 
-        <div className="space-y-32">
+        <ProductThinking />
+        <div className="space-y-32 mt-16">
           {(PROJECTS as any[]).map((project, idx) => (
             <div key={idx} className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               
