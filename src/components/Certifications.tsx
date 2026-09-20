@@ -14,7 +14,7 @@ export default function Certifications() {
           <span className="text-brand font-sans uppercase tracking-widest text-xs mb-4 block font-bold">
             Continuous Learning
           </span>
-          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter text-text-main mb-6 break-words hyphens-auto">
+          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter text-[#B87333] mb-6 break-words hyphens-auto">
             CERTIFICATIONS & AWARDS
           </h2>
         </div>
@@ -26,7 +26,7 @@ export default function Certifications() {
               className="group bg-white border border-border p-8 hover:border-brand/40 transition-colors flex flex-col h-full"
             >
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl font-display font-bold text-text-main mb-3 leading-tight group-hover:text-brand transition-colors">
+                <h3 className="text-lg md:text-xl font-display font-bold text-[#B87333] mb-3 leading-tight group-hover:text-brand transition-colors">
                   {cert.title}
                 </h3>
                 <p className="text-sm font-sans text-text-main/60 font-medium">

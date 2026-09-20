@@ -4,17 +4,19 @@
  */
 
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import Vision from './components/Vision';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Certifications from './components/Certifications';
+import HomePage from './components/HomePage';
+import WorkPage from './components/WorkPage';
+import AgentRoomAICaseStudy from './components/AgentRoomAICaseStudy';
+import SpareXChangeCaseStudy from './components/SpareXChangeCaseStudy';
+import JobLenceCaseStudy from './components/JobLenceCaseStudy';
+import ResearchPage from './components/ResearchPage';
+import ProductTeardowns from './components/ProductTeardowns';
+import AboutPage from './components/AboutPage';
+import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Resume from './components/Resume';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,38 +28,42 @@ function ScrollToTop() {
   return null;
 }
 
-function PageWrapper({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="min-h-[calc(100vh-200px)]">
-      {children}
-    </div>
-  );
-}
-
-function AppRoutes() {
-  return (
-    <Routes>
-      <Route path="/" element={<PageWrapper><Hero /></PageWrapper>} />
-      <Route path="/about" element={<PageWrapper><Vision /></PageWrapper>} />
-      <Route path="/skills" element={<PageWrapper><Skills /></PageWrapper>} />
-      <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
-      <Route path="/experience" element={<PageWrapper><Experience /></PageWrapper>} />
-      <Route path="/journey" element={<PageWrapper><Experience /></PageWrapper>} />
-      <Route path="/awards" element={<PageWrapper><Certifications /></PageWrapper>} />
-      <Route path="/resume" element={<PageWrapper><Resume /></PageWrapper>} />
-      <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
-    </Routes>
-  );
-}
-
 export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-bg flex flex-col">
+      <div className="min-h-screen bg-bg flex flex-col selection:bg-brand selection:text-white">
         <Navigation />
-        <main className="flex-1 mt-20 lg:mt-0">
-          <AppRoutes />
+        <main className="flex-1 mt-16 md:mt-20">
+          <Routes>
+            {/* Home */}
+            <Route path="/" element={<HomePage />} />
+
+            {/* Work & Dedicated Case Studies */}
+            <Route path="/work" element={<WorkPage />} />
+            <Route path="/work/agentroomai" element={<AgentRoomAICaseStudy />} />
+            <Route path="/work/sparexchange" element={<SpareXChangeCaseStudy />} />
+            <Route path="/work/joblence" element={<JobLenceCaseStudy />} />
+
+            {/* Research */}
+            <Route path="/research" element={<ResearchPage />} />
+            <Route path="/research/farmer-token" element={<ResearchPage />} />
+
+            {/* Teardowns */}
+            <Route path="/teardowns" element={<ProductTeardowns />} />
+            <Route path="/teardowns/cashkaro" element={<ProductTeardowns />} />
+
+            {/* About, Resume, Contact */}
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/contact" element={<Contact />} />
+
+            {/* Redirects for clean routing */}
+            <Route path="/projects" element={<Navigate to="/work" replace />} />
+            <Route path="/experience" element={<Navigate to="/about" replace />} />
+            <Route path="/skills" element={<Navigate to="/about" replace />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
         </main>
         <Footer />
       </div>

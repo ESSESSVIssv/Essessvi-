@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -29,7 +29,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: var(--color-text-main);
+    color: #B87333;
     font-family: var(--font-display);
     text-transform: uppercase;
     overflow-wrap: break-word;
@@ -77,3 +77,28 @@
   background: var(--color-brand);
   color: var(--color-bg);
 }
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm;
+  }
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  nav, footer, .print-hide {
+    display: none !important;
+  }
+  .print-page {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+

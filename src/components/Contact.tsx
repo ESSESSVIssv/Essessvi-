@@ -3,207 +3,148 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useRef, useEffect, FormEvent } from "react";
 import {
   Mail,
-  Phone,
   Linkedin,
   Github,
-  Send,
-  User,
-  Sparkles,
-  Loader2,
-  ShieldCheck,
-  Zap,
+  Phone,
+  FileText,
+  ArrowRight
 } from "lucide-react";
 import { PERSONAL_INFO } from "../constants";
-
-interface Message {
-  role: "user" | "assistant";
-  content: string;
-}
+import { Link } from "react-router-dom";
 
 export default function Contact() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      role: "assistant",
-      content: `Hi! I'm Essessvi's AI assistant. Ask me anything about his AI projects or automation work!`,
-    },
-  ]);
-  const [input, setInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    if (messages.length > 1) {
-      scrollToBottom();
-    }
-  }, [messages]);
-
-  const handleSend = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!input.trim() || isLoading) return;
-
-    const userMessage = input.trim();
-    setInput("");
-    setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
-    setIsLoading(true);
-
-    try {
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          message: userMessage,
-          context: PERSONAL_INFO.bio,
-          role: PERSONAL_INFO.role,
-        }),
-      });
-      
-      const data = await response.json();
-      
-      if (data.error) throw new Error(data.error);
-
-      const botResponse = data.text || "I'm sorry, I couldn't generate a response.";
-      
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: botResponse },
-      ]);
-    } catch (error) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          content:
-            "Sorry, I'm having trouble responding right now. Please use the direct email or LinkedIn links on the left!",
-        },
-      ]);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const trustBadges = [
-    { icon: ShieldCheck, label: "Availability", value: "Full-Time" },
-    { icon: Zap, label: "Focus", value: "AI Automation & No-Code" },
-  ];
-
   return (
-    <section
-      id="contact"
-      className="bg-bg py-32 border-t border-text-main/10 relative overflow-hidden"
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-20 lg:gap-32 items-start justify-between">
-          <div className="w-full lg:w-[45%]">
-            <span className="text-brand font-mono uppercase tracking-[0.4em] text-xs mb-8 block font-light">
-              Get in Touch
-            </span>
-            <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tighter text-gradient leading-[0.9] mb-12">
-              LET'S <br />
-              <span className="text-brand">CONNECT.</span>
+    <div className="w-full bg-bg py-20 md:py-28 min-h-screen">
+      <div className="max-w-4xl mx-auto px-6 md:px-12">
+        
+        {/* Page Header */}
+        <div className="mb-14 pb-8 border-b border-border">
+          <div className="text-xs font-sans uppercase tracking-widest text-brand font-bold mb-2">
+            Get in Touch
+          </div>
+          <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4">
+            Let's talk about products.
+          </h1>
+          <p className="text-base md:text-lg font-sans text-text-main/75 max-w-2xl leading-relaxed">
+            I'm a product-focused CSE graduate looking for an APM role, Junior Product Manager position, or Product Management Internship.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+          
+          {/* Direct Channels - Full Width without Form */}
+          <div className="md:col-span-12 max-w-2xl">
+            <h2 className="text-xs font-sans uppercase tracking-widest text-[#B87333] font-bold mb-5" style={{ color: '#B87333' }}>
+              Direct Channels
             </h2>
 
-            <p className="text-text-main/60 text-sm md:text-base mb-16 max-w-md leading-relaxed tracking-wider font-normal">
-              Have a project in mind or looking for an AI automation engineer?
-              Reach out through any channel.
-            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Email */}
+              <a
+                href={`mailto:${PERSONAL_INFO.email}`}
+                className="p-5 bg-white border border-border flex items-start gap-3.5 hover:border-brand transition-colors block group shadow-xs"
+              >
+                <div className="w-10 h-10 bg-brand/10 text-brand flex items-center justify-center shrink-0">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-text-main/50 block mb-0.5">
+                    Email
+                  </span>
+                  <span className="text-sm font-sans font-semibold text-text-main group-hover:text-brand transition-colors break-all">
+                    {PERSONAL_INFO.email}
+                  </span>
+                </div>
+              </a>
 
-            <div className="grid grid-cols-2 gap-6 pt-12 border-t border-text-main/10">
-              {trustBadges.map((badge, idx) => (
-                <div key={idx} className="space-y-2">
-                  <badge.icon className="w-5 h-5 text-brand opacity-60" />
-                  <p className="text-[9px] font-mono font-light text-gray-600 uppercase tracking-widest">
-                    {badge.label}
-                  </p>
-                  <p className="text-xs font-display font-light text-text-main uppercase">
-                    {badge.value}
+              {/* Phone */}
+              <a
+                href="tel:+919392964456"
+                className="p-5 bg-white border border-border flex items-start gap-3.5 hover:border-brand transition-colors block group shadow-xs"
+              >
+                <div className="w-10 h-10 bg-brand/10 text-brand flex items-center justify-center shrink-0">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-text-main/50 block mb-0.5">
+                    Phone
+                  </span>
+                  <span className="text-sm font-sans font-semibold text-text-main group-hover:text-brand transition-colors">
+                    +91 9392964456
+                  </span>
+                </div>
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href={PERSONAL_INFO.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-5 bg-white border border-border flex items-start gap-3.5 hover:border-brand transition-colors block group shadow-xs"
+              >
+                <div className="w-10 h-10 bg-brand/10 text-brand flex items-center justify-center shrink-0">
+                  <Linkedin className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-text-main/50 block mb-0.5">
+                    LinkedIn
+                  </span>
+                  <span className="text-sm font-sans font-semibold text-text-main group-hover:text-brand transition-colors">
+                    linkedin.com/in/essessvi-vadlamudi
+                  </span>
+                </div>
+              </a>
+
+              {/* GitHub */}
+              <a
+                href={PERSONAL_INFO.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-5 bg-white border border-border flex items-start gap-3.5 hover:border-brand transition-colors block group shadow-xs"
+              >
+                <div className="w-10 h-10 bg-brand/10 text-brand flex items-center justify-center shrink-0">
+                  <Github className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-text-main/50 block mb-0.5">
+                    GitHub
+                  </span>
+                  <span className="text-sm font-sans font-semibold text-text-main group-hover:text-brand transition-colors">
+                    github.com/essessvi
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            {/* Resume Callout */}
+            <div className="mt-8 p-6 bg-white border border-border flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xs">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-brand/10 text-brand flex items-center justify-center shrink-0">
+                  <FileText className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-display font-bold text-sm text-[#B87333]" style={{ color: '#B87333' }}>
+                    Looking for my resume?
+                  </h3>
+                  <p className="text-xs font-sans text-text-main/70">
+                    Review my official single-page resume or save as PDF.
                   </p>
                 </div>
-              ))}
+              </div>
+              <Link
+                to="/resume"
+                className="px-5 py-2.5 bg-brand text-white font-sans font-bold text-xs uppercase tracking-wider hover:bg-text-main transition-colors inline-flex items-center gap-1.5 shrink-0 self-start sm:self-auto shadow-xs"
+              >
+                View Resume <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
 
-          <div className="w-full lg:w-[50%] space-y-8">
-            <a
-              href={`mailto:${PERSONAL_INFO.email}`}
-              className="flex items-center gap-8 group p-6 rounded-[2.5rem] bg-card/40 border border-[#D9C7B2]/20 hover:border-brand/40 hover:bg-card/80 transition-all duration-500 shadow-sm"
-            >
-              <div className="w-16 h-16 rounded-[2rem] bg-brand/10 border border-brand/20 flex items-center justify-center text-brand group-hover:scale-110 transition-all duration-500 flex-shrink-0">
-                <Mail size={24} />
-              </div>
-              <div>
-                <p className="font-mono text-[10px] text-text-main/40 font-light uppercase tracking-[0.3em] mb-1 font-normal">
-                  Email
-                </p>
-                <p className="text-text-main font-display font-medium text-xl uppercase tracking-tight break-all">
-                  {PERSONAL_INFO.email}
-                </p>
-              </div>
-            </a>
-
-            <a
-              href={`tel:${PERSONAL_INFO.phone}`}
-              className="flex items-center gap-8 group p-6 rounded-[2.5rem] bg-card/40 border border-[#D9C7B2]/20 hover:border-brand/40 hover:bg-card/80 transition-all duration-500 shadow-sm"
-            >
-              <div className="w-16 h-16 rounded-[2rem] bg-brand/10 border border-brand/20 flex items-center justify-center text-brand group-hover:scale-110 transition-all duration-500 flex-shrink-0">
-                <Phone size={24} />
-              </div>
-              <div>
-                <p className="font-mono text-[10px] text-text-main/40 font-light uppercase tracking-[0.3em] mb-1 font-normal">
-                  Phone
-                </p>
-                <p className="text-text-main font-display font-medium text-xl uppercase tracking-tight">
-                  {PERSONAL_INFO.phone}
-                </p>
-              </div>
-            </a>
-
-            <a
-              href={PERSONAL_INFO.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-8 group p-6 rounded-[2.5rem] bg-card/40 border border-[#D9C7B2]/20 hover:border-brand/40 hover:bg-card/80 transition-all duration-500 shadow-sm"
-            >
-              <div className="w-16 h-16 rounded-[2rem] bg-brand/10 border border-brand/20 flex items-center justify-center text-brand group-hover:scale-110 transition-all duration-500 flex-shrink-0">
-                <Linkedin size={24} />
-              </div>
-              <div>
-                <p className="font-mono text-[10px] text-text-main/40 font-light uppercase tracking-[0.3em] mb-1 font-normal">
-                  LinkedIn
-                </p>
-                <p className="text-text-main font-display font-medium text-xl uppercase tracking-tight">
-                  V.ESSESSVI
-                </p>
-              </div>
-            </a>
-
-            <a
-              href={PERSONAL_INFO.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-8 group p-6 rounded-[2.5rem] bg-card/40 border border-[#D9C7B2]/20 hover:border-brand/40 hover:bg-card/80 transition-all duration-500 shadow-sm"
-            >
-              <div className="w-16 h-16 rounded-[2rem] bg-brand/10 border border-brand/20 flex items-center justify-center text-brand group-hover:scale-110 transition-all duration-500 flex-shrink-0">
-                <Github size={24} />
-              </div>
-              <div>
-                <p className="font-mono text-[10px] text-text-main/40 font-light uppercase tracking-[0.3em] mb-1 font-normal">
-                  GitHub
-                </p>
-                <p className="text-text-main font-display font-medium text-xl uppercase tracking-tight">
-                  V-ESSESSVI
-                </p>
-              </div>
-            </a>
-          </div>
         </div>
+
       </div>
-    </section>
+    </div>
   );
 }

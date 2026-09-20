@@ -24,74 +24,111 @@ import {
   Cpu,
   BarChart3,
   Zap,
-  Globe
+  Globe,
+  CheckCircle,
+  Activity,
+  Layers,
+  FileText,
+  Compass,
+  ArrowRight
 } from 'lucide-react';
 
 export const PERSONAL_INFO = {
-  name: "V.ESSESSVI",
+  name: "V. ESSESSVI",
   firstName: "ESSESSVI",
-  role: "Recent B.Tech CSE Graduate | Aspiring Product Manager",
+  role: "Junior Product Management / APM Candidate",
+  targetRoles: "Product Management Intern · Associate Product Manager · Junior PM",
   email: "vessessvi2005@gmail.com",
   phone: "9392964456",
   location: "Chittoor, India",
   linkedin: "https://www.linkedin.com/in/essessvi-vadlamudi-ab2590273",
   github: "https://github.com/dashboard",
-  resume: "/resume.pdf",
+  resume: "/resume",
   website: "https://essessvi.vercel.app",
-  bio: "I am a recent B.Tech CSE graduate and Aspiring Product Manager with hands-on experience in AI-powered products, workflow automation, and user-focused product development. From building AI WhatsApp agents to developing product strategies for JobLens and SpareXChange, I translate real-world problems into practical solutions. I am currently seeking a Product Management Internship."
+  headline: "Building products around real user problems.",
+  supportingText: "Product-focused CSE graduate with hands-on experience in user research, AI-powered products, workflow automation, and product thinking. I enjoy understanding how people actually experience a problem and turning those insights into simple, useful product solutions.",
+  bio: "Product-focused Computer Science graduate with hands-on experience in user research, AI-powered products, workflow automation, and product thinking. Rather than starting with features or code, I focus on how users experience friction in their daily lives, map out their journey, and design practical, high-utility solutions. I bridge user empathy with technical literacy—collaborating effectively with engineers while keeping the user at the center. I am actively seeking a Product Management Internship or Associate Product Manager (APM) role."
 };
+
+export const CORE_CAPABILITIES = [
+  "Product Discovery",
+  "User Research",
+  "Product Thinking",
+  "AI Products",
+  "User Journey Mapping",
+  "Prototyping"
+];
 
 export const EDUCATION = [
   {
     institution: "The Apollo University",
-    degree: "B.Tech in Computer Science — CGPA: 7.17",
-    period: "Sept 2022 - April 2026",
-    description: ""
+    degree: "B.Tech in Computer Science & Engineering",
+    score: "CGPA: 7.17",
+    period: "Sept 2022 – Apr 2026",
+    description: "Coursework in Software Engineering, Data Structures, Human-Computer Interaction, and Systems Design. Organized university-level events and community outreach programs."
   },
   {
-    institution: "GOVT. JR. COLLEGE, VADAMALAPET, Chittoor",
-    degree: "Intermediate — 542 marks",
-    period: "March 2020 - August 2022",
-    description: ""
+    institution: "Govt. Jr. College, Vadamalapet, Chittoor",
+    degree: "Intermediate (MPC)",
+    score: "542 marks",
+    period: "Mar 2020 – Aug 2022",
+    description: "Mathematics, Physics, and Chemistry."
   },
   {
     institution: "Camford English High School, Chittoor",
-    degree: "SSC — 416 marks",
-    period: "April 2008 - May 2020",
-    description: ""
+    degree: "Secondary School Certificate (SSC)",
+    score: "416 marks",
+    period: "Apr 2008 – May 2020",
+    description: "Foundational education."
   }
 ];
 
 export const EXPERIENCE = [
   {
     company: "AgentRoomAI",
-    title: "AI Workflow Engineer",
-    role: "Intern",
-    period: "Dec 2025 - April 2026",
-    description: "Built end-to-end AI agent workflows for automated customer interactions and order processing.",
+    title: "Intern AI Workflow Engineer",
+    role: "Internship",
+    period: "Dec 2025 – Apr 2026",
+    summary: "Analyzed conversational ordering breakdowns and designed automated conversational workflows to eliminate customer ordering friction.",
     points: [
-      "Integrated OpenAI language models to generate intelligent, real-time customer responses.",
-      "Connected AI systems with the WhatsApp Business API for seamless customer communication.",
-      "Built end-to-end AI agent workflows for automated customer interactions and order processing.",
-      "Streamlined operations by automating message handling, confirmations, and workflow execution, reducing manual effort and improving efficiency."
+      "Identified customer challenges in the ordering process, including incomplete orders, ambiguous messages, delayed confirmations, and repetitive support inquiries.",
+      "Designed structured conversational dialog flows to make customer ordering faster, simpler, and less prone to user drop-off.",
+      "Integrated AI intent classification with deterministic validation rules to parse customer intent and generate relevant real-time confirmations.",
+      "Automated repetitive customer WhatsApp interactions to reduce manual operator effort and improve response handling consistency.",
+      "Identified critical edge cases (topic shifts, partial information, rapid duplicate requests) and iterated workflows to create a dependable customer experience.",
+      "Tested conversational flows and refined system prompts based on observed customer interaction patterns."
     ],
-    tools: ["OpenAI", "WhatsApp Business API", "Workflow Automation"]
+    productSkills: [
+      "Customer Problem Identification",
+      "Conversational UX Design",
+      "Workflow & Journey Mapping",
+      "Edge-Case Analysis",
+      "AI Prompt Engineering",
+      "User Intent Modeling"
+    ]
   },
   {
     company: "SpareXChange",
     title: "Product Lead & Developer",
-    role: "Project",
-    period: "Jan 2025 - Mar 2025",
-    description: "Owned the end-to-end product lifecycle of an automobile marketplace platform.",
+    role: "Product Concept & Prototype",
+    period: "Jan 2025 – Mar 2025",
+    summary: "Spearheaded the product conception, user journey mapping, feature prioritization, and prototype development for a dual-sided automotive spare-parts marketplace.",
     points: [
-      "Owned the end-to-end product lifecycle of an automobile marketplace platform.",
-      "Conducted market research and competitor analysis to identify user needs and product opportunities.",
-      "Designed user journeys and optimized the buying experience across the platform.",
-      "Built a centralized admin dashboard for inventory and transaction management.",
-      "Implemented a secure QR-based payment system with OTP verification for safe transactions.",
-      "Collaborated on feature planning and prioritized product improvements to enhance usability and growth."
+      "Conducted market analysis and identified key friction points in the fragmented offline automobile spare-parts purchasing process.",
+      "Mapped end-to-end user journeys for both individual car owners seeking verified parts and local mechanics sourcing inventory.",
+      "Scoped and prioritized the MVP feature set using Value vs. Effort frameworks, focusing strictly on resolving the market trust deficit.",
+      "Designed and implemented a secure QR-based payment handoff flow with OTP verification to ensure part inspection prior to fund release.",
+      "Built a centralized dashboard for parts suppliers to lower onboarding barriers and simplify listing management.",
+      "Validated transaction workflows and usability through peer prototype walkthroughs and iterative flow adjustments."
     ],
-    tools: ["Product Lifecycle Management", "Market Research", "User Journey Mapping"]
+    productSkills: [
+      "Product Discovery",
+      "Market Research",
+      "User Journey Mapping",
+      "MVP Scoping",
+      "Feature Prioritization",
+      "Trust & Safety Mechanisms"
+    ]
   }
 ];
 
@@ -99,123 +136,95 @@ export const CLUBS = [
   {
     title: "National Service Scheme (NSS)",
     role: "Coordinator & Member",
-    company: "Clubs & Organizations",
+    company: "University Leadership",
     period: "2022 – 2026",
-    description: "Organized and participated in community service initiatives and social awareness campaigns.",
+    description: "Led student groups in community outreach, literacy initiatives, and environmental health campaigns.",
     points: [
-      "Led student groups in organizing community outreach and environmental campaigns.",
-      "Facilitated collaboration between university administration and student volunteers."
+      "Facilitated multi-stakeholder collaboration between university administration, local community leaders, and student volunteers.",
+      "Managed event logistics, volunteer scheduling, and on-ground campaign execution."
     ],
-    tools: ["Leadership", "Event Coordination", "Community Service"]
+    tools: ["Stakeholder Management", "Team Leadership", "Community Outreach"]
   },
   {
     title: "Echo Club",
     role: "Member",
-    company: "Clubs & Organizations",
+    company: "Campus Sustainability",
     period: "2024 – 2025",
-    description: "Active member contributing to environmental conservation and awareness programs.",
+    description: "Active contributor to campus sustainability drives and eco-friendly operational awareness.",
     points: [
-      "Participated in sustainability drives and eco-friendly campus initiatives.",
-      "Collaborated with team members to execute awareness events."
+      "Collaborated with cross-functional student teams to execute resource conservation and waste reduction initiatives on campus."
     ],
-    tools: ["Teamwork", "Sustainability", "Public Awareness"]
+    tools: ["Cross-functional Teamwork", "Event Execution"]
   }
 ];
 
-export const PROJECTS = [
+export const METHODOLOGY_STEPS = [
   {
-    title: "AI WhatsApp Agent",
-    subtitle: "AI-Powered Customer Automation",
-    description: "An AI product automation solution designed to eliminate manual customer support and streamline order logistics.",
-    problem: "Manual order processing was slow, error-prone, and caused significant friction for both business operators and end-customers waiting for responses.",
-    user: "Small-to-medium business owners burdened by manual logistics, and customers seeking instant support.",
-    solution: "Designed a conversational AI agent flow that parses intent, handles queries, and triggers automated fulfillment sequences in real-time.",
-    product_decision: "Prioritized WhatsApp as the interface to meet users where they already are. Chose an orchestrator (n8n) and OpenAI to securely parse order details without hallucination risks, ensuring a scalable product flow.",
-    impact: "Reduced manual processing effort significantly and decreased average response time from hours to seconds.",
-    tools: ["WhatsApp API", "OpenAI", "n8n", "Prompt Engineering"],
-    role: "AI Workflow Engineer (Intern)",
-    status: "Live",
-    icon: MessageSquare,
-    link: "#"
+    number: "01",
+    title: "Understand",
+    description: "Understand the user's context, constraints, and environment before jumping to any solution.",
+    icon: Search
   },
   {
-    title: "SpareXChange",
-    subtitle: "Dual-Sided Auto Parts Platform",
-    description: "An end-to-end e-commerce marketplace prototype designed to solve the discovery and trust problems in the automobile spare parts market.",
-    problem: "Finding reliable, verified spare parts is a highly fragmented experience that lacks transparency and secure transaction mechanisms.",
-    user: "Automobile owners needing affordable parts, and local mechanics looking to reliably source specific inventory.",
-    solution: "Mapped out the full user journey and implemented a structured marketplace with a secure payment handoff system.",
-    product_decision: "Focused the MVP strictly on solving the 'trust deficit' by designing a secure QR-based payment flow with OTP confirmation. Built a centralized dashboard to lower the barrier for supplier inventory management.",
-    impact: "Successfully validated the dual-sided marketplace model, user flows, and core transaction logic.",
-    tools: ["Product Discovery", "User Journey Mapping", "Prototyping", "Feature Prioritization"],
-    role: "Product Lead & Developer",
-    status: "Prototype",
-    icon: Sparkles,
-    link: "https://sparexchange-tau.vercel.app"
+    number: "02",
+    title: "Discover",
+    description: "Use contextual observation, direct conversations, research, and qualitative evidence to identify behavioral patterns.",
+    icon: Compass
   },
   {
-    title: "JobLens",
-    subtitle: "AI Job Discovery Assistant",
-    description: "A smart application platform that evaluates resume-to-job fit to solve the frustration of low-signal job applications.",
-    problem: "Applicants waste hours applying for mismatched roles due to a lack of immediate fit-feedback, leading to application fatigue.",
-    user: "Recent graduates and job seekers overwhelmed by high-volume, low-transparency application processes.",
-    solution: "Designed user flows and integrated AI to instantly parse resumes against job descriptions, providing job-fit scores.",
-    product_decision: "Shifted the product focus away from being just another 'job board' to an AI-driven 'fit-scorer'. Prioritized instant feedback in the user flow to solve the 'resume black hole' anxiety.",
-    impact: "Streamlined the application process, empowering candidates to focus their effort solely on high-probability opportunities.",
-    tools: ["Product Strategy", "AI Products", "UX Flow", "LLMs"],
-    role: "Product Planning & UX",
-    status: "Prototype",
-    icon: Briefcase,
-    link: "https://joblens-ten.vercel.app/"
+    number: "03",
+    title: "Define",
+    description: "Synthesize field observations and pain points into a crisp, actionable product problem statement.",
+    icon: Target
   },
   {
-    title: "FarmerToken",
-    subtitle: "Digital Agricultural Procurement Platform",
-    description: "A dual-sided digital procurement platform designed to reduce factory waiting times and improve grading and payment transparency for farmers.",
-    problem: "Farmers often arrive at factories without knowing available processing capacity, causing long queues and wasted time. Manual grading and payment handling lack transparency, making final payments difficult for farmers to understand.",
-    user: "Farmers needing to deliver agricultural produce, and factory admins managing daily processing capacity and intake.",
-    solution: "Digitized the procurement process. Farmers use mobile login to view nearby factory capacity, book delivery slots, and receive digital tokens. Factory admins check in farmers using tokens, record grade-wise weights, and automatically calculate payments.",
-    product_decision: "Prioritized a simple mobile-number login and digital token system for farmers to reduce barriers to entry. For admins, automated the complex grading math (A/B/C/Rejected) to instantly generate clear digital receipts, building trust.",
-    impact: "Created a scalable prototype that maps the entire agricultural procurement workflow from slot booking to digital receipt generation (Evolving Prototype).",
-    tools: ["Product Management", "Dual-Sided Platform", "Workflow Design", "Prototyping"],
-    role: "Product Manager & Developer",
-    status: "Prototype",
-    icon: Tractor,
-    link: "https://farmer-token.vercel.app"
+    number: "04",
+    title: "Prioritize",
+    description: "Decide which problems and features matter most using value vs. complexity trade-offs.",
+    icon: Layers
   },
   {
-    title: "CashKaro Product Teardown",
-    subtitle: "UX & Value Proposition Analysis",
-    description: "A product teardown identifying friction points in new-user onboarding and product-level value communication.",
-    problem: "New users may not immediately grasp the 'shop via us' value proposition, causing potential drop-offs before their first purchase.",
-    user: "New customers interacting with the CashKaro platform for the first time.",
-    insight: "Observation 1: New-user discovery needs to clarify the 'why' before the 'how'. Observation 2: Displaying generic cashback percentages is less effective than showing concrete, product-specific savings.",
-    solution: "Proposed simplifying the onboarding flow to immediately communicate value, and implementing concrete discount calculations directly on product cards.",
-    product_decision: "Hypothesized that moving from abstract percentages to tangible currency savings would lower cognitive load and increase activation rates.",
-    impact: "Expected impact: Higher new-user activation rates and clearer upfront value communication (Proposed Recommendations).",
-    tools: ["Product Teardown", "Product Thinking", "UX Evaluation"],
-    role: "Product Analyst",
-    status: "Case Study",
-    icon: Target,
-    link: "#"
+    number: "05",
+    title: "Build",
+    description: "Create the simplest useful solution or prototype to test the core hypothesis with minimal overhead.",
+    icon: Rocket
+  },
+  {
+    number: "06",
+    title: "Validate",
+    description: "Test assumptions against real user interactions, gather honest feedback, and rapidly iterate.",
+    icon: CheckCircle
   }
 ];
-export const SKILLS = [
+
+export const PRODUCT_SKILLS = [
   {
-     category: "Product Management & Discovery",
-     items: ["Product Management", "Product Discovery", "User Research", "Product Strategy", "Product Thinking", "MVP Definition", "Competitive Analysis", "Prototyping"]
-   },
+    category: "Product",
+    skills: [
+      "User Research",
+      "Product Discovery",
+      "Product Thinking",
+      "User Journey Mapping",
+      "Problem Framing",
+      "Feature Prioritization",
+      "Initial Product Scope",
+      "Market Research",
+      "Competitor Analysis",
+      "Product Prototyping"
+    ]
+  },
   {
-     category: "AI & Automation",
-     items: ["AI Products", "LLMs", "Prompt Engineering", "AI Automation", "Google AI Studio", "Gemini API", "OpenAI", "n8n"]
-   },
-  {
-     category: "Technical & Other",
-     items: ["API Integration", "WhatsApp Business API", "Project Management"]
-   },
-  {
-    category: "Languages",
-    items: ["English", "Telugu", "Hindi", "Tamil"]
+    category: "AI / Technical",
+    skills: [
+      "AI Products",
+      "LLMs",
+      "OpenAI",
+      "Gemini API",
+      "Prompt Engineering",
+      "Workflow Automation",
+      "WhatsApp Business API",
+      "API Integration"
+    ]
   }
 ];
 
@@ -223,65 +232,35 @@ export const CERTIFICATIONS = [
   {
     title: "Aha! Product Management Professional Certificate",
     issuer: "LinkedIn Learning",
-    date: "May 27, 2026"
+    date: "May 27, 2026",
+    note: "Structured Product Management learning supporting practical product work."
   },
   {
     title: "IBM Data Fundamentals",
     issuer: "IBM SkillsBuild",
-    date: "Dec 2025"
+    date: "Dec 2025",
+    note: "Data literacy and core analysis concepts"
   },
   {
-    title: "Acquiring Data - AI Fundamentals",
-    issuer: "Accenture",
-    date: "Nov 2024"
+    title: "Acquiring Data – AI Fundamentals",
+    issuer: "IBM / AI Education",
+    date: "Nov 2024",
+    note: "Data ingestion, preparation, and AI fundamentals"
   },
   {
     title: "Google Cloud Computing Foundations",
     issuer: "Google Cloud",
-    date: "Dec 2023"
-  },
-  {
-    title: "Ethical Hacking in IIT Hyderabad",
-    issuer: "IIT Hyderabad",
-    date: "Oct 2023"
-  }
-];
-
-export const SERVICES = [
-  { 
-    title: "AI Chatbot Development", 
-    icon: "Target",
-    description: "Architecting high-conversion AI roadmaps that bridge market gaps and drive scalable user value."
-  },
-  { 
-    title: "Business Process Automation", 
-    icon: "Zap",
-    description: "Eliminating operational bottlenecks by engineering intelligent autonomous systems and n8n pipelines."
-  },
-  { 
-    title: "AI Tool Integration", 
-    icon: "Search",
-    description: "Deep-dive user journey mapping and problem discovery to validate high-impact product hypotheses."
-  },
-  { 
-    title: "WhatsApp Bot Development", 
-    icon: "Brain",
-    description: "Designing conversational interfaces and agents that feel human-centric and solve real-world friction."
-  },
-  { 
-    title: "n8n Workflow Building", 
-    icon: "Cpu",
-    description: "Refining technical execution and logic models to maximize output efficiency and resource allocation."
+    date: "Dec 2023",
+    note: "Cloud computing infrastructure principles"
   }
 ];
 
 export const NAV_LINKS = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Experience", href: "/experience" },
-  { name: "Projects", href: "/projects" },
-  { name: "Skills", href: "/skills" },
-  { name: "Awards", href: "/awards" },
-  { name: "Resume", href: "/resume" },
-  { name: "Contact", href: "/contact" }
+  { name: "HOME", href: "/" },
+  { name: "WORK", href: "/work" },
+  { name: "RESEARCH", href: "/research" },
+  { name: "TEARDOWNS", href: "/teardowns" },
+  { name: "ABOUT", href: "/about" },
+  { name: "RESUME", href: "/resume" },
+  { name: "CONTACT", href: "/contact" }
 ];

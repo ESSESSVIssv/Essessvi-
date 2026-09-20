@@ -3,17 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'motion/react';
-import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { NAV_LINKS, PERSONAL_INFO } from '../constants';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { pathname } = useLocation();
-  const navigate = useNavigate();
   const { scrollYProgress } = useScroll();
   
   const scaleX = useSpring(scrollYProgress, {
@@ -24,48 +23,54 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
   return (
     <>
-      <motion.nav 
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ${
+      <nav 
+        className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-200 ${
           scrolled 
-            ? 'py-4 bg-bg border-b-2 border-border shadow-none' 
-            : 'py-8 border-b-2 border-transparent'
+            ? 'py-4 bg-bg/95 backdrop-blur border-b border-border shadow-xs' 
+            : 'py-6 bg-bg/80 backdrop-blur-xs border-b border-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-          {/* Logo */}
+          
+          {/* Logo - EXACTLY V. ESSESSVI in copper color */}
           <Link 
             to="/"
-            className="flex items-center gap-3 cursor-pointer group"
+            className="flex items-center gap-2 cursor-pointer group"
           >
-            <div className="w-10 h-10 bg-brand flex items-center justify-center rounded-2xl font-display font-medium text-bg text-xl group-hover:rotate-12 group-hover:scale-110 transition-all shadow-[0_0_30px_rgba(184,115,51,0.5)]">
-              {PERSONAL_INFO.firstName[0]}
-            </div>
-            <span className="font-display font-bold text-2xl tracking-tighter text-text-main uppercase opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 hidden sm:block">
-              {PERSONAL_INFO.firstName}
+            <span className="font-display font-black text-base md:text-lg tracking-tight text-[#B87333] uppercase group-hover:opacity-85 transition-opacity">
+              V. ESSESSVI
             </span>
           </Link>
 
           {/* Desktop Nav Items */}
-          <div className="hidden lg:flex items-center gap-8">
-            {NAV_LINKS.map((link, index) => {
-              const isActive = pathname === link.href;
+          <div className="hidden lg:flex items-center gap-7 xl:gap-9">
+            {NAV_LINKS.map((link) => {
+              const isActive = link.href === '/' 
+                ? pathname === '/' 
+                : pathname.startsWith(link.href);
+
               return (
                 <NavLink
                   key={link.name}
                   to={link.href}
-                  className={`relative font-sans text-xs tracking-[0.15em] transition-colors duration-300 ease-in-out uppercase font-semibold ${
-                    isActive ? 'text-brand' : 'text-[#111111] hover:text-[#111111]'
+                  className={`font-sans text-xs tracking-wider uppercase font-semibold transition-colors py-1 ${
+                    isActive 
+                      ? 'text-brand font-bold border-b-2 border-brand' 
+                      : 'text-text-main/70 hover:text-brand'
                   }`}
                 >
                   {link.name}
@@ -74,83 +79,72 @@ export default function Navigation() {
             })}
           </div>
 
-          <div className="flex items-center gap-4">
-            {/* CTA Button */}
-            <Link
-              to="/contact"
-              className="hidden sm:flex px-8 py-4 bg-brand text-white font-sans font-bold text-[10px] uppercase tracking-[0.15em] hover:bg-text-main transition-colors items-center"
-            >
-              Let's Talk
-            </Link>
-
-            {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Toggle */}
+          <div className="lg:hidden flex items-center">
             <button 
-              className="lg:hidden p-3 bg-text-main text-white border-2 border-text-main transition-colors hover:bg-bg hover:text-text-main"
+              className="p-2.5 bg-white border border-border text-text-main hover:bg-bg transition-colors cursor-pointer"
               onClick={() => setMobileMenuOpen(true)}
+              aria-label="Open navigation menu"
             >
-              <Menu size={20} />
+              <Menu size={18} />
             </button>
           </div>
         </div>
         
         {/* Scroll Progress Bar */}
         <motion.div 
-          className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent origin-center" 
+          className="absolute bottom-0 left-0 right-0 h-[1px] bg-brand origin-left" 
           style={{ scaleX }} 
         />
-      </motion.nav>
+      </nav>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[100] bg-bg flex flex-col p-8 lg:hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[100] bg-bg flex flex-col p-6 sm:p-8 lg:hidden"
           >
-            <div className="flex items-center justify-between mb-12">
-              <span className="font-display font-bold text-2xl text-text-main uppercase tracking-tighter">
-                Navigation
+            <div className="flex items-center justify-between pb-4 border-b border-border">
+              <span className="font-display font-black text-lg text-[#B87333] uppercase">
+                V. ESSESSVI
               </span>
               <button 
-                className="p-4 bg-text-main text-white border-2 border-text-main"
+                className="p-2.5 bg-white border border-border text-text-main cursor-pointer"
                 onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
               >
-                <X size={24} />
+                <X size={20} />
               </button>
             </div>
 
-            <div className="flex-1 flex flex-col justify-center gap-6">
-              {NAV_LINKS.map((link, idx) => (
-                <motion.a
-                  key={link.name}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.05 }}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setMobileMenuOpen(false);
-                    navigate(link.href);
-                  }}
-                  className={`text-4xl font-display font-bold uppercase tracking-tighter hover:text-brand transition-colors ${
-                    pathname === link.href ? 'text-brand' : 'text-text-main'
-                  }`}
-                >
-                  {link.name}
-                </motion.a>
-              ))}
+            <div className="flex-1 flex flex-col justify-center gap-6 py-8">
+              {NAV_LINKS.map((link) => {
+                const isActive = link.href === '/' 
+                  ? pathname === '/' 
+                  : pathname.startsWith(link.href);
+
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`text-2xl font-display font-bold uppercase tracking-tight transition-colors ${
+                      isActive ? 'text-brand' : 'text-text-main hover:text-brand'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
             </div>
 
-            <div className="pt-12 border-t-2 border-text-main flex items-center justify-between">
-              <div className="flex gap-6">
-                {/* Social links could go here */}
-              </div>
-              <span className="text-[10px] font-sans text-text-main uppercase tracking-widest font-bold">
-                {PERSONAL_INFO.name} // 2026
-              </span>
+            <div className="pt-6 border-t border-border flex items-center justify-between text-xs font-sans text-text-main/60">
+              <span>{PERSONAL_INFO.location}</span>
+              <span className="font-semibold text-brand">Product Management</span>
             </div>
           </motion.div>
         )}
