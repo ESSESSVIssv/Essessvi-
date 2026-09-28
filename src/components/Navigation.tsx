@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'motion/react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { NAV_LINKS, PERSONAL_INFO } from '../constants';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,6 +30,18 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -40,18 +52,18 @@ export default function Navigation() {
       <nav 
         className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-200 ${
           scrolled 
-            ? 'py-4 bg-bg/95 backdrop-blur border-b border-border shadow-xs' 
-            : 'py-6 bg-bg/80 backdrop-blur-xs border-b border-transparent'
+            ? 'py-3.5 sm:py-4 bg-[#FAF9F6]/95 backdrop-blur-md border-b border-neutral-200/80 shadow-2xs' 
+            : 'py-4 sm:py-6 bg-[#FAF9F6]/85 backdrop-blur-xs border-b border-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
           
           {/* Logo - EXACTLY V. ESSESSVI in copper color */}
           <Link 
             to="/"
-            className="flex items-center gap-2 cursor-pointer group"
+            className="flex items-center gap-2 cursor-pointer group py-1"
           >
-            <span className="font-display font-black text-base md:text-lg tracking-tight text-[#B87333] uppercase group-hover:opacity-85 transition-opacity">
+            <span className="font-display font-black text-base sm:text-lg tracking-tight text-[#B87333] uppercase group-hover:opacity-85 transition-opacity">
               V. ESSESSVI
             </span>
           </Link>
@@ -67,10 +79,10 @@ export default function Navigation() {
                 <NavLink
                   key={link.name}
                   to={link.href}
-                  className={`font-sans text-xs tracking-wider uppercase font-semibold transition-colors py-1 ${
+                  className={`font-sans text-xs tracking-wider uppercase font-bold transition-colors py-1.5 ${
                     isActive 
-                      ? 'text-brand font-bold border-b-2 border-brand' 
-                      : 'text-text-main/70 hover:text-brand'
+                      ? 'text-[#B87333] border-b-2 border-[#B87333]' 
+                      : 'text-neutral-700 hover:text-[#B87333]'
                   }`}
                 >
                   {link.name}
@@ -79,21 +91,23 @@ export default function Navigation() {
             })}
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Hamburger Toggle */}
           <div className="lg:hidden flex items-center">
             <button 
-              className="p-2.5 bg-white border border-border text-text-main hover:bg-bg transition-colors cursor-pointer"
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5 bg-white border border-neutral-200 text-neutral-900 hover:text-[#B87333] hover:border-[#B87333]/50 transition-colors shadow-2xs cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B87333]"
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open navigation menu"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
-              <Menu size={18} />
+              <Menu className="w-5 h-5" />
             </button>
           </div>
         </div>
         
         {/* Scroll Progress Bar */}
         <motion.div 
-          className="absolute bottom-0 left-0 right-0 h-[1px] bg-brand origin-left" 
+          className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#B87333] origin-left" 
           style={{ scaleX }} 
         />
       </nav>
@@ -102,26 +116,33 @@ export default function Navigation() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            id="mobile-navigation"
+            initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[100] bg-bg flex flex-col p-6 sm:p-8 lg:hidden"
+            className="fixed inset-0 z-[100] bg-[#FAF9F6] flex flex-col p-5 sm:p-8 lg:hidden overflow-y-auto"
           >
-            <div className="flex items-center justify-between pb-4 border-b border-border">
-              <span className="font-display font-black text-lg text-[#B87333] uppercase">
-                V. ESSESSVI
-              </span>
-              <button 
-                className="p-2.5 bg-white border border-border text-text-main cursor-pointer"
+            {/* Top Bar inside Overlay */}
+            <div className="flex items-center justify-between pb-4 border-b border-neutral-200">
+              <Link 
+                to="/" 
                 onClick={() => setMobileMenuOpen(false)}
-                aria-label="Close menu"
+                className="font-display font-black text-lg text-[#B87333] uppercase"
               >
-                <X size={20} />
+                V. ESSESSVI
+              </Link>
+              <button 
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5 bg-white border border-neutral-200 text-neutral-900 hover:text-[#B87333] transition-colors cursor-pointer shadow-2xs focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B87333]"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close navigation menu"
+              >
+                <X className="w-5 h-5" />
               </button>
             </div>
 
-            <div className="flex-1 flex flex-col justify-center gap-6 py-8">
+            {/* Navigation Links */}
+            <div className="flex-1 flex flex-col justify-center gap-4 py-8">
               {NAV_LINKS.map((link) => {
                 const isActive = link.href === '/' 
                   ? pathname === '/' 
@@ -132,19 +153,23 @@ export default function Navigation() {
                     key={link.name}
                     to={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`text-2xl font-display font-bold uppercase tracking-tight transition-colors ${
-                      isActive ? 'text-brand' : 'text-text-main hover:text-brand'
+                    className={`min-h-[48px] flex items-center justify-between text-2xl font-display font-black uppercase tracking-tight py-2 border-b border-neutral-100 transition-colors ${
+                      isActive 
+                        ? 'text-[#B87333] pl-2 border-l-4 border-l-[#B87333]' 
+                        : 'text-neutral-800 hover:text-[#B87333]'
                     }`}
                   >
-                    {link.name}
+                    <span>{link.name}</span>
+                    <ArrowRight className={`w-4 h-4 transition-transform ${isActive ? 'text-[#B87333] translate-x-1' : 'text-neutral-400'}`} />
                   </Link>
                 );
               })}
             </div>
 
-            <div className="pt-6 border-t border-border flex items-center justify-between text-xs font-sans text-text-main/60">
-              <span>{PERSONAL_INFO.location}</span>
-              <span className="font-semibold text-brand">Product Manager | AI Product & Automation</span>
+            {/* Mobile Menu Footer */}
+            <div className="pt-6 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-sans text-neutral-600">
+              <span>{PERSONAL_INFO.location}, India</span>
+              <span className="font-bold text-[#B87333]">Product Manager | AI Product & Automation</span>
             </div>
           </motion.div>
         )}
