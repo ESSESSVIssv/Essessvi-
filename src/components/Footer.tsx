@@ -20,7 +20,7 @@ export default function Footer() {
             </span>
           </Link>
           <p className="text-xs font-sans text-text-main/60">
-            Product-focused CSE graduate · {PERSONAL_INFO.location}
+            Product Manager | AI Product & Automation · {PERSONAL_INFO.location}
           </p>
         </div>
 

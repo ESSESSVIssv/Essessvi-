@@ -4,21 +4,30 @@
  */
 
 import { PRODUCT_SKILLS } from '../constants';
-import { CheckCircle2, Compass, Cpu } from 'lucide-react';
+import { CheckCircle2, Compass, Cpu, ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-bg py-24 border-b border-border relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    <div className="w-full bg-bg py-20 md:py-28 min-h-screen">
+      <div className="max-w-5xl mx-auto px-6 md:px-12">
         
+        {/* Back Link */}
+        <Link 
+          to="/"
+          className="inline-flex items-center gap-2 text-xs font-sans font-bold uppercase tracking-wider text-text-main/70 hover:text-brand transition-colors mb-10"
+        >
+          <ArrowLeft className="w-4 h-4" /> Back to Home
+        </Link>
+
         {/* Eyebrow & Headline */}
         <div className="mb-12">
           <div className="text-xs font-sans uppercase tracking-widest text-brand font-bold mb-2">
-            Capabilities
+            V. ESSESSVI • Product Manager | AI Product & Automation
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4">
+          <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4">
             Skills & Competencies
-          </h2>
+          </h1>
           <p className="text-text-main/70 font-sans max-w-3xl text-base md:text-lg leading-relaxed">
             Product management foundation centered on discovering user needs and framing problems, complemented by hands-on AI and technical integration skills.
           </p>
@@ -65,6 +74,6 @@ export default function Skills() {
         </div>
 
       </div>
-    </section>
+    </div>
   );
 }

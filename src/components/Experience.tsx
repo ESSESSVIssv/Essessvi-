@@ -4,22 +4,30 @@
  */
 
 import { EXPERIENCE, CLUBS } from '../constants';
-import { Briefcase, CheckCircle2, Users, Layers, Award } from 'lucide-react';
+import { Briefcase, CheckCircle2, Users, Layers, Award, ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-bg py-28 border-b border-border relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    <div className="w-full bg-bg py-20 md:py-28 min-h-screen">
+      <div className="max-w-5xl mx-auto px-6 md:px-12">
         
+        {/* Back Link */}
+        <Link 
+          to="/"
+          className="inline-flex items-center gap-2 text-xs font-sans font-bold uppercase tracking-wider text-text-main/70 hover:text-brand transition-colors mb-10"
+        >
+          <ArrowLeft className="w-4 h-4" /> Back to Home
+        </Link>
+
         {/* Eyebrow & Headline */}
         <div className="mb-14">
-          <div className="inline-flex items-center gap-2 text-brand font-sans uppercase tracking-widest text-xs font-bold mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>
-            Professional Background
+          <div className="text-xs font-sans uppercase tracking-widest text-brand font-bold mb-2">
+            V. ESSESSVI • Product Manager | AI Product & Automation
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4">
-            EXPERIENCE & LEADERSHIP
-          </h2>
+          <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4">
+            Experience & Leadership
+          </h1>
           <p className="text-text-main/70 font-sans max-w-3xl text-base md:text-lg leading-relaxed">
             Hands-on experience identifying user friction, designing conversational workflows, leading project development, and coordinating multi-stakeholder initiatives.
           </p>
@@ -149,6 +157,6 @@ export default function Experience() {
         </div>
 
       </div>
-    </section>
+    </div>
   );
 }

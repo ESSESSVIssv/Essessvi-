@@ -14,6 +14,9 @@ import JobLenceCaseStudy from './components/JobLenceCaseStudy';
 import ResearchPage from './components/ResearchPage';
 import ProductTeardowns from './components/ProductTeardowns';
 import AboutPage from './components/AboutPage';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
+import Certifications from './components/Certifications';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -53,15 +56,20 @@ export default function App() {
             <Route path="/teardowns" element={<ProductTeardowns />} />
             <Route path="/teardowns/cashkaro" element={<ProductTeardowns />} />
 
-            {/* About, Resume, Contact */}
+            {/* About, Experience, Skills, Certifications */}
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/certifications" element={<Certifications />} />
+            <Route path="/leadership" element={<Experience />} />
+            <Route path="/education" element={<AboutPage />} />
+
+            {/* Resume & Contact */}
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
 
             {/* Redirects for clean routing */}
             <Route path="/projects" element={<Navigate to="/work" replace />} />
-            <Route path="/experience" element={<Navigate to="/about" replace />} />
-            <Route path="/skills" element={<Navigate to="/about" replace />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

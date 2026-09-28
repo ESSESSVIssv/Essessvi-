@@ -144,7 +144,7 @@ export default function Navigation() {
 
             <div className="pt-6 border-t border-border flex items-center justify-between text-xs font-sans text-text-main/60">
               <span>{PERSONAL_INFO.location}</span>
-              <span className="font-semibold text-brand">Product Management</span>
+              <span className="font-semibold text-brand">Product Manager | AI Product & Automation</span>
             </div>
           </motion.div>
         )}

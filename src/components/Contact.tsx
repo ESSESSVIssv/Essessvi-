@@ -6,7 +6,6 @@
 import {
   Mail,
   Linkedin,
-  Github,
   Phone,
   FileText,
   ArrowRight
@@ -40,7 +39,7 @@ export default function Contact() {
               Direct Channels
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {/* Email */}
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
@@ -72,7 +71,7 @@ export default function Contact() {
                     Phone
                   </span>
                   <span className="text-sm font-sans font-semibold text-text-main group-hover:text-brand transition-colors">
-                    +91 9392964456
+                    9392964456
                   </span>
                 </div>
               </a>
@@ -93,26 +92,6 @@ export default function Contact() {
                   </span>
                   <span className="text-sm font-sans font-semibold text-text-main group-hover:text-brand transition-colors">
                     linkedin.com/in/essessvi-vadlamudi
-                  </span>
-                </div>
-              </a>
-
-              {/* GitHub */}
-              <a
-                href={PERSONAL_INFO.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-5 bg-white border border-border flex items-start gap-3.5 hover:border-brand transition-colors block group shadow-xs"
-              >
-                <div className="w-10 h-10 bg-brand/10 text-brand flex items-center justify-center shrink-0">
-                  <Github className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-text-main/50 block mb-0.5">
-                    GitHub
-                  </span>
-                  <span className="text-sm font-sans font-semibold text-text-main group-hover:text-brand transition-colors">
-                    github.com/essessvi
                   </span>
                 </div>
               </a>

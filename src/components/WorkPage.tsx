@@ -4,7 +4,7 @@
  */
 
 import { Link } from 'react-router-dom';
-import { ArrowRight, Compass, MessageSquare, ShoppingBag, Briefcase } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function WorkPage() {
   const projects = [
@@ -15,16 +15,15 @@ export default function WorkPage() {
       subtitle: "Making WhatsApp ordering easier to handle",
       category: "AI Product · Conversational Experience · Workflow Automation",
       badge: "Internship Project",
-      description: "Customers don't always place orders in a clean or predictable format. I worked on a conversational workflow designed to understand customer messages, identify order details, handle incomplete information, and move the conversation toward confirmation.",
-      contributions: [
+      problem: "Customers don't always place orders in a clean or predictable format, leading to incomplete orders, delayed confirmations, and heavy manual handling.",
+      myContribution: "Customer problem identification, conversation flow design, customer intent, confirmation logic, and edge-case handling.",
+      focusAreas: [
         "Customer problem identification",
         "Conversation flow design",
         "Customer intent classification",
         "Confirmation logic & state tracking",
         "Edge cases & ambiguous inputs",
-        "AI response handling",
-        "Workflow automation",
-        "Iteration based on customer behavior"
+        "Workflow automation & prompt iteration"
       ],
       link: "/work/agentroomai"
     },
@@ -32,11 +31,12 @@ export default function WorkPage() {
       id: "sparexchange",
       number: "02",
       title: "SpareXChange",
-      subtitle: "Finding the right spare part shouldn't require searching everywhere.",
+      subtitle: "Finding automobile spare parts without fragmented search",
       category: "Consumer Product · Marketplace · Product Discovery",
-      badge: "Product Concept & Prototype",
-      description: "I explored the problem of finding automobile spare parts when availability, condition, price, and trust are unclear. The product concept brings first-hand and second-hand parts into one marketplace and focuses on helping users discover available parts with more confidence.",
-      contributions: [
+      badge: "Self-Initiated Product Project",
+      problem: "Finding automobile spare parts is fragmented by unclear availability, condition uncertainty, and a lack of buyer-seller trust.",
+      myContribution: "Market exploration, user journey mapping, initial product scope definition, and OTP/QR verified payment prototype.",
+      focusAreas: [
         "Spare-part discovery & fitment validation",
         "Dual-sided availability mapping",
         "Marketplace trust & verification mechanisms",
@@ -50,11 +50,12 @@ export default function WorkPage() {
       id: "farmer-token",
       number: "03",
       title: "Farmer Token",
-      subtitle: "I went to the market before designing the product.",
+      subtitle: "On-ground field research before designing product solutions",
       category: "Field Research · Product Discovery · Workflow Design",
       badge: "Field User Research & Concept",
-      description: "The idea started with a workflow problem, but I didn't want to design the solution from assumptions. I went to the market, observed how the process worked, and spoke directly with farmers about their experience.",
-      contributions: [
+      problem: "Farmers endure long, unpredictable queues and manual paperwork at procurement centers without visibility into intake status.",
+      myContribution: "On-ground field research at market yards, observation of the queue workflow, direct farmer conversations, and token concept.",
+      focusAreas: [
         "Contextual field observation at procurement centers",
         "Direct farmer conversations & pain-point discovery",
         "End-to-end journey mapping from sunrise queue to weighbridge",
@@ -67,11 +68,12 @@ export default function WorkPage() {
       id: "joblence",
       number: "04",
       title: "JobLence",
-      subtitle: "Applying to more jobs doesn't necessarily mean finding more relevant jobs.",
+      subtitle: "Surfacing relevant opportunities based on applicant background",
       category: "Job Discovery · Search Experience · Product Concept",
-      badge: "Product Concept & Prototype",
-      description: "I explored the problem of job seekers having to search through large numbers of openings without knowing which opportunities actually match their background. JobLence is a product concept that starts with the user's resume and explores how relevant opportunities could be surfaced more clearly.",
-      contributions: [
+      badge: "Self-Initiated Product Project",
+      problem: "Early-career applicants face information overload and lack of clarity on whether their background actually matches job requirements.",
+      myContribution: "Discovery friction analysis, resume-based match mapping, and transparent qualification filtering prototype.",
+      focusAreas: [
         "Job-search friction & information overload analysis",
         "Search relevance scoping for early-career candidates",
         "Resume-to-requirement match flow mapping",
@@ -89,13 +91,13 @@ export default function WorkPage() {
         {/* Page Header */}
         <div className="mb-16">
           <div className="text-xs font-sans uppercase tracking-widest text-brand font-bold mb-2">
-            Selected Work
+            V. ESSESSVI • Product Manager | AI Product & Automation
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4">
-            Work
+            Selected Work
           </h1>
           <p className="text-base md:text-lg font-sans text-text-main/75 max-w-2xl leading-relaxed">
-            Product work across AI experiences, consumer products, marketplace concepts, and job discovery.
+            A selection of products and projects where I explored user problems, product decisions, workflows, and technology.
           </p>
         </div>
 
@@ -108,7 +110,7 @@ export default function WorkPage() {
             >
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-6 border-b border-border/80 mb-6">
                 <div>
-                  <div className="flex items-center gap-3 mb-2">
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
                     <span className="text-xs font-mono font-bold text-brand">
                       {project.number}
                     </span>
@@ -132,25 +134,41 @@ export default function WorkPage() {
                   to={project.link}
                   className="px-5 py-2.5 bg-brand text-white font-sans font-bold text-xs uppercase tracking-wider hover:bg-text-main transition-colors inline-flex items-center gap-2 shrink-0 self-start cursor-pointer shadow-xs"
                 >
-                  Read Case Study <ArrowRight className="w-4 h-4" />
+                  View Case Study <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
 
-              {/* Description */}
-              <p className="text-sm md:text-base font-sans text-text-main/80 leading-relaxed mb-6">
-                {project.description}
-              </p>
+              {/* Problem & Contribution */}
+              <div className="space-y-4 mb-6 text-sm font-sans">
+                <div className="p-4 bg-bg border border-border">
+                  <span className="text-xs font-sans font-bold uppercase tracking-wider text-text-main/60 block mb-1">
+                    Problem:
+                  </span>
+                  <p className="text-text-main/85 leading-relaxed font-medium">
+                    {project.problem}
+                  </p>
+                </div>
 
-              {/* Contributions */}
+                <div className="p-4 bg-brand/5 border border-brand/20">
+                  <span className="text-xs font-sans font-bold uppercase tracking-wider text-brand block mb-1">
+                    My Contribution:
+                  </span>
+                  <p className="text-text-main/85 leading-relaxed">
+                    {project.myContribution}
+                  </p>
+                </div>
+              </div>
+
+              {/* Detailed Focus Areas */}
               <div>
-                <h3 className="text-xs font-sans font-bold uppercase tracking-wider text-[#B87333]/50 mb-3">
-                  My Contribution & Focus Areas:
+                <h3 className="text-xs font-sans font-bold uppercase tracking-wider text-text-main/50 mb-3">
+                  Focus Areas & Product Execution:
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs md:text-sm font-sans text-text-main/80">
-                  {project.contributions.map((c, idx) => (
-                    <div key={idx} className="flex items-center gap-2 p-2 bg-bg border border-border/70">
+                  {project.focusAreas.map((area, idx) => (
+                    <div key={idx} className="flex items-center gap-2 p-2.5 bg-bg border border-border/70">
                       <span className="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>
-                      <span>{c}</span>
+                      <span>{area}</span>
                     </div>
                   ))}
                 </div>

@@ -31,6 +31,7 @@
   h1, h2, h3, h4, h5, h6 {
     color: #B87333;
     font-family: var(--font-display);
+    font-weight: 800;
     text-transform: uppercase;
     overflow-wrap: break-word;
     word-wrap: break-word;

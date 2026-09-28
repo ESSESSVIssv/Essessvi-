@@ -23,11 +23,14 @@ export default function AboutPage() {
         {/* Page Header */}
         <div className="mb-14 pb-8 border-b border-border">
           <div className="text-xs font-sans uppercase tracking-widest text-brand font-bold mb-2">
-            Background & Story
+            V. ESSESSVI • Product Manager | AI Product & Automation
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4">
             About
           </h1>
+          <p className="text-sm md:text-base font-sans text-text-main/75 max-w-2xl leading-relaxed">
+            Product thinking rooted in user observation, conversational systems, and engineering fundamentals.
+          </p>
         </div>
 
         {/* 1. About Me Narrative */}

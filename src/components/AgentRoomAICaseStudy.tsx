@@ -134,7 +134,7 @@ export default function AgentRoomAICaseStudy() {
                 Manual Operator Overload
               </div>
               <p className="text-xs font-sans text-text-main/70 leading-relaxed">
-                Operators retyping details into backend sheets created transcription errors and response bottlenecks during peak hours.
+                Operators retyping details into backend order logs created transcription errors and response bottlenecks during peak hours.
               </p>
             </div>
           </div>

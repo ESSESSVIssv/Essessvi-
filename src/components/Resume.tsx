@@ -11,7 +11,11 @@ import {
   ZoomIn, 
   ZoomOut, 
   RotateCcw,
-  Check
+  Check,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -43,7 +47,7 @@ export default function Resume() {
 
           <div className="flex items-center gap-2">
             <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-bold uppercase tracking-wider rounded-sm">
-              <Check className="w-3 h-3" /> Official PDF Version
+              <Check className="w-3 h-3" /> Official Updated Resume
             </span>
           </div>
         </div>
@@ -65,7 +69,6 @@ export default function Resume() {
 
             {/* Actions */}
             <div className="flex items-center gap-3">
-              {/* Download PDF */}
               <button 
                 onClick={handlePrint}
                 className="flex items-center gap-2 px-5 py-2.5 bg-brand text-white font-sans font-bold text-xs uppercase tracking-wider hover:bg-neutral-900 transition-colors shadow-xs cursor-pointer"
@@ -123,35 +126,35 @@ export default function Resume() {
         >
           <div 
             ref={resumeRef}
-            id="resume-document-sheet"
-            className="print-page w-full max-w-[820px] bg-white border border-neutral-300 shadow-md p-8 sm:p-10 md:p-12 text-black leading-snug print:border-none print:shadow-none print:p-0"
+            id="resume-document-container"
+            className="print-page w-full max-w-[820px] bg-white border border-neutral-300 shadow-md p-7 sm:p-9 md:p-10 text-black leading-snug print:border-none print:shadow-none print:p-0"
             style={{
-              fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif'
+              fontFamily: 'Georgia, Cambria, "Times New Roman", Times, serif'
             }}
           >
-            {/* HEADER */}
-            <div className="text-center pb-2.5 mb-3 border-b border-black">
-              <h1 className="text-2xl sm:text-3xl font-serif font-black tracking-tight uppercase text-[#B87333] mb-0.5" style={{ color: '#B87333' }}>
+            {/* 1. HEADER */}
+            <div className="text-center pb-2 mb-2.5 border-b border-black">
+              <h1 className="text-2xl sm:text-[28px] font-bold tracking-normal uppercase text-black mb-0.5 leading-tight">
                 V. ESSESSVI
               </h1>
-              <div className="text-sm font-bold text-neutral-900 mb-1">
-                Aspiring Product Manager
+              <div className="text-[13px] sm:text-[14px] font-bold text-black mb-1">
+                Product Manager | AI Product & Automation
               </div>
-              <div className="text-[11px] sm:text-xs text-neutral-800 flex flex-wrap justify-center items-center gap-x-2 gap-y-0.5">
-                <span>9392964456</span>
+              <div className="text-[10.5px] sm:text-[11px] text-black flex flex-wrap justify-center items-center gap-x-2 gap-y-0.5" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+                <span className="flex items-center gap-1">📞 9392964456</span>
                 <span>|</span>
-                <a href="mailto:vessessvi2005@gmail.com" className="hover:underline text-neutral-800">
-                  vessessvi2005@gmail.com
+                <a href="mailto:vessessvi12005@gmail.com" className="hover:underline text-black flex items-center gap-1">
+                  ✉ vessessvi12005@gmail.com
                 </a>
                 <span>|</span>
-                <span className="uppercase">CHITTOOR</span>
+                <span className="flex items-center gap-1">📍 CHITTOOR</span>
               </div>
-              <div className="text-[11px] sm:text-xs text-neutral-800 flex flex-wrap justify-center items-center gap-x-2 gap-y-0.5 mt-0.5">
+              <div className="text-[10.5px] sm:text-[11px] text-black flex flex-wrap justify-center items-center gap-x-2 gap-y-0.5 mt-0.5" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
                 <a 
-                  href="https://linkedin.com/in/essessvi-vadlamudi-ab2590273" 
+                  href="https://linkedin.com/in/essessvi-vadlamudi" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="hover:underline text-neutral-800"
+                  className="hover:underline text-black"
                 >
                   linkedin.com/in/essessvi-vadlamudi
                 </a>
@@ -160,170 +163,169 @@ export default function Resume() {
                   href="https://essessvi.vercel.app" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="hover:underline text-neutral-800"
+                  className="hover:underline text-black"
                 >
                   essessvi.vercel.app
                 </a>
               </div>
             </div>
 
-            {/* PROFILE */}
-            <div className="mb-3">
-              <div className="text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1 text-black">
+            {/* 2. PROFILE */}
+            <div className="mb-2.5">
+              <div className="text-[11.5px] sm:text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1 text-black font-sans">
                 PROFILE
               </div>
-              <p className="text-[11px] sm:text-[11.5px] leading-normal text-neutral-900 text-justify">
-                Product-focused CSE graduate with hands-on experience in user research, product discovery, AI-powered products, and product prototyping. Conducted field-based research with farmers by observing real-world workflows and speaking directly with users to identify pain points and product opportunities. Experienced in AI workflow automation, consumer product projects, user journey mapping, market research, and translating real-world problems into simple, practical MVP concepts.
+              <p className="text-[10.5px] sm:text-[11px] leading-relaxed text-black text-justify">
+                Product Manager with hands-on experience building AI-powered products and user-focused solutions. Skilled in end-to-end product ownership — from understanding user problems, conducting market and competitor research, mapping user journeys, defining product features, and delivering measurable outcomes. Strong interest in AI products, consumer experiences, and solving real-world problems through simple, practical products.
               </p>
             </div>
 
-            {/* SKILLS */}
-            <div className="mb-3">
-              <div className="text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1 text-black">
+            {/* 3. SKILLS */}
+            <div className="mb-2.5">
+              <div className="text-[11.5px] sm:text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1 text-black font-sans">
                 SKILLS
               </div>
-              <div className="text-[11px] sm:text-[11.5px] leading-normal text-neutral-900 space-y-0.5">
+              <div className="text-[10.5px] sm:text-[11px] leading-relaxed text-black space-y-0.5">
                 <div>
-                  <span className="font-bold">Product:</span> Product Thinking | User Research | Product Discovery | User Journey Mapping | Problem Framing | Feature Prioritization | MVP | Market Research | Competitor Analysis
+                  <span className="font-bold">Product:</span> Product Thinking | User Research | Product Discovery | User Journey Mapping | Feature Prioritization | MVP | Market Research | Competitor Analysis
                 </div>
                 <div>
-                  <span className="font-bold">AI & Tools:</span> AI Products | LLMs | OpenAI | Google AI Studio | Gemini API | WhatsApp Business API | Prompt Engineering | Workflow Automation | Notion
+                  <span className="font-bold">AI & Tools:</span> AI Products | LLMs | n8n | OpenAI | Google AI Studio | Gemini API | WhatsApp Business API | Prompt Engineering | Workflow Automation | Figma | Notion | Google Sheets
                 </div>
               </div>
             </div>
 
-            {/* EXPERIENCE / PRODUCT PROJECTS */}
-            <div className="mb-3">
-              <div className="text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1.5 text-black">
+            {/* 4. EXPERIENCE / PRODUCT PROJECTS */}
+            <div className="mb-2.5">
+              <div className="text-[11.5px] sm:text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1.5 text-black font-sans">
                 EXPERIENCE / PRODUCT PROJECTS
               </div>
 
-              {/* 1. AgentRoomAI */}
+              {/* 4.1 AgentRoomAI */}
               <div className="mb-2">
                 <div className="flex justify-between items-baseline">
-                  <span className="text-[12px] font-bold text-black">
+                  <span className="text-[11.5px] font-bold text-black">
                     AgentRoomAI
                   </span>
-                  <span className="text-[11px] font-medium text-neutral-800">
+                  <span className="text-[10.5px] font-bold text-black">
                     Dec 2025 – Apr 2026
                   </span>
                 </div>
-                <div className="text-[11px] font-semibold text-neutral-900 mb-0.5">
-                  Role: Intern AI Workflow Engineer
+                <div className="flex justify-between items-baseline text-[10.5px] text-neutral-800 mb-0.5 font-sans italic">
+                  <span>Product & AI Workflow Intern</span>
+                  <span>(Remote | Part-time)</span>
                 </div>
-                <ul className="list-disc list-outside ml-3.5 text-[10.5px] sm:text-[11px] text-neutral-900 space-y-0.5 leading-tight">
-                  <li>Identified customer friction in the ordering process, including incomplete orders, unclear messages, confirmations, and support requests.</li>
+                <ul className="list-disc list-outside ml-3.5 text-[10px] sm:text-[10.5px] text-black space-y-0.5 leading-snug">
+                  <li>Identified customer challenges in the ordering process, including incomplete orders, unclear messages, confirmations, and support requests.</li>
                   <li>Designed conversational flows to make customer ordering faster, simpler, and more reliable.</li>
                   <li>Integrated AI models to understand customer intent and generate relevant real-time responses.</li>
-                  <li>Automated repetitive WhatsApp interactions to reduce manual effort and improve response handling.</li>
-                  <li>Identified edge cases and iterated workflows based on observed user interactions.</li>
-                  <li>Built and tested AI-powered workflows using n8n, OpenAI, and WhatsApp Business API.</li>
+                  <li>Automated repetitive WhatsApp interactions to reduce manual effort and improve response handling — including order requests, menu/product queries, order-detail extraction, validation, confirmations, status updates, notifications, and support.</li>
+                  <li>Tested conversational flows and refined prompts based on observed user interactions.</li>
                 </ul>
               </div>
 
-              {/* 2. SpareXChange */}
+              {/* 4.2 SpareXChange */}
               <div className="mb-2">
                 <div className="flex justify-between items-baseline">
-                  <span className="text-[12px] font-bold text-black">
+                  <span className="text-[11.5px] font-bold text-black">
                     SpareXChange — Self-Initiated Product Project
                   </span>
-                  <span className="text-[11px] font-medium text-neutral-800">
+                  <span className="text-[10.5px] font-bold text-black">
                     Jan 2025 – Mar 2025
                   </span>
                 </div>
-                <div className="text-[11px] font-semibold text-neutral-900 mb-0.5">
-                  Role: Product Lead & Developer
+                <div className="text-[10.5px] text-neutral-800 mb-0.5 font-sans italic">
+                  Product Lead
                 </div>
-                <ul className="list-disc list-outside ml-3.5 text-[10.5px] sm:text-[11px] text-neutral-900 space-y-0.5 leading-tight">
-                  <li>Conducted market research and competitor analysis to identify customer needs and gaps in the automobile spare-parts market.</li>
-                  <li>Mapped user journeys and identified friction points in the spare-parts buying experience.</li>
+                <ul className="list-disc list-outside ml-3.5 text-[10px] sm:text-[10.5px] text-black space-y-0.5 leading-snug">
+                  <li>Conducted user research and competitor analysis to identify customer needs and gaps in the automobile spare-parts market.</li>
+                  <li>Mapped user journeys and identified friction points in the spare-parts buying experience (5 major friction points).</li>
                   <li>Defined and prioritized product features based on user needs and business requirements.</li>
-                  <li>Designed an MVP focused on spare-part discovery, inventory visibility, and transaction management.</li>
-                  <li>Implemented an OTP-based payment/verification flow for a smoother transaction experience.</li>
+                  <li>Built the MVP focused on spare-part discovery, inventory visibility, and transaction management.</li>
+                  <li>Target users: vehicle/bike owners, mechanics, spare-parts buyers/sellers, local shops, and scrapyard sellers.</li>
+                  <li>Implemented a QR-based payment flow with OTP verification for a smoother transaction experience.</li>
                 </ul>
               </div>
 
-              {/* 3. JobLence */}
+              {/* 4.3 JobLence */}
               <div className="mb-2">
                 <div className="flex justify-between items-baseline">
-                  <span className="text-[12px] font-bold text-black">
-                    JobLence — Self-Initiated Product Project
+                  <span className="text-[11.5px] font-bold text-black">
+                    JobLence — Self-Initiated Product Management Case Study
                   </span>
-                  <span className="text-[11px] font-medium text-neutral-800">
-                    Product Project
+                  <span className="text-[10.5px] font-bold text-black">
+                    Mar 2026 – May 2026
                   </span>
                 </div>
-                <div className="text-[11px] font-semibold text-neutral-900 mb-0.5">
-                  Role: Product Prototype
+                <div className="text-[10.5px] text-neutral-800 mb-0.5 font-sans italic">
+                  Product Manager (Independent Prototype)
                 </div>
-                <ul className="list-disc list-outside ml-3.5 text-[10.5px] sm:text-[11px] text-neutral-900 space-y-0.5 leading-tight">
+                <ul className="list-disc list-outside ml-3.5 text-[10px] sm:text-[10.5px] text-black space-y-0.5 leading-snug">
                   <li>Identified job-search friction faced by students and early-career candidates when navigating large numbers of job listings.</li>
-                  <li>Analyzed the job-discovery journey and designed a simplified experience focused on relevant opportunities and easier search.</li>
+                  <li>Designed a job discovery experience focused on relevant opportunities and simplified search.</li>
                   <li>Defined core MVP features around job search, filtering, and relevance.</li>
                 </ul>
               </div>
 
-              {/* 4. Mango Farmer Token System */}
+              {/* 4.4 Mango Farmer Token System */}
               <div className="mb-2">
                 <div className="flex justify-between items-baseline">
-                  <span className="text-[12px] font-bold text-black">
+                  <span className="text-[11.5px] font-bold text-black">
                     Mango Farmer Token System
                   </span>
-                  <span className="text-[11px] font-medium text-neutral-800">
-                    Product Research / Prototype
+                  <span className="text-[10.5px] font-bold text-black">
+                    2026 Harvest Season
                   </span>
                 </div>
-                <div className="text-[11px] font-semibold text-neutral-900 mb-0.5">
-                  Role: Product Research & Prototype
+                <div className="text-[10.5px] text-neutral-800 mb-0.5 font-sans italic">
+                  Product Prototype | Food & Industries Department — Mango Procurement & Processing Operations
                 </div>
-                <ul className="list-disc list-outside ml-3.5 text-[10.5px] sm:text-[11px] text-neutral-900 space-y-0.5 leading-tight">
-                  <li>Conducted field-based user research at a market by observing how farmers and factory staff manage token and queue processes.</li>
-                  <li>Spoke directly with farmers to understand their day-to-day experience, frustrations, and challenges in the existing workflow.</li>
-                  <li>Mapped the process and identified friction and visibility gaps affecting farmers.</li>
-                  <li>Translated field observations into product opportunities and designed an app-based workflow to simplify token management and improve process visibility.</li>
-                  <li>Focused on a simple user experience for users with varying levels of technical familiarity.</li>
+                <ul className="list-disc list-outside ml-3.5 text-[10px] sm:text-[10.5px] text-black space-y-0.5 leading-snug">
+                  <li>Identified the need for a more organized token and queue-management process between mango farmers and factory staff.</li>
+                  <li>Designed an app-based workflow to simplify token management and improve process visibility for farmers.</li>
+                  <li>Conducted 3-4 site visits and interviewed 10-12 farmers to understand their challenges and needs.</li>
+                  <li>Focused on a simple user experience suitable for users with varying levels of technical familiarity.</li>
                 </ul>
               </div>
 
-              {/* 5. CashKaro Product Teardown */}
+              {/* 4.5 CashKaro Product Teardown */}
               <div className="mb-1">
                 <div className="flex justify-between items-baseline">
-                  <span className="text-[12px] font-bold text-black">
+                  <span className="text-[11.5px] font-bold text-black">
                     CashKaro Product Teardown
                   </span>
-                  <span className="text-[11px] font-medium text-neutral-800">
-                    Product Analysis
+                  <span className="text-[10.5px] font-bold text-black">
+                    Feb 2026 – Mar 2026
                   </span>
                 </div>
-                <div className="text-[11px] font-semibold text-neutral-900 mb-0.5">
-                  Role: Product Analysis / UX Teardown
+                <div className="text-[10.5px] text-neutral-800 mb-0.5 font-sans italic">
+                  Self-Initiated Product Management Case Study
                 </div>
-                <ul className="list-disc list-outside ml-3.5 text-[10.5px] sm:text-[11px] text-neutral-900 space-y-0.5 leading-tight">
-                  <li>Analyzed the first-time user journey to understand how new users discover CashKaro's product value proposition.</li>
-                  <li>Examined onboarding, savings communication, deal discovery, and key conversion touchpoints.</li>
-                  <li>Proposed clearer product-specific savings messaging, improved deal discovery, and stronger first-time-user value communication.</li>
-                  <li>Structured recommendations using observation, problem, hypothesis, proposed solution, and expected impact.</li>
+                <ul className="list-disc list-outside ml-3.5 text-[10px] sm:text-[10.5px] text-black space-y-0.5 leading-snug">
+                  <li>Analyzed the product and user flow to understand how it drives user acquisition and conversion.</li>
+                  <li>Proposed product-level improvements to enhance discovery, offers, and user engagement.</li>
+                  <li>Structured recommendations using observation, problem framing, hypothesis, proposed solution, and expected impact.</li>
                 </ul>
               </div>
 
             </div>
 
-            {/* EDUCATION */}
-            <div className="mb-3">
-              <div className="text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1.5 text-black">
+            {/* 5. EDUCATION */}
+            <div className="mb-2.5">
+              <div className="text-[11.5px] sm:text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1.5 text-black font-sans">
                 EDUCATION
               </div>
               
-              <div className="space-y-1.5 text-[11px] sm:text-[11.5px]">
+              <div className="space-y-1.5 text-[10.5px] sm:text-[11px]">
                 {/* The Apollo University */}
                 <div className="flex justify-between items-start">
                   <div>
                     <div className="font-bold text-black">The Apollo University</div>
-                    <div className="text-neutral-800">B.Tech in Computer Science & Engineering</div>
+                    <div className="text-black font-sans">B.Tech in Computer Science & Engineering</div>
                   </div>
                   <div className="text-right shrink-0">
-                    <div className="font-medium text-neutral-800">Sep 2022 – Apr 2026</div>
-                    <div className="font-bold text-black">CGPA: 7.17</div>
+                    <div className="font-bold text-black">Sept 2022 – Apr 2026</div>
+                    <div className="font-bold text-black font-sans">CGPA: 7.17</div>
                   </div>
                 </div>
 
@@ -331,11 +333,11 @@ export default function Resume() {
                 <div className="flex justify-between items-start">
                   <div>
                     <div className="font-bold text-black">Govt. Jr. College, Vadamalapet</div>
-                    <div className="text-neutral-800">Intermediate</div>
+                    <div className="text-black font-sans">Intermediate</div>
                   </div>
                   <div className="text-right shrink-0">
-                    <div className="font-medium text-neutral-800">Mar 2020 – Aug 2022</div>
-                    <div className="font-bold text-black">542 marks</div>
+                    <div className="font-bold text-black">Jun 2020 – May 2022</div>
+                    <div className="text-black font-sans">542/1000 (54.2%)</div>
                   </div>
                 </div>
 
@@ -343,73 +345,73 @@ export default function Resume() {
                 <div className="flex justify-between items-start">
                   <div>
                     <div className="font-bold text-black">Camford English High School, Chittoor</div>
-                    <div className="text-neutral-800">SSC</div>
+                    <div className="text-black font-sans">SSC</div>
                   </div>
                   <div className="text-right shrink-0">
-                    <div className="font-medium text-neutral-800">Apr 2008 – May 2020</div>
-                    <div className="font-bold text-black">416 marks</div>
+                    <div className="font-bold text-black">Jun 2018 – Mar 2020</div>
+                    <div className="text-black font-sans">416/600 (69.00%)</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* LANGUAGES KNOWN */}
-            <div className="mb-3">
-              <div className="text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1 text-black">
+            {/* 6. LANGUAGES KNOWN */}
+            <div className="mb-2.5">
+              <div className="text-[11.5px] sm:text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1 text-black font-sans">
                 LANGUAGES KNOWN
               </div>
-              <div className="text-[11px] sm:text-[11.5px] text-neutral-900">
+              <div className="text-[10.5px] sm:text-[11px] text-black">
                 English • Telugu • Hindi • Tamil
               </div>
             </div>
 
-            {/* CLUBS & LEADERSHIP */}
-            <div className="mb-3">
-              <div className="text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1.5 text-black">
+            {/* 7. CLUBS & LEADERSHIP */}
+            <div className="mb-2.5">
+              <div className="text-[11.5px] sm:text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1.5 text-black font-sans">
                 CLUBS & LEADERSHIP
               </div>
-              <div className="space-y-1.5 text-[11px] sm:text-[11.5px] text-neutral-900">
+              <div className="space-y-1.5 text-[10.5px] sm:text-[11px] text-black">
                 <div>
                   <div className="font-bold text-black">
-                    NSS (2022–2026) — Coordinator & Member
+                    NSS (2022 – 2026) — Coordinator & Member
                   </div>
-                  <ul className="list-disc list-outside ml-3.5 text-[10.5px] sm:text-[11px] text-neutral-900 space-y-0.5 leading-tight mt-0.5">
+                  <ul className="list-disc list-outside ml-3.5 text-[10px] sm:text-[10.5px] text-black space-y-0.5 leading-snug mt-0.5">
                     <li>Led student groups in community outreach and environmental campaigns.</li>
                     <li>Facilitated collaboration between university administration and student volunteers.</li>
                   </ul>
                 </div>
                 <div>
                   <div className="font-bold text-black">
-                    Echo Club (2024–2025) — Member
+                    Echo Club (2024 – 2025) — Member
                   </div>
-                  <ul className="list-disc list-outside ml-3.5 text-[10.5px] sm:text-[11px] text-neutral-900 space-y-0.5 leading-tight mt-0.5">
+                  <ul className="list-disc list-outside ml-3.5 text-[10px] sm:text-[10.5px] text-black space-y-0.5 leading-snug mt-0.5">
                     <li>Participated in sustainability initiatives and eco-friendly campus activities.</li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* CERTIFICATIONS */}
+            {/* 8. CERTIFICATIONS */}
             <div>
-              <div className="text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1 text-black">
+              <div className="text-[11.5px] sm:text-[12px] font-bold uppercase tracking-wider border-b border-black pb-0.5 mb-1 text-black font-sans">
                 CERTIFICATIONS
               </div>
-              <div className="space-y-0.5 text-[10.5px] sm:text-[11px] text-neutral-900">
+              <div className="space-y-0.5 text-[10px] sm:text-[10.5px] text-black">
                 <div className="flex justify-between items-baseline">
-                  <span>• <span className="font-semibold">Aha! Product Management Professional Certificate</span> (LinkedIn Learning)</span>
-                  <span className="font-medium text-neutral-800 shrink-0 ml-2">May 27, 2026</span>
+                  <span>• Product Management Professional Certificate (LinkedIn Learning)</span>
+                  <span className="font-bold text-black shrink-0 ml-2">May 27, 2026</span>
                 </div>
                 <div className="flex justify-between items-baseline">
-                  <span>• <span className="font-semibold">IBM Data Fundamentals</span></span>
-                  <span className="font-medium text-neutral-800 shrink-0 ml-2">Dec 2025</span>
+                  <span>• IBM Data Fundamentals</span>
+                  <span className="font-bold text-black shrink-0 ml-2">Dec 2025</span>
                 </div>
                 <div className="flex justify-between items-baseline">
-                  <span>• <span className="font-semibold">Acquiring Data – AI Fundamentals</span></span>
-                  <span className="font-medium text-neutral-800 shrink-0 ml-2">Nov 2024</span>
+                  <span>• Acquiring Data – AI Fundamentals</span>
+                  <span className="font-bold text-black shrink-0 ml-2">Nov 2024</span>
                 </div>
                 <div className="flex justify-between items-baseline">
-                  <span>• <span className="font-semibold">Google Cloud Computing Foundations</span></span>
-                  <span className="font-medium text-neutral-800 shrink-0 ml-2">Dec 2023</span>
+                  <span>• Google Cloud Computing Foundations</span>
+                  <span className="font-bold text-black shrink-0 ml-2">Dec 2023</span>
                 </div>
               </div>
             </div>
