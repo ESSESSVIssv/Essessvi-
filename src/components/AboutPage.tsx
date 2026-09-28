@@ -11,45 +11,72 @@ import {
   CheckCircle2, 
   ArrowRight,
   Sparkles,
-  Users
+  Users,
+  MapPin,
+  Mail,
+  Linkedin
 } from 'lucide-react';
-import { CERTIFICATIONS, PRODUCT_SKILLS, EDUCATION } from '../constants';
+import { CERTIFICATIONS, PRODUCT_SKILLS, EDUCATION, PERSONAL_INFO } from '../constants';
+import profilePic from '../assets/profile.png';
 
 export default function AboutPage() {
   return (
-    <div className="w-full bg-bg py-20 md:py-28 min-h-screen">
-      <div className="max-w-4xl mx-auto px-6 md:px-12">
+    <div className="w-full bg-[#FAF9F6] py-16 md:py-24 min-h-screen">
+      <div className="max-w-5xl mx-auto px-6 md:px-12">
         
         {/* Page Header */}
-        <div className="mb-14 pb-8 border-b border-border">
-          <div className="text-xs font-sans uppercase tracking-widest text-brand font-bold mb-2">
+        <div className="mb-12 pb-8 border-b border-neutral-200">
+          <div className="text-xs font-sans uppercase tracking-widest text-[#B87333] font-black mb-2">
             V. ESSESSVI • Product Manager | AI Product & Automation
           </div>
-          <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4">
-            About
+          <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4 uppercase">
+            About Me
           </h1>
-          <p className="text-sm md:text-base font-sans text-text-main/75 max-w-2xl leading-relaxed">
+          <p className="text-sm md:text-base font-sans text-neutral-600 max-w-2xl leading-relaxed">
             Product thinking rooted in user observation, conversational systems, and engineering fundamentals.
           </p>
         </div>
 
-        {/* 1. About Me Narrative */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-display font-bold text-[#B87333] mb-6">
-            Product thinking rooted in user observation and engineering fundamentals.
-          </h2>
+        {/* 1. About Me Narrative with Profile Picture */}
+        <section className="mb-16 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          
+          <div className="md:col-span-8 space-y-4">
+            <h2 className="text-2xl font-display font-black text-[#B87333] mb-4 uppercase">
+              Who I Am & How I Build
+            </h2>
 
-          <div className="space-y-4 text-base font-sans text-text-main/80 leading-relaxed">
-            <p>
-              I'm <span className="font-bold text-[#B87333]" style={{ color: '#B87333' }}>V. Essessvi</span>, a CSE graduate interested in building products that solve real user problems.
-            </p>
-            <p>
-              My work spans field-based user research, AI-powered workflows, consumer product concepts, and product analysis. I enjoy understanding how people actually experience a problem, breaking that problem down, and turning the insights into practical product solutions.
-            </p>
-            <p>
-              My technical background helps me understand what can be built, while my product work has taught me to focus first on why something should be built and who it is for.
-            </p>
+            <div className="space-y-4 text-base font-sans text-neutral-800 leading-relaxed">
+              <p>
+                I am a product-focused Computer Science and Engineering graduate from <strong className="font-bold text-neutral-950">The Apollo University</strong> (2022–2026). My passion lies in understanding where everyday users experience friction and translating those real-world pain points into intuitive, high-utility product experiences.
+              </p>
+              <p>
+                Rather than starting with lines of code or complex feature lists, I ground my work in <strong className="font-bold text-neutral-950">field-based user observations</strong>, <strong className="font-bold text-neutral-950">direct interviews</strong>, and <strong className="font-bold text-neutral-950">workflow mapping</strong>. Whether conducting in-person research with mango farmers at local markets, building an automobile spare-parts marketplace concept (SpareXChange), or designing AI conversational order flows at AgentRoomAI, I focus on the problem before deciding what gets built.
+              </p>
+              <p>
+                I combine a strong technical foundation in algorithms and software engineering with product discovery, user empathy, and rapid prototyping. I am currently seeking an <strong className="font-bold text-[#B87333]">Associate Product Manager (APM)</strong> role, <strong className="font-bold text-[#B87333]">Junior Product Manager</strong> position, or <strong className="font-bold text-[#B87333]">Product Management Internship</strong>.
+              </p>
+            </div>
           </div>
+
+          <div className="md:col-span-4">
+            <div className="bg-white border border-neutral-200 p-3 shadow-xs">
+              <div className="aspect-[3/4] w-full overflow-hidden bg-neutral-100 border border-neutral-200/80 mb-3">
+                <img 
+                  src={profilePic} 
+                  alt="V. Essessvi" 
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="px-1 text-xs font-sans space-y-1">
+                <div className="font-bold text-[#B87333] text-sm uppercase">V. Essessvi</div>
+                <div className="text-neutral-600 font-medium">The Apollo University '26</div>
+                <div className="text-neutral-500 flex items-center gap-1 pt-1">
+                  <MapPin className="w-3 h-3 text-[#B87333]" /> Chittoor, India
+                </div>
+              </div>
+            </div>
+          </div>
+
         </section>
 
         {/* 2. Experience Section */}

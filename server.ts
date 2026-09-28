@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY,
+  apiKey: process.env.GEMINI_API_KEY || "",
   httpOptions: {
     headers: {
       "User-Agent": "aistudio-build",
@@ -17,16 +17,29 @@ const ai = new GoogleGenAI({
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  
+  // In development, dev server must run on port 3000 (proxied by Nginx on 8080).
+  // In production (Cloud Run), port is passed as environment variable PORT (typically 8080).
+  const isProduction = process.env.NODE_ENV === "production";
+  const PORT = isProduction ? (Number(process.env.PORT) || 8080) : 3000;
 
   app.use(express.json());
+
+  // Cloud Run health check endpoints
+  app.get("/health", (_req, res) => {
+    res.status(200).send("OK");
+  });
+
+  app.get("/api/health", (_req, res) => {
+    res.status(200).json({ status: "healthy" });
+  });
 
   app.post("/api/chat", async (req, res) => {
     try {
       const { message, context, role } = req.body;
       
       const response = await ai.models.generateContent({
-        model: "gemini-3.5-flash",
+        model: "gemini-2.5-flash",
         contents: `
           You are V.Essessvi's professional AI assistant. 
           Context: ${context}. 
@@ -51,9 +64,8 @@ async function startServer() {
   app.post("/api/tts", async (req, res) => {
     try {
       const { text } = req.body;
-      // We are trying to use the proper TTS model. If it fails, the frontend will fallback to browser TTS!
       const audioResponse = await ai.models.generateContent({
-        model: "gemini-3.1-flash-tts-preview",
+        model: "gemini-2.5-flash",
         contents: [{ parts: [{ text }] }],
         config: {
           responseModalities: [Modality.AUDIO],
@@ -72,7 +84,7 @@ async function startServer() {
     }
   });
 
-  if (process.env.NODE_ENV !== "production") {
+  if (!isProduction) {
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
@@ -81,13 +93,13 @@ async function startServer() {
   } else {
     const distPath = path.join(process.cwd(), "dist");
     app.use(express.static(distPath));
-    app.get("*", (req, res) => {
+    app.get("*", (_req, res) => {
       res.sendFile(path.join(distPath, "index.html"));
     });
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running in ${isProduction ? "production" : "development"} on port ${PORT}`);
   });
 }
 

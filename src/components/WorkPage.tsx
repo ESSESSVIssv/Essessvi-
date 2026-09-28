@@ -85,54 +85,54 @@ export default function WorkPage() {
   ];
 
   return (
-    <div className="w-full bg-bg py-20 md:py-28 min-h-screen">
-      <div className="max-w-5xl mx-auto px-6 md:px-12">
+    <div className="w-full bg-bg py-12 sm:py-20 md:py-28 min-h-screen">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-12">
         
         {/* Page Header */}
-        <div className="mb-16">
-          <div className="text-xs font-sans uppercase tracking-widest text-brand font-bold mb-2">
+        <div className="mb-10 sm:mb-16">
+          <div className="text-xs font-sans uppercase tracking-widest text-[#B87333] font-bold mb-2">
             V. ESSESSVI • Product Manager | AI Product & Automation
           </div>
-          <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4 uppercase">
             Selected Work
           </h1>
-          <p className="text-base md:text-lg font-sans text-text-main/75 max-w-2xl leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg font-sans text-text-main/75 max-w-2xl leading-relaxed">
             A selection of products and projects where I explored user problems, product decisions, workflows, and technology.
           </p>
         </div>
 
         {/* Projects List */}
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-12">
           {projects.map((project) => (
             <article 
               key={project.id}
-              className="p-8 md:p-10 bg-white border border-border shadow-xs hover:border-brand/40 transition-colors"
+              className="p-5 sm:p-8 md:p-10 bg-white border border-border shadow-xs hover:border-brand/40 transition-colors"
             >
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-6 border-b border-border/80 mb-6">
                 <div>
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                  <div className="flex flex-wrap items-center gap-2.5 mb-2">
                     <span className="text-xs font-mono font-bold text-brand">
                       {project.number}
                     </span>
-                    <h2 className="text-2xl md:text-3xl font-display font-bold text-[#B87333]">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-[#B87333]">
                       {project.title}
                     </h2>
-                    <span className="px-2.5 py-0.5 bg-bg border border-border text-[11px] font-sans font-semibold text-text-main/70">
+                    <span className="px-2 py-0.5 bg-bg border border-border text-[11px] font-sans font-semibold text-text-main/70">
                       {project.badge}
                     </span>
                   </div>
 
-                  <p className="text-base font-sans font-bold text-brand mb-1">
+                  <p className="text-sm sm:text-base font-sans font-bold text-brand mb-1">
                     {project.subtitle}
                   </p>
-                  <span className="text-xs font-sans text-text-main/60">
+                  <span className="text-xs font-sans text-text-main/60 block">
                     {project.category}
                   </span>
                 </div>
 
                 <Link
                   to={project.link}
-                  className="px-5 py-2.5 bg-brand text-white font-sans font-bold text-xs uppercase tracking-wider hover:bg-text-main transition-colors inline-flex items-center gap-2 shrink-0 self-start cursor-pointer shadow-xs"
+                  className="w-full md:w-auto justify-center px-5 py-3 md:py-2.5 bg-brand text-white font-sans font-bold text-xs uppercase tracking-wider hover:bg-text-main transition-colors inline-flex items-center gap-2 shrink-0 self-start md:self-auto cursor-pointer shadow-xs"
                 >
                   View Case Study <ArrowRight className="w-4 h-4" />
                 </Link>
