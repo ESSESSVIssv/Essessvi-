@@ -20,7 +20,7 @@ export default function Footer() {
             </span>
           </Link>
           <p className="text-xs font-sans text-text-main/60">
-            Product Manager | AI Product & Automation · {PERSONAL_INFO.location}
+            Aspiring Product Manager · {PERSONAL_INFO.location}
           </p>
         </div>
 

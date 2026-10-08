@@ -22,8 +22,8 @@ export default function Certifications() {
 
         {/* Eyebrow & Headline */}
         <div className="mb-14">
-          <div className="text-xs font-sans uppercase tracking-widest text-brand font-bold mb-2">
-            V. ESSESSVI • Product Manager | AI Product & Automation
+          <div className="text-xs font-sans uppercase tracking-widest text-[#B87333] font-bold mb-2">
+            V. ESSESSVI • Aspiring Product Manager
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4">
             Certifications & Learning

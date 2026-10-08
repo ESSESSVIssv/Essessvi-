@@ -15,8 +15,8 @@ import {
 export const PERSONAL_INFO = {
   name: "V. Essessvi",
   firstName: "Essessvi",
-  role: "Product Manager | AI Product & Automation",
-  targetRoles: "Product Manager | AI Product & Automation",
+  role: "Aspiring Product Manager",
+  targetRoles: "Aspiring Product Manager",
   email: "vessessvi12005@gmail.com",
   phone: "9392964456",
   location: "Chittoor",
@@ -24,8 +24,8 @@ export const PERSONAL_INFO = {
   resume: "/resume",
   website: "https://essessvi.vercel.app",
   headline: "Building products around real user problems.",
-  profile: "Product Manager with hands-on experience building AI-powered products and user-focused solutions. Skilled in end-to-end product ownership — from understanding user problems, conducting market and competitor research, mapping user journeys, defining product features, and delivering measurable outcomes. Strong interest in AI products, consumer experiences, and solving real-world problems through simple, practical products.",
-  bio: "Product Manager with hands-on experience building AI-powered products and user-focused solutions. Skilled in end-to-end product ownership — from understanding user problems, conducting market and competitor research, mapping user journeys, defining product features, and delivering measurable outcomes. Strong interest in AI products, consumer experiences, and solving real-world problems through simple, practical products."
+  profile: "Aspiring Product Manager with hands-on experience building AI-powered products and user-focused solutions. Skilled in end-to-end product ownership — from understanding user problems, conducting market and competitor research, mapping user journeys, defining product features, and delivering measurable outcomes. Strong interest in AI products, consumer experiences, and solving real-world problems through simple, practical products.",
+  bio: "Aspiring Product Manager with hands-on experience building AI-powered products and user-focused solutions. Skilled in end-to-end product ownership — from understanding user problems, conducting market and competitor research, mapping user journeys, defining product features, and delivering measurable outcomes. Strong interest in AI products, consumer experiences, and solving real-world problems through simple, practical products."
 };
 
 export const CORE_CAPABILITIES = [
@@ -305,7 +305,6 @@ export const NAV_LINKS = [
   { name: "WORK", href: "/work" },
   { name: "RESEARCH", href: "/research" },
   { name: "TEARDOWNS", href: "/teardowns" },
-  { name: "ABOUT", href: "/about" },
   { name: "RESUME", href: "/resume" },
   { name: "CONTACT", href: "/contact" }
 ];

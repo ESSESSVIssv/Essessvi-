@@ -138,7 +138,7 @@ export default function Resume() {
                 V. ESSESSVI
               </h1>
               <div className="text-[13px] sm:text-[14px] font-bold text-black mb-1">
-                Product Manager | AI Product & Automation
+                Aspiring Product Manager
               </div>
               <div className="text-[10.5px] sm:text-[11px] text-black flex flex-wrap justify-center items-center gap-x-2 gap-y-0.5" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
                 <span className="flex items-center gap-1">📞 9392964456</span>

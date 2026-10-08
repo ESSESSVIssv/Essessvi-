@@ -169,7 +169,7 @@ export default function Navigation() {
             {/* Mobile Menu Footer */}
             <div className="pt-6 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-sans text-neutral-600">
               <span>{PERSONAL_INFO.location}, India</span>
-              <span className="font-bold text-[#B87333]">Product Manager | AI Product & Automation</span>
+              <span className="font-bold text-[#B87333]">Aspiring Product Manager</span>
             </div>
           </motion.div>
         )}

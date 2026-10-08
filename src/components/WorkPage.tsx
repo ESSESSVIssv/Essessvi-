@@ -91,7 +91,7 @@ export default function WorkPage() {
         {/* Page Header */}
         <div className="mb-10 sm:mb-16">
           <div className="text-xs font-sans uppercase tracking-widest text-[#B87333] font-bold mb-2">
-            V. ESSESSVI • Product Manager | AI Product & Automation
+            V. ESSESSVI • Aspiring Product Manager
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4 uppercase">
             Selected Work

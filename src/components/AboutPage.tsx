@@ -17,7 +17,7 @@ import {
   Linkedin
 } from 'lucide-react';
 import { CERTIFICATIONS, PRODUCT_SKILLS, EDUCATION, PERSONAL_INFO } from '../constants';
-import profilePic from '../assets/profile.png';
+import profilePic from '../assets/essessvi-real-photo.jpg';
 
 export default function AboutPage() {
   return (
@@ -27,7 +27,7 @@ export default function AboutPage() {
         {/* Page Header */}
         <div className="mb-12 pb-8 border-b border-neutral-200">
           <div className="text-xs font-sans uppercase tracking-widest text-[#B87333] font-black mb-2">
-            V. ESSESSVI • Product Manager | AI Product & Automation
+            V. ESSESSVI • Aspiring Product Manager
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-[#B87333] mb-4 uppercase">
             About Me
@@ -62,9 +62,16 @@ export default function AboutPage() {
             <div className="bg-white border border-neutral-200 p-3 shadow-xs">
               <div className="aspect-[3/4] w-full overflow-hidden bg-neutral-100 border border-neutral-200/80 mb-3">
                 <img 
-                  src={profilePic} 
+                  src={profilePic || '/profile.jpg'} 
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.src.endsWith('/profile.jpg')) {
+                      target.src = '/profile.jpg';
+                    }
+                  }}
                   alt="V. Essessvi" 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
+                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="px-1 text-xs font-sans space-y-1">

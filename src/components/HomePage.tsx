@@ -4,16 +4,9 @@
  */
 
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Mail, 
-  Linkedin, 
-  MapPin, 
-  GraduationCap, 
-  FileText
-} from 'lucide-react';
+import { ArrowRight, FileText } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
-import profilePic from '../assets/profile.png';
+import profilePic from '../assets/essessvi-real-photo.jpg';
 
 export default function HomePage() {
   return (
@@ -33,7 +26,7 @@ export default function HomePage() {
             <span className="font-extrabold">{PERSONAL_INFO.name.toUpperCase()}</span>
             <span className="text-neutral-300" aria-hidden="true">•</span>
             <span className="text-neutral-600 font-semibold tracking-normal normal-case sm:uppercase">
-              Product Manager | AI Product & Automation
+              Aspiring Product Manager
             </span>
           </div>
 
@@ -132,10 +125,17 @@ export default function HomePage() {
               {/* Photo Frame */}
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-100 border border-neutral-200">
                 <img 
-                  src={profilePic} 
+                  src={profilePic || '/profile.jpg'} 
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.src.endsWith('/profile.jpg')) {
+                      target.src = '/profile.jpg';
+                    }
+                  }}
                   alt="V. Essessvi - Product Manager" 
-                  className="w-full h-full object-cover object-top filter brightness-[1.02] contrast-[1.01] transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="w-full h-full object-cover object-center filter brightness-[1.01] contrast-[1.01] transition-transform duration-500 group-hover:scale-[1.02]"
                   loading="eager"
+                  referrerPolicy="no-referrer"
                 />
                 
                 {/* Subtle corner badge */}
@@ -145,60 +145,6 @@ export default function HomePage() {
                     V. Essessvi
                   </span>
                 </div>
-              </div>
-
-              {/* Identity & Details Card Footer */}
-              <div className="pt-3.5 sm:pt-4 pb-1 px-1">
-                
-                <div className="flex items-baseline justify-between gap-2 mb-1">
-                  <h2 
-                    className="font-display font-black text-lg sm:text-xl text-[#B87333] tracking-tight uppercase"
-                    style={{ color: '#B87333', fontWeight: 900 }}
-                  >
-                    <strong>V. ESSESSVI</strong>
-                  </h2>
-                  <span className="text-[10.5px] sm:text-[11px] font-mono font-bold text-neutral-500 uppercase">
-                    B.Tech CSE '26
-                  </span>
-                </div>
-
-                <div className="text-xs font-sans font-semibold text-neutral-700 mb-2.5 sm:mb-3">
-                  Product Manager | AI Product & Automation
-                </div>
-
-                <div className="pt-2.5 sm:pt-3 border-t border-neutral-100 space-y-1.5 text-xs font-sans text-neutral-600">
-                  <div className="flex items-center gap-2">
-                    <GraduationCap className="w-3.5 h-3.5 text-[#B87333] shrink-0" />
-                    <span>The Apollo University (2022–2026)</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-3.5 h-3.5 text-[#B87333] shrink-0" />
-                    <span>Chittoor, Andhra Pradesh, India</span>
-                  </div>
-                </div>
-
-                {/* Direct Contact Links */}
-                <div className="mt-3.5 pt-2.5 sm:pt-3 border-t border-neutral-100 flex items-center justify-between text-xs font-sans">
-                  <a 
-                    href="mailto:vessessvi12005@gmail.com"
-                    className="font-bold text-[#B87333] hover:text-neutral-900 transition-colors inline-flex items-center gap-1.5 min-h-[36px]"
-                  >
-                    <Mail className="w-3.5 h-3.5" />
-                    <span>Email Me</span>
-                  </a>
-                  
-                  <a 
-                    href="https://linkedin.com/in/essessvi-vadlamudi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-[#B87333] hover:text-neutral-900 transition-colors inline-flex items-center gap-1 min-h-[36px]"
-                    title="LinkedIn Profile"
-                  >
-                    <Linkedin className="w-3.5 h-3.5" />
-                    <span>LinkedIn</span>
-                  </a>
-                </div>
-
               </div>
 
             </div>
